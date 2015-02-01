@@ -1,0 +1,45 @@
+.notification {
+  .opacity(0);
+  .transition-transform-opacity(@transition_bounce);
+  .transition-delay(100ms);
+  .translate(0;4rem);
+  background-color: black;
+  // color: @gray_900;
+  border-radius: 0.125rem;
+  bottom: 0;
+  color: white;
+  left: 0;
+  right: 0;
+  padding: 1rem 1.5rem 0.7rem;
+  position: fixed;
+  visibility: hidden;
+  &.error {
+    background-color: @red_900;
+  }
+  &.active {
+    .opacity(100);
+    .translate(0;0);
+    visibility: visible;
+  }
+  .message {
+    display: inline-block;
+    line-height: 2.25rem;
+    vertical-align: middle;
+  }
+  .btn {
+    display: inline-block;
+    float: right;
+    margin: 0 0;
+    vertical-align: middle;
+  }
+  // MQ MEDIUM
+  @media @mq_medium {
+    bottom: 2rem;
+    left: 2rem;
+    min-width: 18rem;
+    right: auto;
+    .btn {
+      margin: 0 1.5rem;
+    }
+  }
+}

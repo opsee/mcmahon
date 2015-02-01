@@ -1,0 +1,47 @@
+.progress {
+  .box-sizing(border-box);
+  border: 3px solid @gray_400;
+  border-radius: 3rem;
+  margin-bottom: 2rem;
+  padding: 0.25rem;
+  position: relative;
+  &.success {
+    .progress_bar { background: @green_200; }
+
+  }
+  .progress_bar {
+    .transition(width @transition_transform);
+    background: @blue_300;
+    border-radius: 1rem;
+    height: 1rem;
+    max-width: 100%;
+    width: 1rem;
+  }
+  .ticks {
+    bottom: -1.5rem;
+    content: "";
+    height: 1rem;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+  .tick {
+    background-color: @gray_400;
+    content: "";
+    display: inline-block;
+    height: 0.5rem;
+    width: 2px;
+    margin: 0 6%;
+    vertical-align: top;
+    &.large {
+      height: 0.75rem;
+    }
+  }
+}
+.progress_counter {
+  color: @blue_300;
+  &.success {
+    color: @green_200;
+  }
+}

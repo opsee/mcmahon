@@ -1,0 +1,32 @@
+.header {
+  background-color: @gray_900;
+  padding: 1rem;
+  position: relative;
+  .action_btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+  }
+  h1 {
+    // padding: 2rem;
+  }
+  .header_img {
+    width: 100%;
+  }
+  &.datacenter {
+  }
+
+
+  // MQ MEDIUM
+  @media @mq_medium {
+    // height: 15rem;
+    h1 {
+
+    }
+    .action_btn {
+      position: absolute;
+      bottom: -1.5rem;
+      right: 2rem;
+    }
+  }
+}
