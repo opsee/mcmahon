@@ -14,33 +14,27 @@ $( document ).ready(function() {
         email: true
       },
       FNAME: {
-        required: true,
-        minlength: 2
+        required: true
       },
       LNAME: {
-        required: true,
-        minlength: 2
+        required: true
       }
     },
-    // onfocusout: function(error, element) {
-    //   if(!element.target.validity.valid) {
-    //     $(element).siblings('.error_text').addClass('visible');
+    // onkeyup: function() {
+    //   if ($('#mc-embedded-subscribe-form').valid()) {
+    //     $('#mc-embedded-subscribe').prop('disabled', false);
     //   } else {
-    //     $(element).siblings('.error_text').removeClass('visible');
+    //     $('#mc-embedded-subscribe').prop('disabled', true);
     //   }
     // },
     errorPlacement: function(error, element) {
       //return true;
     },
-    submitHandler: function (form) { // for demo
-      alert('valid form submitted'); // for demo
-      return false; // for demo
+    highlight: function(element, errorClass, validClass) {
+      $(element).addClass('error').addClass('has_content').removeClass('valid');
+    },
+    unhighlight: function(element, errorClass, validClass) {
+      $(element).removeClass('error').removeClass('has_content').addClass('valid');
     }
   });
-
-  // $('input').bind('input propertychange', function() {
-  //   console.log("d");
-  //     // $('#output').html($(this).val());
-  // });
-
 });

@@ -913,7 +913,10 @@ a:active {
 .input_container > input[type='password']:active::-moz-placeholder,
 .input_container > input[type='text'].has_content::-moz-placeholder,
 .input_container > input[type='email'].has_content::-moz-placeholder,
-.input_container > input[type='password'].has_content::-moz-placeholder {
+.input_container > input[type='password'].has_content::-moz-placeholder,
+.input_container > input[type='text'].error::-moz-placeholder,
+.input_container > input[type='email'].error::-moz-placeholder,
+.input_container > input[type='password'].error::-moz-placeholder {
   color: transparent;
   opacity: 1;
 }
@@ -925,7 +928,10 @@ a:active {
 .input_container > input[type='password']:active:-ms-input-placeholder,
 .input_container > input[type='text'].has_content:-ms-input-placeholder,
 .input_container > input[type='email'].has_content:-ms-input-placeholder,
-.input_container > input[type='password'].has_content:-ms-input-placeholder {
+.input_container > input[type='password'].has_content:-ms-input-placeholder,
+.input_container > input[type='text'].error:-ms-input-placeholder,
+.input_container > input[type='email'].error:-ms-input-placeholder,
+.input_container > input[type='password'].error:-ms-input-placeholder {
   color: transparent;
 }
 .input_container > input[type='text']:focus::-webkit-input-placeholder,
@@ -936,7 +942,10 @@ a:active {
 .input_container > input[type='password']:active::-webkit-input-placeholder,
 .input_container > input[type='text'].has_content::-webkit-input-placeholder,
 .input_container > input[type='email'].has_content::-webkit-input-placeholder,
-.input_container > input[type='password'].has_content::-webkit-input-placeholder {
+.input_container > input[type='password'].has_content::-webkit-input-placeholder,
+.input_container > input[type='text'].error::-webkit-input-placeholder,
+.input_container > input[type='email'].error::-webkit-input-placeholder,
+.input_container > input[type='password'].error::-webkit-input-placeholder {
   color: transparent;
 }
 .input_container > input[type='text']:focus ~ label,
@@ -947,7 +956,10 @@ a:active {
 .input_container > input[type='password']:active ~ label,
 .input_container > input[type='text'].has_content ~ label,
 .input_container > input[type='email'].has_content ~ label,
-.input_container > input[type='password'].has_content ~ label {
+.input_container > input[type='password'].has_content ~ label,
+.input_container > input[type='text'].error ~ label,
+.input_container > input[type='email'].error ~ label,
+.input_container > input[type='password'].error ~ label {
   opacity: 100;
   filter: alpha(opacity=10000);
   -webkit-transform: translate(0, 0);
@@ -964,7 +976,10 @@ a:active {
 .input_container > input[type='password']:active.error,
 .input_container > input[type='text'].has_content.error,
 .input_container > input[type='email'].has_content.error,
-.input_container > input[type='password'].has_content.error {
+.input_container > input[type='password'].has_content.error,
+.input_container > input[type='text'].error.error,
+.input_container > input[type='email'].error.error,
+.input_container > input[type='password'].error.error {
   -webkit-box-shadow: 0 1px 0 #e84e40;
   box-shadow: 0 1px 0 #e84e40;
   border-bottom-color: #e84e40;
@@ -977,7 +992,10 @@ a:active {
 .input_container > input[type='password']:active.error ~ label,
 .input_container > input[type='text'].has_content.error ~ label,
 .input_container > input[type='email'].has_content.error ~ label,
-.input_container > input[type='password'].has_content.error ~ label {
+.input_container > input[type='password'].has_content.error ~ label,
+.input_container > input[type='text'].error.error ~ label,
+.input_container > input[type='email'].error.error ~ label,
+.input_container > input[type='password'].error.error ~ label {
   color: #e84e40;
 }
 .input_container > input[type='text']:focus.error ~ .svg_icon,
@@ -988,8 +1006,31 @@ a:active {
 .input_container > input[type='password']:active.error ~ .svg_icon,
 .input_container > input[type='text'].has_content.error ~ .svg_icon,
 .input_container > input[type='email'].has_content.error ~ .svg_icon,
-.input_container > input[type='password'].has_content.error ~ .svg_icon {
+.input_container > input[type='password'].has_content.error ~ .svg_icon,
+.input_container > input[type='text'].error.error ~ .svg_icon,
+.input_container > input[type='email'].error.error ~ .svg_icon,
+.input_container > input[type='password'].error.error ~ .svg_icon {
   fill: #e84e40;
+}
+.input_container > input[type='text']:focus.error ~ .error_text,
+.input_container > input[type='email']:focus.error ~ .error_text,
+.input_container > input[type='password']:focus.error ~ .error_text,
+.input_container > input[type='text']:active.error ~ .error_text,
+.input_container > input[type='email']:active.error ~ .error_text,
+.input_container > input[type='password']:active.error ~ .error_text,
+.input_container > input[type='text'].has_content.error ~ .error_text,
+.input_container > input[type='email'].has_content.error ~ .error_text,
+.input_container > input[type='password'].has_content.error ~ .error_text,
+.input_container > input[type='text'].error.error ~ .error_text,
+.input_container > input[type='email'].error.error ~ .error_text,
+.input_container > input[type='password'].error.error ~ .error_text {
+  opacity: 100;
+  filter: alpha(opacity=10000);
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  visibility: visible;
 }
 .input_container > input[type='text']:focus,
 .input_container > input[type='email']:focus,
@@ -1042,10 +1083,10 @@ a:active {
 .input_container > .error_text {
   opacity: 0;
   filter: alpha(opacity=0);
-  -webkit-transition: -webkit-transform 450ms cubic-bezier(0.23, 1, 0.32, 1), opacity 450ms cubic-bezier(0.23, 1, 0.32, 1), visibility 450ms cubic-bezier(0.23, 1, 0.32, 1);
-  -moz-transition: -moz-transform 450ms cubic-bezier(0.23, 1, 0.32, 1), opacity 450ms cubic-bezier(0.23, 1, 0.32, 1), visibility 450ms cubic-bezier(0.23, 1, 0.32, 1);
-  -o-transition: -o-transform 450ms cubic-bezier(0.23, 1, 0.32, 1), opacity 450ms cubic-bezier(0.23, 1, 0.32, 1), visibility 450ms cubic-bezier(0.23, 1, 0.32, 1);
-  transition: transform 450ms cubic-bezier(0.23, 1, 0.32, 1), opacity 450ms cubic-bezier(0.23, 1, 0.32, 1), visibility 450ms cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transition: -webkit-transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, visibility 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+  -moz-transition: -moz-transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, visibility 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+  -o-transition: -o-transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, visibility 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+  transition: transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, visibility 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
   -webkit-transform: translate(2rem, 0);
   -ms-transform: translate(2rem, 0);
   -o-transform: translate(2rem, 0);
@@ -1054,15 +1095,6 @@ a:active {
   display: inline-block;
   font-weight: 700;
   visibility: hidden;
-}
-.input_container > .error_text.visible {
-  opacity: 100;
-  filter: alpha(opacity=10000);
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -o-transform: translate(0, 0);
-  transform: translate(0, 0);
-  visibility: visible;
 }
 /*
 .ng-valid.ng-dirty {

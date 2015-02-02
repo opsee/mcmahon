@@ -44,7 +44,7 @@
           fill: @gray_400;
         }
       }
-      &:focus, &:active, &.has_content {
+      &:focus, &:active, &.has_content, &.error {
         .placeholder(transparent);
         ~ label {
           .opacity(100);
@@ -56,6 +56,11 @@
           border-bottom-color: @red_400;
           ~ label {color: @red_400;}
           ~ .svg_icon { fill: @red_400; }
+          ~ .error_text {
+            .opacity(100);
+            .translate(0;0);
+            visibility: visible;
+          }
         }
       }
       &:focus, &:active {
@@ -84,17 +89,12 @@
   }
   > .error_text {
     .opacity(0);
-    .transition-transform-opacity(@transition_transform);
+    .transition-transform-opacity(@transition_transform 100ms);
     .translate(2rem;0);
     color: @red_400;
     display: inline-block;
     font-weight: @body_font_bold_weight;
     visibility: hidden;
-    &.visible {
-      .opacity(100);
-      .translate(0;0);
-      visibility: visible;
-    }
   }
 }
 
