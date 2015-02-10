@@ -126,6 +126,7 @@
   </svg>
 
   <div class="fixed_bg">
+    <canvas id="c"></canvas>
     <header>
       <h1>Opsee</h1>
       <h2 class="subtitle">Monitoring-driven Development</h2>
@@ -192,5 +193,26 @@
     </form>
   </div>
   <!--End mc_embed_signup-->
+
+  <script id="shader-fs" type="x-shader/x-fragment">
+          #ifdef GL_ES
+            precision highp float;
+            #endif
+          void main(void) {
+           gl_FragColor = vec4(0.2, 0.3, 0.4, 0.75);
+          }
+      </script>
+
+    <script id="shader-vs" type="x-shader/x-vertex">
+        attribute vec3 vertexPosition;
+
+      uniform mat4 modelViewMatrix;
+      uniform mat4 perspectiveMatrix;
+
+      void main(void) {
+        gl_Position = perspectiveMatrix * modelViewMatrix * vec4(  vertexPosition, 1.0);
+      }
+    </script>
+
 
 </body>
