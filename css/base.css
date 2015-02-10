@@ -1375,12 +1375,6 @@ html {
   -webkit-font-smoothing: antialiased;
   height: 100%;
 }
-canvas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-}
 h1,
 h2,
 h3 {
@@ -1411,10 +1405,16 @@ p {
 }
 .fixed_bg {
   min-height: 100%;
+  background-image: url('../img/bg2-mobile.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
+}
+@media only screen and (min-width: 48rem) {
+  .fixed_bg {
+    background-image: url('../img/bg2.jpg');
+  }
 }
 .fixed_bg header {
   margin-top: -4rem;
