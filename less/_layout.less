@@ -76,10 +76,14 @@
   .offset-by-one-half.columns     { margin-left: 52%; }
 }
 
+@media @mq_medium {
+  .container { max-width: @mq_medium_rem - 12rem; }
+}
+
 @media @mq_large {
-  .container { max-width: @mq_large_rem - 2rem; }
+  .container { max-width: @mq_large_rem - 16rem; }
 }
 
 @media @mq_xlarge {
-  .container { max-width: @mq_xlarge_rem - 2rem; }
+  .container { max-width: @mq_xlarge_rem - 20rem; }
 }

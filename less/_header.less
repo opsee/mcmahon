@@ -1,32 +1,35 @@
 .header {
-  background-color: @gray_900;
-  padding: 1rem;
-  position: relative;
-  .action_btn {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-  }
-  h1 {
-    // padding: 2rem;
-  }
-  .header_img {
-    width: 100%;
-  }
-  &.datacenter {
-  }
+  padding: 2rem 1rem 0 1rem;
+}
 
-
-  // MQ MEDIUM
-  @media @mq_medium {
-    // height: 15rem;
-    h1 {
-
+.header_logo {
+  height: 60px;
+}
+.header_nav {
+  .opacity(0);
+  float: right;
+  vertical-align: top;
+  visibility: hidden;
+}
+.header_link {
+  display: inline-block;
+  font-weight: @body_med_font_weight;
+  padding: 0 1rem;
+  text-transform: uppercase;
+  &.hiring {
+    color: @orange_400;
+    &:hover {
+      color: @orange_700;
     }
-    .action_btn {
-      position: absolute;
-      bottom: -1.5rem;
-      right: 2rem;
-    }
+  }
+}
+
+@media @mq_medium {
+  .header {
+    padding: 2rem 0 0 0;
+  }
+  .header_nav {
+    .opacity(100);
+    visibility: visible;
   }
 }

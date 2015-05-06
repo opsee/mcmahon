@@ -1,10 +1,9 @@
 html {
   font-size: 14px;
-  //-webkit-font-smoothing: antialiased;
 }
 
 body {
-  color: white;
+  color: @body_text_color;
   font-family: @body_font_family;
   font-weight: @body_font_weight;
   line-height: 1rem;
@@ -18,6 +17,15 @@ body {
     background: @blue_100;
   }
 }
+.alt_color {
+  color: @body_text_color_alt;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 { color: @heading_text_color_alt; }
+}
 
 p {
   line-height: 1.25rem;
@@ -28,7 +36,8 @@ em {
   font-style: italic;
 }
 
-b,strong {
+b,
+strong {
   font-weight: @body_font_bold_weight;
 }
 
@@ -38,11 +47,12 @@ h3,
 h4,
 h5,
 h6 {
-  color: @gray_200;
+  color: @heading_text_color;
   font-family: @heading_font_family;
   font-weight: @heading_font_weight;
   line-height: 1.1;
   margin: 0;
+  text-transform: uppercase;
   //margin: 1.414rem 0 0.5rem;
 }
 h1 { font-size: 2.441em; }

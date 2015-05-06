@@ -1,5 +1,10 @@
+body,html {
+  // -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+
 body {
-  background-color: @gray_800;
+  background-color: @gray_900;
 }
 
 .svg_icon {
@@ -8,4 +13,230 @@ body {
   fill: white;
   height: 1.5rem;
   width: 1.5rem;
+}
+
+.pad2 {
+  padding: 3rem 1rem;
+  @media @mq_medium {
+    padding: 5rem 0;
+  }
+}
+
+.pad2top {
+  padding: 3rem 1rem 0 1rem;
+  @media @mq_medium {
+    padding: 5rem 0 0 0;
+  }
+}
+
+.bullet_list {
+  li {
+    line-height: 1.25rem;
+  }
+}
+
+#boids {
+  position: relative;
+  canvas {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+.signup {
+  background-color: @gray_bg;
+}
+
+.microservices {
+  background-color: @gray_200;
+}
+
+.software {
+  background-color: @gray_800;
+}
+
+.anywhere {
+  background-color: @blue_gray_900;
+  background-image: url('../img/sleeping.jpg');
+  background-position: center left;
+  background-size: cover;
+}
+
+.design {
+  background-color: @blue_gray_100;
+}
+.img_bottom {
+  display: block;
+  margin: 1rem auto 0 auto;
+  width: 60%;
+  vertical-align: bottom;
+  @media @mq_medium {
+    margin-top: 0;
+    width: 100%;
+  }
+}
+
+.team {
+  background-color: @gray_800;
+}
+.team_headshot {
+  margin: 0 0;
+  // padding: 1rem 0.5rem;
+  position: relative;
+  text-align: center;
+  &:active, &:focus {
+    img:nth-of-type(2) {
+      .opacity(100);
+      .rotate(0deg);
+      visibility: visible;
+    }
+  }
+  img {
+    .transition(transform @transition_transform, opacity @transition_transform, visibility @transition_transform;);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    cursor: pointer;
+    // margin-bottom: 1rem;
+    width: 25%;
+    &:nth-of-type(2) {
+      .opacity(0);
+      .rotate(45deg);
+      position: absolute;
+      top: 0;
+      left: 0;
+      visibility: hidden;
+    }
+    @media @mq_medium {
+      width: 100%;
+    }
+  }
+  figcaption {
+    margin: 1rem 0;
+  }
+}
+.team_jobs {
+  list-style: none;
+  padding: 0;
+  > li {
+    background-color: @gray_bg;
+  }
+}
+.team_jobs_link {
+  padding: 1rem;
+  display: block;
+}
+.job_desc {
+  padding: 0 2rem 2rem 2rem;
+}
+
+
+.ac-container {
+  label {
+    background-color: @gray_bg;
+    display: block;
+    padding: 1rem;
+    cursor: pointer;
+    &:hover {
+      background-color: @gray_900;
+    }
+    .svg_icon {
+      .transition(transform @transition_transform);
+      vertical-align: middle;
+    }
+  }
+  input {
+    display: none;
+  }
+  input:checked + label, input:checked + label:hover {
+    background-color: @gray_900;
+    .svg_icon {
+      .rotate(180deg);
+    }
+  }
+  article {
+    .transition(max-height @transition_transform, padding @transition_transform 100ms;);
+    background-color: @gray_bg;
+    max-height: 0px;
+    overflow: hidden;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  input:checked ~ article {
+    max-height: 100rem;
+    padding: 2rem;
+  }
+}
+
+//////////////////////////////////////////
+// BOUNCING ARROW ////////////////////////
+//////////////////////////////////////////
+
+
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+.arrow {
+  fill: white;
+  width: 3rem;
+  height: 3rem;
+}
+
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+  bottom: 2.5rem;
+  height: 3rem;
+  left: 50%;
+  margin-left: -1.5rem;
+  width: 3rem;
+  position: absolute;
 }

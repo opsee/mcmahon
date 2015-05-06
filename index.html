@@ -8,11 +8,11 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-  <title>Opsee - Monitoring-driven development</title>
-  <meta name="description" content="Opsee is enabling monitoring-driven development. With tools to attach seamlessly to your infrastructure, and discover and monitor new services automatically, you never need to wonder what’s covered and what isn’t.">
+  <title>Opsee - Own Your Availability</title>
+  <meta name="description" content="Application developers are being asked to own the availability of their code, and we're here to help.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.opsee.co/">
-  <meta property="og:title" content="Monitoring-driven development">
+  <meta property="og:title" content="Own Your Availability">
   <meta property="og:site_name" content="Opsee">
 
   <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
@@ -125,75 +125,235 @@
     </symbol>
   </svg>
 
-  <div class="fixed_bg">
-    <canvas id="c"></canvas>
-    <header>
-      <h1>Opsee</h1>
-      <h2 class="subtitle">Monitoring-driven Development</h2>
-    </header>
-    <div class="bounce">
-      <svg class="svg_icon arrow" viewBox="0 0 24 24"><use xlink:href="#ico_chevron_down" /></svg>
+  <div id="boids">
+    <div class="header">
+      <div class="container">
+        <img class="header_logo" src="img/logo.svg" alt="Opsee logo">
+        <nav class="header_nav">
+          <a class="header_link" href="#product-section">Product</a>
+          <a class="header_link" href="#team-section">Team</a>
+          <a class="header_link hiring" href="#hiring-positions">We're Hiring!</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="hero pad2">
+      <div class="container">
+        <h1 class="centered">Own Your Availability</h1>
+        <p>Clouds are replacing datacenters, containers are replacing VMs and microservices are replacing monolithic applications. Independent microservices allow engineering organizations to break free of a quarterly release cycle and ship small increments of functionality every single day. There's a cost, though. Functionality that once ran in a single process can now potentially span multiple machines. The unreliable network that has been interposed into this functionality now adds a proliferation of new failure cases the system as a whole.</p>
+        <p>And now, more than ever, application developers are being asked to own the availability of their code. And we're here to help.</p>
+      </div>
     </div>
   </div>
 
-  <div class="dark">
+  <div class="signup pad2">
+    <div class="container" id="mc_embed_signup">
+      <form action="//opsee.us10.list-manage.com/subscribe/post?u=f6291133c44c59f3209284bb7&amp;id=689a72b5cb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+          <h2 class="centered">Sign up to learn more</h2>
+
+          <p>We're launching soon. Sign up to be one of the first to try Opsee for free in our private beta. If you <a href="https://opsee.typeform.com/to/JHiTKr" target="_blank">fill out our survey</a> and you're a good fit, <em>we'll bump you to the top of the list</em>.</p>
+          <div class="row">
+            <div class="columns twelve">
+              <div class="mc-field-group input_container">
+                <input type="email" value="" name="EMAIL" class="required email block icon" id="mce-EMAIL" placeholder="email address">
+                <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_mail" /></svg>
+                <label for="mce-EMAIL">Email Address</label>
+                <span class="error_text font_small">is not valid</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="columns six">
+              <div class="mc-field-group input_container">
+                <input type="text" value="" name="FNAME" class="required block icon" id="mce-FNAME" placeholder="first name">
+                <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_person" /></svg>
+                <label for="mce-FNAME">First Name</label>
+                <span class="error_text font_small">is required</span>
+              </div>
+            </div>
+            <div class="columns six">
+              <div class="mc-field-group input_container">
+                <input type="text" value="" name="LNAME" class="required block icon" id="mce-LNAME" placeholder="last name">
+                <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_person" /></svg>
+                <label for="mce-LNAME">Last Name</label>
+                <span class="error_text font_small">is required</span>
+              </div>
+            </div>
+          </div>
+          <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+          </div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;"><input type="text" name="b_f6291133c44c59f3209284bb7_689a72b5cb" tabindex="-1" value=""></div>
+          <div class="row">
+            <div class="columns twelve">
+              <div class="clear input_container"><input type="submit" value="Keep me posted" name="subscribe" id="mc-embedded-subscribe" class="button btn raised success block"></div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="microservices alt_color pad2" id="product-section">
     <div class="container">
-      <h3>Things have changed since we started writing code</h3>
-      <p class="lead">We've replaced the three-tier architecture with a distributed system of services, and more people are deploying code. A lot more can go wrong, and it's getting harder to track. We need to understand this infrastructure to get our jobs done, and bridging the gap between dev and ops means owning our availability. It needs to get easier, though.</p>
-
-      <h3>Opsee is enabling monitoring-driven development</h3>
-      <p class="lead">With tools to attach seamlessly to your infrastructure, and discover and monitor new services automatically, you never need to wonder what’s covered and what isn’t.</p>
-    </div>
-  </div>
-
-  <!-- Begin MailChimp Signup Form -->
-  <div class="container" id="mc_embed_signup">
-    <form action="//opsee.us10.list-manage.com/subscribe/post?u=f6291133c44c59f3209284bb7&amp;id=689a72b5cb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-      <div id="mc_embed_signup_scroll">
-        <h2>Signup</h2>
-
-        <p>Opsee is launching soon. Sign up to be one of the first to try Opsee for free in our private beta. If you <a href="https://steve56.typeform.com/to/joCwyh" target="_blank">fill out our survey</a> and you're a good fit, <em>we'll bump you to the top of the list</em>.</p>
-        <div class="row">
-          <div class="columns twelve">
-            <div class="mc-field-group input_container">
-              <input type="email" value="" name="EMAIL" class="required email block icon" id="mce-EMAIL" placeholder="email address">
-              <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_mail" /></svg>
-              <label for="mce-EMAIL">Email Address</label>
-              <span class="error_text font_small">is not valid</span>
-            </div>
-          </div>
+      <div class="row">
+        <div class="columns four">
+          <img class="img_bottom" src="img/aws.png" alt="AWS Logo">
         </div>
-        <div class="row">
-          <div class="columns six">
-            <div class="mc-field-group input_container">
-              <input type="text" value="" name="FNAME" class="required block icon" id="mce-FNAME" placeholder="first name">
-              <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_person" /></svg>
-              <label for="mce-FNAME">First Name</label>
-              <span class="error_text font_small">is required</span>
-            </div>
-          </div>
-          <div class="columns six">
-            <div class="mc-field-group input_container">
-              <input type="text" value="" name="LNAME" class="required block icon" id="mce-LNAME" placeholder="last name">
-              <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_person" /></svg>
-              <label for="mce-LNAME">Last Name</label>
-              <span class="error_text font_small">is required</span>
-            </div>
-          </div>
-        </div>
-        <div id="mce-responses" class="clear">
-          <div class="response" id="mce-error-response" style="display:none"></div>
-          <div class="response" id="mce-success-response" style="display:none"></div>
-        </div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-        <div style="position: absolute; left: -5000px;"><input type="text" name="b_f6291133c44c59f3209284bb7_689a72b5cb" tabindex="-1" value=""></div>
-        <div class="row">
-          <div class="columns twelve">
-            <div class="clear input_container"><input type="submit" value="Sign me up" name="subscribe" id="mc-embedded-subscribe" class="button btn raised success block"></div>
-          </div>
+        <div class="columns eight">
+          <h2>Made for Microservices</h2>
+          <p>Opsee is made for distributed environments. Hundreds of services in production? No problem. Opsee recognizes new instances and containers as they come online and automatically starts health checking the services being run.</p>
         </div>
       </div>
-    </form>
+    </div>
   </div>
-  <!--End mc_embed_signup-->
 
+  <div class="software pad2top">
+    <div class="container">
+      <div class="row">
+        <div class="columns six">
+          <h2>No Software, no agent</h2>
+          <p>No bash scripts to blithely curl and pipe into sudo, and no opaque APT repos to add. Our bastion instance is delivered as a prebuilt AMI that automatically detects your AWS infrastructure and services, and coordinates health checking and incident response.</p>
+        </div>
+        <div class="columns six">
+          <img class="img_bottom" src="img/bastion.svg" alt="bastion host diagram">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="anywhere pad2">
+    <div class="container">
+      <div class="row">
+        <div class="columns seven offset-by-five">
+          <h2>Fix It Anywhere</h2>
+          <p>Being on call can be a real drag. All too often your sleep will get ruined by an easily solved problem like a noisy threshold or a malfunctioning VM. Opsee is designed to work for mobile first, so you can do everything from silencing a noisy alert to restarting a crashed process. All from your phone.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="design alt_color pad2top">
+    <div class="container">
+      <div class="row">
+        <div class="columns six">
+          <h2>Designed for You</h2>
+          <p>Better anomoly detection, prettier graphs and more data are all nice, but how many new devops products <strong>feel like they were designed for the people who use them</strong>? It shouldn’t take a webinar to explain how our tools work.</p>
+        </div>
+        <div class="columns five offset-by-one">
+          <img class="img_bottom" src="img/phone.svg" alt="phone alert">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="team pad2" id="team-section">
+    <div class="container">
+      <h2 class="centered">The Opsee Team</h2>
+      <p>Over 10 years developing monitoring tools, and 20 working with developers and ops professionals to build some of the most beloved tools in the space including Boundary, Riak, and Los Alamos National Laboratory.</p>
+
+      <div class="row">
+        <div class="columns three">
+          <figure class="team_headshot">
+            <img src="img/cliffmoon1.jpg" alt="Person">
+            <img class="team_headshot_ro" src="img/cliffmoon2.jpg" alt="Person">
+            <figcaption>
+              <div><strong>Cliff Moon</strong></div>
+              <div><a href="https://twitter.com/moonpolysoft" target="_blank">@moonpolysoft</a></div>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="columns three">
+          <figure class="team_headshot">
+            <img src="img/steveboak1.jpg" alt="Person">
+            <img class="team_headshot_ro" src="img/steveboak2.jpg" alt="Person">
+            <figcaption>
+              <div><strong>Steve Boak</strong></div>
+              <div><a href="https://twitter.com/sboak" target="_blank">@sboak</a></div>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="columns three">
+          <figure class="team_headshot">
+            <img src="img/andygross1.jpg" alt="Person">
+            <img class="team_headshot_ro" src="img/andygross2.jpg" alt="Person">
+            <figcaption>
+              <div><strong>Andy Gross</strong></div>
+              <div><a href="https://twitter.com/argv0" target="_blank">@argv0</a></div>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="columns three">
+          <figure class="team_headshot">
+            <img src="img/gregpoirier1.jpg" alt="Person">
+            <img class="team_headshot_ro" src="img/gregpoirier2.jpg" alt="Person">
+            <figcaption>
+              <div><strong>Greg Poirier</strong></div>
+              <div><a href="https://twitter.com/grepory" target="_blank">@grepory</a></div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+
+      <div class="pad2">
+        <h2 class="centered">We're Hiring!</h2>
+        <p>We’re always looking for talented people to join, so even if you don’t see a position listed, reach out to us. Just send an email with your résumé and a little about yourself to <a href="mailto:work@opsee.co">work@opsee.co</a>. Every thoughtful application we receive will be replied to, we promise.</p>
+
+        <section class="ac-container" id="hiring-positions">
+          <div>
+            <input id="ac-1" name="accordion-1" type="checkbox" />
+            <label for="ac-1"><svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_chevron_down" /></svg> Frontend Developer</label>
+            <article>
+              <p>Opsee is looking for a talented, senior frontend engineer to be our second employee and lead the development of our web application. You’ll be using your expertise in Javascript and modern JS frameworks (like Angular or React) to build tools developers love.</p>
+
+              <p>You’ll work closely with the backend team to spec and build new features, and process real-time data streams (WebSockets) from our APIs and bastion hosts. You’ll also work with design to create a seamless and delightful product experience, and a powerful web application to notify users of problems and visualize and report on their application health and performance.</p>
+
+              <p>To apply, send an email with your résumé and a little about yourself to <a href="mailto:work@opsee.co">work@opsee.co</a>.</p>
+
+              <h3>Requirements</h3>
+
+              <ul class="bullet_list">
+                <li>At least three years of experience working with JavaScript professionally, and a strong portfolio of launched projects</li>
+                <li>Experience with modern Javascript frameworks like Angular or React (we use Angular, but we’re very interested in React) and mastery of component/directive design</li>
+                <li>Expertise at testing and performance-tuning Javascript in the browser</li>
+                <li>Experience with responsive design and mobile-first design principles</li>
+                <li>Comfort with CSS pre-compilers like Sass or Less</li>
+                <li>Located in the Bay Area. We’re open to remote working at later stages but we need the early team to be local to San Francisco</li>
+              </ul>
+
+              <h3>Nice to haves</h3>
+              <ul class="bullet_list">
+                <li>Previous work in small startup environments</li>
+                <li>Experience with modern browser technologies like WebSockets</li>
+                <li>Background in computer science</li>
+                <li>Previous work on marketing websites, and with marketing departments</li>
+                <li>Mobile application development experience</li>
+              </ul>
+
+              <h3>About Opsee</h3>
+              <p>We’re based in San Francisco's SoMa neighborhood and founded by <a href="https://twitter.com/moonpolysoft" target="_blank">Cliff Moon</a>, <a href="https://twitter.com/sboak" target="_blank">Steve Boak</a>, and <a href="https://twitter.com/argv0" target="_blank">Andy Gross</a>. Out team has over 15 years of experience building dev tools and has built some of the most beloved tools in the industry, including Boundary and Riak.</p>
+              <p>We're a technology company in the truest sense of the term. We're here to build great technology and a product that we and our users love.</p>
+
+              <h3>Benefits</h3>
+              <ul class="bullet_list">
+                <li>Compensation is competitive, and includes a generous equity grant and full medical, dental, and vision benefits</li>
+                <li>Unlimited budget for your workstation</li>
+                <li>Paid time off</li>
+              </ul>
+
+              <p>Every thoughtful application we receive will be replied to, we promise.</p>
+              <p>Opsee Co. is an Equal Opportunity Employer.</p>
+            </article>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <script src='js/three.min.js'></script>
+  <script src="js/boids.js"></script>
 </body>
