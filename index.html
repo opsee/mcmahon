@@ -4,7 +4,17 @@
   <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6076032/688446/css/fonts.css" />
   <link rel="stylesheet" type="text/css" href="css/base.css" />
 
-  <!-- <link rel="shortcut icon" type="image/png" href="/img/favicon.png" /> -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+  <meta name="application-name" content="Opsee"/>
+  <meta name="msapplication-TileColor" content="#00579B" />
+  <meta name="msapplication-TileImage" content="mstile-144x144.png" />
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -32,12 +42,12 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-59205908-1', 'auto');
     ga('send', 'pageview');
-  </script><script>
+  </script>
+  <script>
   !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
   arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
   d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
   insertBefore(d,q)}(window,document,'script','_gs');
-
   _gs('GSN-959221-B');
 </script>
 </head>
@@ -143,6 +153,7 @@
     <div class="header">
       <div class="container">
         <img class="header_logo" src="img/logo.svg" alt="Opsee logo">
+        <img class="header_logo_color" src="img/logo-color.svg" alt="Opsee logo color">
         <nav class="header_nav">
           <a class="header_link" href="#product-section">Product</a>
           <a class="header_link" href="#team-section">Team</a>
@@ -224,14 +235,14 @@
     </div>
   </div>
 
-  <div class="software pad2top">
+  <div class="software pad2">
     <div class="container">
       <div class="row">
-        <div class="columns six">
+        <div class="columns seven">
           <h2 class="centered">No Software, no Agent</h2>
           <p>No bash scripts to blithely curl and pipe into sudo sh, and no opaque APT repos to add. Our bastion instance is delivered as a prebuilt AMI that automatically detects your AWS infrastructure and services, and coordinates health checking and incident response.</p>
         </div>
-        <div class="columns six">
+        <div class="columns five">
           <img class="img_bottom" src="img/bastion.svg" alt="bastion host diagram">
         </div>
       </div>
@@ -367,8 +378,8 @@
     </div>
   </div>
 
-  <script src='js/three.min.js'></script>
-  <script src="js/boids.js"></script>
+  <!--<script src='js/three.min.js'></script>
+  <script src="js/boids.js"></script>-->
   <script>
   $('[data-event]').on('click', function() {
     _gs('event', $(this).data('event'));

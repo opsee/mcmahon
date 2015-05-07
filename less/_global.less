@@ -4,7 +4,7 @@ body,html {
 }
 
 body {
-  background-color: @gray_900;
+  background-color: @gray_bg;
 }
 
 .svg_icon {
@@ -50,7 +50,7 @@ body {
 }
 
 .signup {
-  background-color: @gray_bg;
+  background-color: @gray_900;
 }
 
 .microservices {
@@ -105,9 +105,9 @@ body {
   }
   img {
     .transition(transform @transition_transform, opacity @transition_transform, visibility @transition_transform;);
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
+    border-radius: 50%;
     cursor: pointer;
+    display: block;
     // margin-bottom: 1rem;
     width: 100%;
     &:nth-of-type(2) {

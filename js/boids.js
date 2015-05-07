@@ -13,8 +13,6 @@ var boidAnimation = {
 	},
 	init: function() {
 		var boidsContainer = document.getElementById("boids");
-
-		console.log(boidsContainer.clientHeight + ", " + window.innerWidth);
 		boidAnimation.scene = new THREE.Scene();
 		boidAnimation.W =  window.innerWidth;
 		boidAnimation.H = boidsContainer.clientHeight;
@@ -34,7 +32,7 @@ var boidAnimation = {
 
 		document.getElementById("boids").appendChild(boidAnimation.renderer.domElement);
 
-		boidAnimation.makeParticles(500);
+		boidAnimation.makeParticles(400);
 
 		boidAnimation.render();
 	},

@@ -3,7 +3,21 @@
 }
 
 .header_logo {
+  display: block;
+  float: left;
   height: 75px;
+}
+.header_logo_color {
+  .opacity(0);
+  .transition(opacity @transition_transform);
+  display: block;
+  height: 75px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  &:hover {
+    .opacity(100);
+  }
 }
 .header_nav {
   float: right;
