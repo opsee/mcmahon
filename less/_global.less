@@ -21,11 +21,16 @@ body {
     padding: 5rem 0;
   }
 }
-
 .pad2top {
   padding: 3rem 1rem 0 1rem;
   @media @mq_medium {
     padding: 5rem 0 0 0;
+  }
+}
+.pad2bot {
+  padding: 0 1rem 3rem 1rem;
+  @media @mq_medium {
+    padding: 0 0 5rem 0;
   }
 }
 
@@ -81,10 +86,12 @@ body {
   background-color: @gray_800;
 }
 .team_headshot {
-  margin: 0 0;
+  display: inline-block;
+  margin: 0 3%;
   // padding: 1rem 0.5rem;
   position: relative;
   text-align: center;
+  width: 42%;
   &:active, &:focus {
     img:nth-of-type(2) {
       .opacity(100);
@@ -92,13 +99,17 @@ body {
       visibility: visible;
     }
   }
+  @media @mq_medium {
+    margin: 0 2%;
+    width: 21%;
+  }
   img {
     .transition(transform @transition_transform, opacity @transition_transform, visibility @transition_transform;);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     cursor: pointer;
     // margin-bottom: 1rem;
-    width: 25%;
+    width: 100%;
     &:nth-of-type(2) {
       .opacity(0);
       .rotate(45deg);
@@ -106,9 +117,6 @@ body {
       top: 0;
       left: 0;
       visibility: hidden;
-    }
-    @media @mq_medium {
-      width: 100%;
     }
   }
   figcaption {
@@ -133,15 +141,20 @@ body {
 
 .ac-container {
   label {
+    .transition(background-color @transition_transform);
     background-color: @gray_bg;
+    color: @blue_200;
     display: block;
+    font-weight: @body_med_font_weight;
     padding: 1rem;
     cursor: pointer;
+    text-transform: uppercase;
     &:hover {
       background-color: @gray_900;
     }
     .svg_icon {
       .transition(transform @transition_transform);
+      fill: @blue_200;
       vertical-align: middle;
     }
   }
@@ -164,7 +177,7 @@ body {
     z-index: 1;
   }
   input:checked ~ article {
-    max-height: 100rem;
+    max-height: 200rem;
     padding: 2rem;
   }
 }

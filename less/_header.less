@@ -3,21 +3,20 @@
 }
 
 .header_logo {
-  height: 60px;
+  height: 75px;
 }
 .header_nav {
-  .opacity(0);
   float: right;
   vertical-align: top;
-  visibility: hidden;
 }
 .header_link {
-  display: inline-block;
+  display: none;
   font-weight: @body_med_font_weight;
   padding: 0 1rem;
   text-transform: uppercase;
   &.hiring {
     color: @orange_400;
+    display: inline-block;
     &:hover {
       color: @orange_700;
     }
@@ -28,8 +27,7 @@
   .header {
     padding: 2rem 0 0 0;
   }
-  .header_nav {
-    .opacity(100);
-    visibility: visible;
+  .header_link {
+    display: inline-block;
   }
 }
