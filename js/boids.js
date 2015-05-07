@@ -43,11 +43,11 @@ var boidAnimation = {
 			particle;
 		for (var i = 0; i <= num; i++) {
 			if (i % 3 === 0) {
-				particle = new boidAnimation.Particle(Math.random() * 2 - 1, Math.random() * 2 - 1, Math.random() * 2 - 1, Math.random()*0.4 + 0.2, 0x352424);
+				particle = new boidAnimation.Particle(Math.random() * 2 - 1, Math.random() * 2 - 1, Math.random() * 2 - 1, Math.random()*0.4 + 0.2, 0x3d2622);
 			} else if (i % 3 === 1) {
-				particle = new boidAnimation.Particle(Math.random() * 2 - 1, Math.random() * 2 - 1, Math.random() * 2 - 1, Math.random()*0.4 + 0.2, 0x4c3535);
+				particle = new boidAnimation.Particle(Math.random() * 2 - 1, Math.random() * 2 - 1, Math.random() * 2 - 1, Math.random()*0.4 + 0.2, 0x4d332d);
 			} else {
-				particle = new boidAnimation.Particle(Math.random() * 2 - 1, Math.random() * 2 - 1, Math.random() * 2 - 1, Math.random()*0.4 + 0.2, 0x604343);
+				particle = new boidAnimation.Particle(Math.random() * 2 - 1, Math.random() * 2 - 1, Math.random() * 2 - 1, Math.random()*0.4 + 0.2, 0x5c3f36);
 			}
 			particle.putInPlace();
 			particle.mesh.position.normalize();
