@@ -32,7 +32,14 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-59205908-1', 'auto');
     ga('send', 'pageview');
-  </script>
+  </script><script>
+  !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+  arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+  d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
+  insertBefore(d,q)}(window,document,'script','_gs');
+
+  _gs('GSN-959221-B');
+</script>
 </head>
 <body>
 
@@ -262,7 +269,7 @@
       <p>Over 10 years developing monitoring tools, and 20 working with developers and ops professionals to build some of the most beloved tools in the space including Boundary, Riak, and Sensu.</p>
 
       <div class="centered">
-        <figure class="team_headshot">
+        <figure class="team_headshot" data-event="cliff">
          <img src="img/cliffmoon1.jpg" alt="Cliff Moon">
          <img class="team_headshot_ro" src="img/cliffmoon2.jpg" alt="Cliff Moon">
          <figcaption>
@@ -270,7 +277,7 @@
            <div><a href="https://twitter.com/moonpolysoft" target="_blank">@moonpolysoft</a></div>
          </figcaption>
         </figure><!--
-        --><figure class="team_headshot">
+        --><figure class="team_headshot" data-event="steve">
          <img src="img/steveboak1.jpg" alt="Steve Boak">
          <img class="team_headshot_ro" src="img/steveboak2.jpg" alt="Steve Boak">
          <figcaption>
@@ -278,7 +285,7 @@
            <div><a href="https://twitter.com/sboak" target="_blank">@sboak</a></div>
          </figcaption>
         </figure><!--
-        --><figure class="team_headshot">
+        --><figure class="team_headshot" data-event="andy">
          <img src="img/andygross1.jpg" alt="Person">
          <img class="team_headshot_ro" src="img/andygross2.jpg" alt="Andy Gross">
          <figcaption>
@@ -286,7 +293,7 @@
            <div><a href="https://twitter.com/argv0" target="_blank">@argv0</a></div>
          </figcaption>
         </figure><!--
-        --><figure class="team_headshot">
+        --><figure class="team_headshot" data-event="greg">
          <img src="img/gregpoirier1.jpg" alt="Greg Poirier">
          <img class="team_headshot_ro" src="img/gregpoirier2.jpg" alt="Greg Poirier">
          <figcaption>
@@ -306,7 +313,7 @@
         <h2 class="centered">We're Hiring!</h2>
         <p>We’re always looking for talented people to join, so even if you don’t see a position listed, reach out to us. Just send an email with your résumé and a little about yourself to <a href="mailto:work@opsee.co">work@opsee.co</a>. Every thoughtful application we receive will be replied to, we promise.</p>
 
-        <section class="ac-container" id="hiring-positions">
+        <section class="ac-container" id="hiring-positions" data-event="frontend developer">
           <div>
             <input id="ac-1" name="accordion-1" type="checkbox" />
             <label for="ac-1"><svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_chevron_down" /></svg> Frontend Developer</label>
@@ -362,4 +369,9 @@
 
   <script src='js/three.min.js'></script>
   <script src="js/boids.js"></script>
+  <script>
+  $('[data-event]').on('click', function() {
+    _gs('event', $(this).data('event'));
+  });
+  </script>
 </body>
