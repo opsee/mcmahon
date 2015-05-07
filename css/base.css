@@ -181,8 +181,8 @@ th {
 }
 @font-face {
   font-family: 'InconsolataMedium';
-  src: url('/app/web-fonts/Inconsolata-webfont.eot');
-  src: local('☺'), url('../web-fonts/Inconsolata-webfont.woff') format('woff'), url('/app/web-fonts/Inconsolata-webfont.ttf') format('truetype'), url('/app/web-fonts/Inconsolata-webfont.svg#webfont6txitxZN') format('svg');
+  src: url('/app/fonts/Inconsolata-webfont.eot');
+  src: local('☺'), url('../fonts/Inconsolata-webfont.woff') format('woff'), url('../fonts/Inconsolata-webfont.ttf') format('truetype'), url('../fonts/Inconsolata-webfont.svg#webfont6txitxZN') format('svg');
   font-weight: normal;
   font-style: normal;
 }
