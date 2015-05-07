@@ -33,7 +33,7 @@
       border-bottom: 1px solid @gray_600;
       display: block;
       font-family: @mono_font_family;
-      font-size: 1rem;
+      font-size: 1.125rem;
       font-weight: 300;
       line-height: 1rem;
       outline: none;
@@ -68,6 +68,9 @@
         border-bottom-color: @blue_200;
         ~ label {color: @blue_200;}
         ~ .svg_icon { fill: @blue_200; }
+      }
+      @media @mq_medium {
+        font-size: 1rem;
       }
       &.icon {
         text-indent: 2rem;

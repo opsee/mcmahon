@@ -1203,7 +1203,7 @@ a:active {
   border-bottom: 1px solid #757575;
   display: block;
   font-family: 'InconsolataMedium', monospace;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 300;
   line-height: 1rem;
   outline: none;
@@ -1387,6 +1387,13 @@ a:active {
 .input_container > input[type='email']:active ~ .svg_icon,
 .input_container > input[type='password']:active ~ .svg_icon {
   fill: #afbfff;
+}
+@media only screen and (min-width: 48rem) {
+  .input_container > input[type='text'],
+  .input_container > input[type='email'],
+  .input_container > input[type='password'] {
+    font-size: 1rem;
+  }
 }
 .input_container > input[type='text'].icon,
 .input_container > input[type='email'].icon,
