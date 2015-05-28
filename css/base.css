@@ -403,6 +403,9 @@ body {
   transform: scale(1.5, 1.5);
   fill: #afbfff;
 }
+.ac-container article {
+  margin-bottom: 2px;
+}
 .ac-container label {
   -webkit-transition: background-color 450ms cubic-bezier(0.23, 1, 0.32, 1);
   -o-transition: background-color 450ms cubic-bezier(0.23, 1, 0.32, 1);
