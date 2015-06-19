@@ -1,0 +1,24 @@
+.hljs {
+  background-color: $body-bg;
+  font-size: 14px;
+  padding: 8px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+  &::-webkit-scrollbar-corner {
+    background: black;
+  }
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: black;
+  }
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    @include border-radius(3px);
+    background: $gray-600;
+    cursor: pointer;
+  }
+}

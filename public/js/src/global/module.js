@@ -1,0 +1,1 @@
+angular.module('opsee.global', ['opsee.global.controllers', 'opsee.global.directives', 'opsee.global.services', 'opsee.global.filters']);

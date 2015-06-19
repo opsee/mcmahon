@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6076032/688446/css/fonts.css" />
-  <link rel="stylesheet" type="text/css" href="css/base.css" />
+  <link rel="stylesheet" type="text/css" href="public/css/src/base.css" />
 
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
@@ -32,9 +32,9 @@
   <meta name="twitter:description" content="Own Your Availability. Application developers are being asked to own the availability of their code. We're here to help.">
   <meta name="twitter:image:src" content="https://s3-us-west-1.amazonaws.com/opsee-public-images/opsee_logo_blue_400px.png">
 
-  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-  <script type="text/javascript" src="js/jquery.validate.min.js"></script>
-  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="public/js/old/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="public/js/old/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="public/js/old/app.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -158,8 +158,8 @@
   <div id="boids">
     <div class="header">
       <div class="container">
-        <img class="header_logo" src="img/logo.svg" alt="Opsee logo">
-        <img class="header_logo_color" src="img/logo-color.svg" alt="Opsee logo color">
+        <img class="header_logo" src="/public/img/logo.svg" alt="Opsee logo">
+        <img class="header_logo_color" src="/public/img/logo-color.svg" alt="Opsee logo color">
         <nav class="header_nav">
           <a class="header_link" href="#product-section">Product</a>
           <a class="header_link" href="#team-section">Team</a>
@@ -231,7 +231,7 @@
     <div class="container">
       <div class="row">
         <div class="columns four">
-          <img class="img_bottom" src="img/container.svg" alt="riding the docker wave">
+          <img class="img_bottom" src="/public/img/container.svg" alt="riding the docker wave">
         </div>
         <div class="columns eight">
           <h2 class="centered">Made for Microservices</h2>
@@ -249,7 +249,7 @@
           <p>No bash scripts to blithely curl and pipe into sudo sh, and no opaque APT repos to add. Our bastion instance is delivered as a prebuilt AMI that automatically detects your AWS infrastructure and services, and coordinates health checking and incident response.</p>
         </div>
         <div class="columns five">
-          <img class="img_bottom" src="img/bastion.svg" alt="bastion host diagram">
+          <img class="img_bottom" src="/public/img/bastion.svg" alt="bastion host diagram">
         </div>
       </div>
     </div>
@@ -274,7 +274,7 @@
           <p>Better anomaly detection, prettier graphs, and more data are all nice, but how many new devops products <strong>feel like they were designed for the people who use them</strong>? It shouldn’t take a webinar to explain how our tools work.</p>
         </div>
         <div class="columns five offset-by-one">
-          <img class="img_bottom" src="img/phone.svg" alt="phone alert">
+          <img class="img_bottom" src="/public/img/phone.svg" alt="phone alert">
         </div>
       </div>
     </div>
@@ -287,8 +287,8 @@
 
       <div class="centered">
         <figure class="team_headshot" data-event="cliff">
-          <img src="img/cliffmoon1.jpg" alt="Cliff Moon">
-          <img class="team_headshot_ro" src="img/cliffmoon2.jpg" alt="Cliff Moon">
+          <img src="/public/img/cliffmoon1.jpg" alt="Cliff Moon">
+          <img class="team_headshot_ro" src="/public/img/cliffmoon2.jpg" alt="Cliff Moon">
           <figcaption>
             <div><strong>Cliff Moon</strong></div>
             <div class="team_icons">
@@ -302,8 +302,8 @@
          </figcaption>
         </figure><!--
         --><figure class="team_headshot" data-event="steve">
-         <img src="img/steveboak1.jpg" alt="Steve Boak">
-         <img class="team_headshot_ro" src="img/steveboak2.jpg" alt="Steve Boak">
+         <img src="/public/img/steveboak1.jpg" alt="Steve Boak">
+         <img class="team_headshot_ro" src="/public/img/steveboak2.jpg" alt="Steve Boak">
          <figcaption>
            <div><strong>Steve Boak</strong></div>
            <div class="team_icons">
@@ -315,25 +315,11 @@
              </a>
            </div>
          </figcaption>
-        </figure><!--
-        --><figure class="team_headshot" data-event="andy">
-         <img src="img/andygross1.jpg" alt="Person">
-         <img class="team_headshot_ro" src="img/andygross2.jpg" alt="Andy Gross">
-         <figcaption>
-           <div><strong>Andy Gross</strong></div>
-           <div class="team_icons">
-             <a href="https://twitter.com/argv0" title="@argv0 on Twitter" target="_blank">
-               <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_twitter" /></svg>
-             </a>
-             <a href="https://www.linkedin.com/in/andygross" title="Andy Gross on LinkedIn" target="_blank">
-               <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_linkedin" /></svg>
-             </a>
-           </div>
-         </figcaption>
+        </figure>
         </figure><!--
         --><figure class="team_headshot" data-event="greg">
-         <img src="img/gregpoirier1.jpg" alt="Greg Poirier">
-         <img class="team_headshot_ro" src="img/gregpoirier2.jpg" alt="Greg Poirier">
+         <img src="/public/img/gregpoirier1.jpg" alt="Greg Poirier">
+         <img class="team_headshot_ro" src="/public/img/gregpoirier2.jpg" alt="Greg Poirier">
          <figcaption>
            <div><strong>Greg Poirier</strong></div>
            <div class="team_icons">
@@ -347,8 +333,8 @@
          </figcaption>
         </figure><!--
         --><figure class="team_headshot" data-event="corey">
-         <img src="img/coreylight1.jpg" alt="Corey Light">
-         <img class="team_headshot_ro" src="img/coreylight2.jpg" alt="Corey Light">
+         <img src="/public/img/coreylight1.jpg" alt="Corey Light">
+         <img class="team_headshot_ro" src="/public/img/coreylight2.jpg" alt="Corey Light">
          <figcaption>
            <div><strong>Corey Light</strong></div>
            <div class="team_icons">
@@ -362,7 +348,7 @@
          </figcaption>
         </figure><!--
         --><figure class="team_headshot">
-         <a href="https://twitter.com/opseeco" target="_blank"><img src="img/opseeco.png" alt="Person"></a>
+         <a href="https://twitter.com/opseeco" target="_blank"><img src="/public/img/opseeco.png" alt="Person"></a>
          <figcaption>
            <div><a href="https://twitter.com/opseeco" target="_blank">@opseeco</a></div>
            <div class="team_icons">
