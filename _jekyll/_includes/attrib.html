@@ -1,0 +1,13 @@
+{% unless post %}
+{% assign post = page %}
+{% endunless %}
+{% assign author = site.data.authors[post.author] %}
+<!-- Output author details if some exist. -->
+{% if author %}
+<div>
+  <span>
+      <!-- Personal Info. -->
+      Written by {% if link %}<a href="{{ author.web }}" target="_blank">{% endif %}{{ author.name }}{% if link %}</a>{% endif %}, <time datetime="{{post.date|date:"%F"}}" am-time-ago="'{{post.date|date:"%F"}}'"></time>
+  </span>
+</div>
+{% endif %}

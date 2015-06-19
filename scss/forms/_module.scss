@@ -1,16 +1,8 @@
-@import './toggle-switch';
-
 .form-group {
   border: none;
   margin-bottom: 32px;
   position: relative;
   background-color: $gray-900;
-  // &.has-error {
-  //   label {
-  //     color: $brand-danger;
-  //   }
-  // }
-  // @extend .md-shadow-bottom-z-1;
   &.search-group {
     margin-top: 4em;
   }

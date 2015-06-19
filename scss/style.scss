@@ -1,13 +1,12 @@
-@import "breakpoint";
 @import "includes/module";
 @import "global/module";
-@import "checks/module";
 @import "forms/module";
 
 body {
-  @include display-flex();
-  @include flex-direction(column);
-  background-color: $body-bg;
+  // @include display-flex();
+  // @include flex-direction(column);
+  background:$gray-100;
+  color:$gray-800;
   ::selection {
     background: #90CAF9; //blue-200
   }
@@ -16,21 +15,6 @@ body {
   }
 }
 
-.logo-header {
-  display: block;
-  margin: 0 auto;
-  width: 33%;
-}
-@include breakpoint($screen-sm) {
-  .logo-header {
-    width: 25%;
-  }
-}
-
 hr {
   border-color: $gray-800;
-}
-
-.dropdown-menu > li > * {
-  font-weight: $body-font-weight;
 }

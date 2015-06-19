@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
   var load = require('load-grunt-tasks')(grunt)
-  , rewrite = require( "connect-modrewrite" )
+  // , rewrite = require( "connect-modrewrite" )
   ;
 
   // Project configuration.
@@ -9,13 +9,25 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     shell:{
       jekyll:{
-        command:'jekyll build --source _site --destination blog --config _config.yml'
+        command:'jekyll build --source _jekyll --destination blog --config _config.yml'
       },
       npm:{
         command:'npm install'
       },
       bower:{
-        command:'bower install'
+        command:'bower cache clean && bower install'
+      },
+      seedling:{
+        command:'bower update seedling'
+      },
+    },
+    jekyll:{
+      server:{
+        options:{
+          src: '_jekyll',
+          config: '_config.yml',
+          dest:'blog'
+        }
       }
     },
     connect: {
@@ -23,15 +35,14 @@ module.exports = function(grunt) {
         options: {
           port: 4000,
           hostname:'localhost',
-          base: '',
           open:true,
-          middleware: function(connect, options, middlewares) {
-            var rules = [
-                "!\\.html|\\.js|\\.css|\\.svg|\\.jp(e?)g|\\.png|\\.woff|\\.tiff|\\.gif$ /index.html"
-            ];
-            middlewares.unshift( rewrite( rules ) );
-            return middlewares;
-          }
+          // middleware: function(connect, options, middlewares) {
+          //   var rules = [
+          //       "!\\.html|\\.js|\\.css|\\.svg|\\.jp(e?)g|\\.png|\\.woff|\\.tiff|\\.gif$ /index.html"
+          //   ];
+          //   middlewares.unshift( rewrite( rules ) );
+          //   return middlewares;
+          // }
         }
       }
     },
@@ -60,10 +71,11 @@ module.exports = function(grunt) {
             'angulartics/dist/angulartics.min',
             'angulartics/dist/angulartics-ga.min',
             'angular-animate/angular-animate.min',
-            'angular-ui-router/release/angular-ui-router',
             'angular-aria/angular-aria.min',
             'angular-touch/angular-touch.min',
-            'fastclick/lib/fastclick'
+            'fastclick/lib/fastclick',
+            'moment/moment',
+            'angular-moment/angular-moment.min'
           ].map(function(f){
             return 'public/lib/'+f+'.js';
           })
@@ -124,12 +136,15 @@ module.exports = function(grunt) {
         files:['Gruntfile.js'],
         tasks:['uglify:deps']
       },
-      j:{
+      jekyll:{
+        files:['_jekyll/**/*'],
+        tasks:['jekyll']
+      },
+      blog:{
         options:{
           livereload:true
         },
-        files:['_site/**/*.**'],
-        tasks:['shell:jekyll','copy']
+        files:['blog/**/*'],
       },
       srcScripts:{
         options:{
@@ -170,18 +185,17 @@ module.exports = function(grunt) {
       }
     },
     concurrent:{
-      setup:['shell:npm','shell:bower'],
-      build:['uglify:deps','buildJekyll','compass:dist']
+      setup:['shell:npm','shell:bower','shell:seedling'],
+      build:['uglify:deps','jekyll']
     },
   });
 
 
-  grunt.registerTask('buildJekyll', ['shell:jekyll','copy']);
   grunt.registerTask('init', ['concurrent:setup','concurrent:build']);
   grunt.registerTask('serve', ['connect', 'watch']);
   grunt.registerTask('annotate', ['ngAnnotate','uglify:annotated','clean:annotated']);
   grunt.registerTask('prod', ['concurrent:setup','concurrent:build','annotate']);
   grunt.registerTask('docker', ['install', 'compass', 'build', 'shell:docker']);
-  grunt.registerTask('default', ['init','serve']);
+  grunt.registerTask('default', ['init','compass','connect','watch']);
 
 };
