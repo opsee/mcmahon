@@ -1,21 +1,16 @@
-@import "./mixins";
-@import "./fonts";
-@import "./ngActivityIndicator";
-@import "./opsee-variables";
-@import "./bootstrap";
-//compass should come after bootstrap for this reason:
-//https://github.com/Compass/compass/issues/289#issuecomment-81999241
+@import "breakpoint";
 @import "compass";
 @import "compass/css3/deprecated-support";
-@import "./typography";
-@import "./layout";
-@import "./helpers";
-@import "./md-alert";
-@import "./md-button";
-@import "./md-table";
-@import "./md-tabs";
-@import "./md-toolbar";
-@import "./modal";
-@import "./tutorial";
-@import "./hljs";
-@import "./progress-bar"
+@import '../public/lib/seedling/scss/module.scss';
+
+@import "includes/bootstrap";
+@import "includes/mixins";
+@import "includes/fonts";
+@import "includes/typography";
+@import "includes/layout";
+@import "includes/helpers";
+@import "includes/md-button";
+@import "includes/md-table";
+@import "includes/md-tabs";
+@import "includes/md-toolbar";
+@import "includes/modal";
