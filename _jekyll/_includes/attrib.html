@@ -7,7 +7,8 @@
 <div>
   <span>
       <!-- Personal Info. -->
-      Written by {% if link %}<a href="{{ author.web }}" target="_blank">{% endif %}{{ author.name }}{% if link %}</a>{% endif %}, <time datetime="{{post.date|date:"%F"}}" am-time-ago="'{{post.date|date:"%F"}}'"></time>
+      <img src="/public/img/{{post.author}}1.jpg" class="img-author"/>
+      {% if link %}<a href="{{ author.web }}" target="_blank">{% endif %}{{ author.name }}{% if link %}</a>{% endif %}, <time datetime="{{post.date|date:"%F"}}" am-time-ago="'{{post.date|date:"%F"}}'"></time>
   </span>
 </div>
 {% endif %}
