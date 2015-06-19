@@ -1,0 +1,102 @@
+body {
+  min-height:100vh;
+}
+.content-pad {
+  padding-top: 32px;
+}
+
+.display-flex{
+  @include display-flex;
+}
+.display-flex-sm{
+  @include breakpoint($screen-sm){
+    @include display-flex;
+  }
+}
+.vertical-align{
+  @include display-flex;
+  @include align-items(center);
+}
+.vertical-align-sm{
+  @include breakpoint($screen-sm){
+    @include display-flex;
+    @include align-items(center);
+  }
+}
+.flex-1{
+  @include flex(1);
+}
+.flex-column{
+  @include flex-direction(column);
+}
+.flex-wrap{
+  @include flex-wrap(wrap);
+}
+.justify-content-between{
+  @include justify-content(space-between);
+}
+.justify-content-around{
+  @include justify-content(space-around);
+}
+.justify-content-end{
+  @include justify-content(flex-end);
+}
+.flex-75{
+  @include flex(1 75%);
+}
+.flex-25{
+ @include flex(1 25%);
+}
+.flex-order-0{
+  @include order(0);
+}
+.flex-order-1{
+  @include order(1);
+}
+.flex-order-2{
+  @include order(2);
+}
+.flex-order-3{
+  @include order(3);
+}
+
+.transition-msg{
+  @include transition(all $swift-ease-out-duration $swift-ease-out-timing-function);
+  // @include transition(all 5s $swift-ease-out-timing-function);
+  &.ng-enter {
+    @include transform(translateY(15px));
+  }
+  &.ng-enter,&.ng-leave-active {
+    opacity:0;
+  }
+  &.ng-enter-active,&.ng-leave {
+    opacity:1;
+    @include transform(none);
+  }
+  &.ng-leave-active {
+    @include transform(translateY(-15px));
+    opacity:0;
+  }
+}
+
+.margin-none{
+  margin:0 !important;
+}
+
+.padding{
+  padding:1em;
+}
+.padding-lr {
+  padding-left:1em;
+  padding-right:1em;
+}
+.padding-tb{
+  padding-top:1em;
+  padding-bottom:1em;
+}
+.padding-b {
+  padding-bottom: 1em;
+}
+.padding-bx2 {
+  padding-bottom: 2em;
+}

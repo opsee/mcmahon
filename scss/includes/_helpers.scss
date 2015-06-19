@@ -1,0 +1,70 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+.ng-hide{
+  display: none;
+}
+
+.bg-gray-300{
+  background-color: $gray-300;
+}
+.bg-gray-500{
+  background-color: $gray-500;
+}
+.bg-gray-900{
+  background-color: $gray-900;
+}
+.bg-brand-primary{
+  background-color: $brand-primary;
+}
+.bg-brand-success{
+  background-color: $brand-success;
+}
+.bg-brand-info{
+  background-color: $brand-info;
+}
+.bg-brand-warning{
+  background-color: $brand-warning;
+}
+.bg-brand-danger{
+  background-color: $brand-danger;
+}
+.bg-body{
+  background-color: $body-bg;
+}
+
+.fill-white{
+  fill:white;
+}
+
+.user-select-none{
+  @include user-select(none);
+}
+
+// .css-two-col{
+//   @include breakpoint(600px){
+//     @include column-count(2);
+//     > *{
+//       display: inline-block;
+//       width:100%;
+//     }
+//   }
+// }
+
+// .padding{
+//   padding:1rem;
+// }
+// .padding-sm{
+//   padding:.3rem;
+// }
+// .padding-tb{
+//   padding-top:1rem;
+//   padding-bottom:1rem;
+// }
+// .padding-tb-md{
+//   padding-top:2rem;
+//   padding-bottom:2rem;
+// }
+// .padding-none{
+//   padding:0;
+// }
