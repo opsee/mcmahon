@@ -1,9 +1,12 @@
-# lasape
-front-end
+# mcmahon
+Opsee main site & blog
 
 ## Building
 
 ### Pre-requisites
+
+Make sure your ssh key is associted with github.
+https://help.github.com/articles/generating-ssh-keys/#step-4-add-your-ssh-key-to-your-account
 
 1. Node.js 
   * brew install node
