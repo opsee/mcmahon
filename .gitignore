@@ -18,6 +18,8 @@ public/css/src/style.css
 *.min.js
 blog/
 
+packageCache.json
+
 public/lib/
 rawdata/
 .sass-cache/

@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 
   var load = require('load-grunt-tasks')(grunt)
+  var fs = require('fs');
   // , rewrite = require( "connect-modrewrite" )
   ;
 
@@ -150,7 +151,7 @@ module.exports = function(grunt) {
         options:{
            livereload:true
          },
-        files:['js/public/**/*.js'],
+        files:['js/public/js/**/*.js'],
       },
       sass:{
         files:['scss/**/*.scss'],
@@ -161,12 +162,6 @@ module.exports = function(grunt) {
           livereload:true
         },
         files:['public/css/**/*.css']
-      },
-      pages:{
-        options:{
-          livereload:true
-        },
-        files:['public/**/*.html']
       }
     },
     compass:{
@@ -185,13 +180,38 @@ module.exports = function(grunt) {
       }
     },
     concurrent:{
-      setup:['shell:npm','shell:bower','shell:seedling'],
-      build:['uglify:deps','jekyll']
+      npmBower:['shell:npm','shell:bower'],
     },
+    revision:{
+      options:{
+        property: 'meta.revision',
+        ref: 'HEAD',
+        short:false
+      }
+    }
   });
 
 
-  grunt.registerTask('init', ['concurrent:setup','concurrent:build']);
+  grunt.registerTask('packageCache', 'Generate packageCache file to avoid unnecessary npm install and bower install', function(){
+    var done = this.async();
+    var bower = grunt.file.readJSON('bower.json');
+    var npm = grunt.file.readJSON('package.json');
+    var combined = JSON.stringify({npm:npm,bower:bower});
+    try{
+      var cache = grunt.file.read('packageCache.json');
+    }catch(err){
+      grunt.file.write('packageCache.json',JSON.stringify(combined));
+      grunt.task.run(['concurrent:npmBower','uglify:deps']);
+      done();
+    }
+    if(cache){
+      grunt.log.ok('package.json and bower.json up to date.');
+      done();
+      return true;
+    }
+  });
+
+  grunt.registerTask('init', ['packageCache','shell:seedling','jekyll']);
   grunt.registerTask('serve', ['connect', 'watch']);
   grunt.registerTask('annotate', ['ngAnnotate','uglify:annotated','clean:annotated']);
   grunt.registerTask('prod', ['concurrent:setup','concurrent:build','annotate']);
