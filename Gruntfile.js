@@ -197,12 +197,18 @@ module.exports = function(grunt) {
     var bower = grunt.file.readJSON('bower.json');
     var npm = grunt.file.readJSON('package.json');
     var combined = JSON.stringify({npm:npm,bower:bower});
+    function runThem(){
+      grunt.file.write('packageCache.json',combined);
+      grunt.task.run(['concurrent:npmBower','uglify:deps']);
+      return done();
+    }
     try{
       var cache = grunt.file.read('packageCache.json');
+      if(combined != cache){
+        return runThem();
+      }
     }catch(err){
-      grunt.file.write('packageCache.json',JSON.stringify(combined));
-      grunt.task.run(['concurrent:npmBower','uglify:deps']);
-      done();
+      runThem();
     }
     if(cache){
       grunt.log.ok('package.json and bower.json up to date.');

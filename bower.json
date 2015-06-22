@@ -17,7 +17,8 @@
     "angular-aria": "~1.4.1",
     "angular-animate": "~1.4.1",
     "seedling": "git@github.com:opsee/seedling.git",
-    "angular-moment": "~0.10.1"
+    "angular-moment": "~0.10.1",
+    "jquery-validate": "~1.13.1"
   },
   "resolutions": {
     "angular": "1.4.1",
