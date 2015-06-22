@@ -10,7 +10,7 @@ https://help.github.com/articles/generating-ssh-keys/#step-4-add-your-ssh-key-to
 
 1. Node.js 
   * brew install node
-  * npm install -g grunt grunt-cli bower
+  * npm install -g grunt-cli bower
 2. Dependencies
   * npm install
   * sudo gem install bundler
@@ -25,7 +25,7 @@ https://help.github.com/articles/generating-ssh-keys/#step-4-add-your-ssh-key-to
 
 1. bundle exec grunt
 
-This will start a server on localhost:8000 and open it in a browser window.
+This will start a server on localhost:4000 and open it in a browser window.
 Grunt will watch for file changes and update on the fly.
 
 ## Docker
