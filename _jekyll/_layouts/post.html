@@ -1,14 +1,26 @@
-{% include top.html %}
+`{% include top.html %}
+<div class="post-header" style="background-image: url({{ page.cover }});">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>{{ page.category }}</h3>
+        <h1>{{ page.title }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
-      <h1>{{ page.title }}</h1>
-      {% assign link = true %}
-      {%include attrib.html%}
-      <div>
-        <br/>
+    <div class="col-xs-12 col-sm-2">
+      <div class="attrib-container">
+        {% assign link = true %}
+        {%include attrib.html%}
       </div>
-      {{ content }}
+    </div>
+    <div class="col-xs-12 col-sm-10">
+      <div class="post-body">
+        {{ content }}
+      </div>
     </div>
   </div>
 </div>
