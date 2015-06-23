@@ -1,12 +1,13 @@
 @import "includes/module";
 @import "global/module";
 @import "forms/module";
+@import "blog/module";
 
 body {
   // @include display-flex();
   // @include flex-direction(column);
-  background:$gray-100;
-  color:$gray-800;
+  background:$gray-200;
+  color: $text-color-lightbg;
   ::selection {
     background: #90CAF9; //blue-200
   }
@@ -17,9 +18,4 @@ body {
 
 hr {
   border-color: $gray-800;
-}
-
-.img-author{
-  border-radius:100%;
-  width:55px;
 }

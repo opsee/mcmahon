@@ -4,11 +4,21 @@
 {% assign author = site.data.authors[post.author] %}
 <!-- Output author details if some exist. -->
 {% if author %}
-<div>
+<div class="post-attrib">
   <span>
       <!-- Personal Info. -->
-      <img src="/public/img/{{post.author}}1.jpg" class="img-author"/>
-      {% if link %}<a href="{{ author.web }}" target="_blank">{% endif %}{{ author.name }}{% if link %}</a>{% endif %}, <time datetime="{{post.date|date:"%F"}}" am-time-ago="'{{post.date|date:"%F"}}'"></time>
+      {% if link %}
+        <img src="/public/img/{{post.author}}1.jpg" class="attrib-author"/>
+        <a href="{{ author.web }}" target="_blank">{% endif %}{{ author.name }}{% if link %}</a>
+      {% endif %}
+      <time class="attrib-time" datetime="{{post.date|date:"%F"}}" am-time-ago="'{{post.date|date:"%F"}}'"></time>
+      <ul class="list-unstyled attrib-tags">
+        {% for tag in post.tags %}
+        <li>
+          <a class="tag_list_link" href="/tag/{{ tag }}">#{{ tag }}</a>
+        </li>
+        {% endfor %}
+      </ul>
   </span>
 </div>
 {% endif %}
