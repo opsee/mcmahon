@@ -1,0 +1,37 @@
+.post-header {
+  background-color: black;
+  background-size: cover;
+  background-position: 50% 50%;
+  color: $text-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  @include breakpoint($screen-sm) {
+    height: 480px;
+  }
+}
+.post-attrib-container {
+  padding-top: 2em;
+  @include breakpoint($screen-sm) {
+    padding-top: 4em;
+  }
+}
+.post-body {
+  padding-top: 2em;
+  @include breakpoint($screen-sm) {
+    padding-top: 4em;
+  }
+  pre {
+    background-color: white;
+    text-indent: 0.5em;
+  }
+  code {
+    background-color: white;
+    padding: 1px 2px;
+    margin: 0 2px;
+  }
+}

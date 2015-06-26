@@ -1,0 +1,15 @@
+.list-attrib-container {
+  margin-top: 1em;
+}
+.list-header {
+  align-items: center;
+  background-color: black;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+  text-align: center;
+  @include breakpoint($screen-sm) {
+    height: 240px;
+  }
+}
