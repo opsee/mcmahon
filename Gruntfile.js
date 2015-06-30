@@ -35,7 +35,7 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: 4000,
-          hostname:'localhost',
+          hostname:grunt.option('remote') ? '0.0.0.0' : 'localhost',
           open:true,
           // middleware: function(connect, options, middlewares) {
           //   var rules = [
