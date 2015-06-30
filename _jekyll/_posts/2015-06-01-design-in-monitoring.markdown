@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Test Post
+title: Monitorama 2015 - Design in Monitoring
 category: UX
-author: corey_light
-excerpt: A wonderful test post
-cover: /public/img/blog/opsee-wallpaper.png
+author: Steve Boak
+excerpt: A designer's view of the monitoring world, and what can be done to improve it
+cover: /public/img/blog/monitorama.jpg
+cover-list: /public/img/blog/monitorama-list.jpg
 
 ---
 

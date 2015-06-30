@@ -35,7 +35,6 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: 4000,
-          hostname:'localhost',
           open:true,
           // middleware: function(connect, options, middlewares) {
           //   var rules = [
@@ -119,7 +118,7 @@ module.exports = function(grunt) {
         }
         ]
       },
-      //we have two annotate tasks because the app.js needs 
+      //we have two annotate tasks because the app.js needs
       //to load in before all the other modules
       app:{
         files:[
