@@ -1,13 +1,6 @@
 {% include top.html %}
-<div class="post-header" style="background-image: url({{ page.cover }});">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <h3>{{ page.category }}</h3>
-        <h1>{{ page.title }}</h1>
-      </div>
-    </div>
-  </div>
+<div class="post-header">
+  <img class="header-image" src="{{ page.cover }}" alt="{{page.cover-alt}}">
 </div>
 <div class="container">
   <div class="row">
@@ -19,6 +12,7 @@
     </div>
     <div class="col-xs-12 col-sm-10">
       <div class="post-body">
+        <h1>{{ page.title }}</h1>
         {{ content }}
       </div>
     </div>

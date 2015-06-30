@@ -1,10 +1,11 @@
 ---
 layout: post
 title: Hello World
-category: DevOps
-author: greg_poirier
+category: general
+author: cliff_moon
 excerpt: Hello Worldes. Vestibulum imperdiet adipiscing arcu, quis aliquam dolor condimentum dapibus. Aliquam fermentum leo aliquet quam volutpat et molestie mauris mattis. Suspendisse semper consequat velit in suscipit.
 cover: /public/img/blog/opsee-wallpaper.png
+cover-alt: Opsee Logo
 
 ---
 
