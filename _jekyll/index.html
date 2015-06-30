@@ -7,7 +7,7 @@ title: Home
 {% for post in paginator.posts %}
   <article>
     <a href="{{site.baseurl}}{{post.url}}">
-      <header class="list-header" style="background-image: url({{ post.cover }});"></header>
+      <header class="list-header" style="background-image: url({{ post.cover-list }});"></header>
     </a>
     <h2>{{ post.title }}</h2>
     <div class="entry">{{ post.excerpt }}</div>

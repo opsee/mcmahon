@@ -10,6 +10,13 @@
   overflow: hidden;
   position: relative;
   text-align: center;
+  h1 {
+    @include border-radius(3px);
+    background-color: rgba($gray-900, 0.85);
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0.25em 0.5em;
+  }
   @include breakpoint($screen-sm) {
     height: 480px;
   }
