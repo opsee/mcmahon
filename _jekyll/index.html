@@ -8,6 +8,7 @@ title: Home
 
 {% for post in paginator.posts %}
   <article class="padding-tb" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  {% assign author = site.data.authors[post.author] %}
     <div class="row">
       <div class="col-xs-12">
         <h2>
@@ -24,10 +25,7 @@ title: Home
         </a>
       </div>
       <div class="col-xs-12">
-        <div class="row padding-tb">
-          <div class="col-xs-12 col-sm-3 padding-b">{% include attrib.html %}</div>
-          <div class="col-xs-12 col-sm-9" itemprop="description">{{ post.excerpt }}</div>
-        </div>
+        {{ post.excerpt }} <span class="list-author">– by {{ author.name }}</span>
       </div>
     </div>
   </article>
