@@ -1,0 +1,55 @@
+.post-header {
+  // background-color: black;
+  // background-size: cover;
+  // background-position: 50% 50%;
+  align-items: center;
+  color: $text-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  // h1 {
+  //   @include border-radius(3px);
+  //   background-color: rgba($gray-900, 0.85);
+  //   left: 50%;
+  //   margin: 0 0 0 -25%;
+  //   padding: 0.25em 0.5em;
+  //   top: 50%;
+  //   position: absolute;
+  // }
+  .header-image {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  @include breakpoint($screen-sm) {
+    height: 480px;
+  }
+}
+.post-attrib-container {
+  padding-top: 2em;
+  @include breakpoint($screen-sm) {
+    padding-top: 4em;
+  }
+}
+.post-body {
+  padding: 2em 0;
+  @include breakpoint($screen-sm) {
+    padding: 4em 0;
+  }
+  h1 {
+    margin: 0 0 1em 0;
+  }
+  pre {
+    background-color: white;
+    text-indent: 0.5em;
+  }
+  code {
+    background-color: white;
+    padding: 1px 2px;
+    margin: 0 2px;
+  }
+}

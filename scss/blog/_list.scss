@@ -1,0 +1,28 @@
+.list-attrib-container {
+  margin-top: 1em;
+}
+.list-header {
+  align-items: center;
+  // background-color: black;
+  // background-position: 50% 50%;
+  // background-size: cover;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  &:hover, &:active {
+    .header-image {
+      @include transform(scale(1.25));
+    }
+  }
+  @include breakpoint($screen-sm) {
+    height: 240px;
+  }
+  .header-image {
+    @include transition(transform 1s $swift-ease-out-timing-function);
+    width: 100%;
+  }
+}

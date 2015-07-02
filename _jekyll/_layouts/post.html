@@ -1,14 +1,20 @@
 {% include top.html %}
+<div class="post-header">
+  <img class="header-image" src="{{ page.cover }}" alt="{{page.cover-alt}}">
+</div>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
-      <h1>{{ page.title }}</h1>
-      {% assign link = true %}
-      {%include attrib.html%}
-      <div>
-        <br/>
+    <div class="col-xs-12 col-sm-2">
+      <div class="post-attrib-container">
+        {% assign link = true %}
+        {%include attrib.html%}
       </div>
-      {{ content }}
+    </div>
+    <div class="col-xs-12 col-sm-10">
+      <div class="post-body">
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+      </div>
     </div>
   </div>
 </div>

@@ -2,7 +2,6 @@ module.exports = function(grunt) {
 
   var load = require('load-grunt-tasks')(grunt)
   var fs = require('fs');
-  // , rewrite = require( "connect-modrewrite" )
   ;
 
   // Project configuration.
@@ -34,17 +33,13 @@ module.exports = function(grunt) {
     connect: {
       server: {
         options: {
-          port: 4000,
-          hostname:'localhost',
-          open:true,
-          // middleware: function(connect, options, middlewares) {
-          //   var rules = [
-          //       "!\\.html|\\.js|\\.css|\\.svg|\\.jp(e?)g|\\.png|\\.woff|\\.tiff|\\.gif$ /index.html"
-          //   ];
-          //   middlewares.unshift( rewrite( rules ) );
-          //   return middlewares;
-          // }
+          port: 4000
         }
+      }
+    },
+    open:{
+      dev:{
+        path:'http://localhost:4000'
       }
     },
     copy:{
@@ -119,7 +114,7 @@ module.exports = function(grunt) {
         }
         ]
       },
-      //we have two annotate tasks because the app.js needs 
+      //we have two annotate tasks because the app.js needs
       //to load in before all the other modules
       app:{
         files:[
@@ -218,10 +213,10 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('init', ['packageCache','shell:seedling','jekyll']);
-  grunt.registerTask('serve', ['connect', 'watch']);
+  grunt.registerTask('serve', ['connect', 'open', 'watch']);
   grunt.registerTask('annotate', ['ngAnnotate','uglify:annotated','clean:annotated']);
   grunt.registerTask('prod', ['concurrent:setup','concurrent:build','annotate']);
   grunt.registerTask('docker', ['install', 'compass', 'build', 'shell:docker']);
-  grunt.registerTask('default', ['init','compass','connect','watch']);
+  grunt.registerTask('default', ['init','compass','serve']);
 
 };

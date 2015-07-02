@@ -5,17 +5,21 @@ title: Home
 
 <!-- Show last 5 posts here -->
 {% for post in paginator.posts %}
-  <article class="padding-tb">
-    <header>
-      <h2><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h2>
-      {% include attrib.html %}
-      Categorized: <span class="category"><i class="icon-tag"></i> {{ post.categories | category_links }}</span><br/>
-    </header>
-    <div><br/></div>
+  <article>
+    <a href="{{site.baseurl}}{{post.url}}">
+      <header class="list-header">
+        <img class="header-image" src="{{ post.cover }}" alt="{{post.cover-alt}}">
+      </header>
+    </a>
+    <h2><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h2>
     <div class="entry">{{ post.excerpt }}</div>
-  </article>
-{% endfor %}
 
+    <div class="list-attrib-container">
+      {% include attrib.html %}
+    </div>
+  </article>
+
+{% endfor %}
 
 <div id="paginator">
     {% if paginator.next_page %}
