@@ -9,7 +9,7 @@
   <a href="{{ author.web }}" target="_blank" class="no-underline">
   {% endif %}
     <div class="display-flex flex-vertical-align">
-      <img src="/public/img/{{post.author}}1.jpg" class="attrib-author"/>
+      {% if link %}<img src="/public/img/{{post.author}}1.jpg" class="attrib-author"/>{% endif %}
       <div class="padding-l">
         <div>{{ author.name }}</div>
         <time class="attrib-time" datetime="{{post.date|date:"%F"}}" am-time-ago="'{{post.date|date:"%F"}}'"></time>

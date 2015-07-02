@@ -5,6 +5,7 @@ title: Home
 
 <!-- Show last 5 posts here -->
 {% for post in paginator.posts %}
+  {% assign author = site.data.authors[post.author] %}
   <article class="padding-tb">
     <div class="row">
       <div class="col-xs-12">
@@ -18,10 +19,7 @@ title: Home
         </a>
       </div>
       <div class="col-xs-12">
-        <div class="row padding-tb">
-          <div class="col-xs-12 col-sm-3 padding-b">{% include attrib.html %}</div>
-          <div class="col-xs-12 col-sm-9">{{ post.excerpt }}</div>
-        </div>
+        {{ post.excerpt }} <span class="list-author">– by {{ author.name }}</span>
       </div>
     </div>
   </article>
