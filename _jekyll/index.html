@@ -5,17 +5,24 @@ title: Home
 
 <!-- Show last 5 posts here -->
 {% for post in paginator.posts %}
-  <article>
-    <a href="{{site.baseurl}}{{post.url}}">
-      <header class="list-header">
-        <img class="header-image" src="{{ post.cover }}" alt="{{post.cover-alt}}">
-      </header>
-    </a>
-    <h2><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h2>
-    <div class="entry">{{ post.excerpt }}</div>
-
-    <div class="list-attrib-container">
-      {% include attrib.html %}
+  <article class="padding-tb">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h2>
+      </div>
+      <div class="col-xs-12">
+        <a href="{{site.baseurl}}{{post.url}}">
+          <header class="list-header bg-img-fill" style="background-image:url({{ post.cover }})">
+            <img class="sr-only header-image" src="{{ post.cover }}" alt="{{post.cover-alt}}">
+          </header>
+        </a>
+      </div>
+      <div class="col-xs-12">
+        <div class="row padding-tb">
+          <div class="col-xs-12 col-sm-3 padding-b">{% include attrib.html %}</div>
+          <div class="col-xs-12 col-sm-9">{{ post.excerpt }}</div>
+        </div>
+      </div>
     </div>
   </article>
 

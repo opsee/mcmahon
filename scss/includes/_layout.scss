@@ -13,11 +13,11 @@ body {
     @include display-flex;
   }
 }
-.vertical-align{
+.flex-vertical-align{
   @include display-flex;
   @include align-items(center);
 }
-.vertical-align-sm{
+.flex-vertical-align-sm{
   @include breakpoint($screen-sm){
     @include display-flex;
     @include align-items(center);
@@ -90,13 +90,27 @@ body {
   padding-left:1em;
   padding-right:1em;
 }
+.padding-l{
+  padding-left:1em;
+}
 .padding-tb{
   padding-top:1em;
   padding-bottom:1em;
+}
+.padding-tb-md{
+  padding-top:2em;
+  padding-bottom:2em;
 }
 .padding-b {
   padding-bottom: 1em;
 }
 .padding-bx2 {
   padding-bottom: 2em;
+}
+
+.pull-left-xs{
+  float:left;
+  @include breakpoint($screen-sm){
+    float: none;
+  }
 }

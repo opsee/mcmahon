@@ -1,18 +1,22 @@
 {% include top.html %}
-<div class="post-header">
-  <img class="header-image" src="{{ page.cover }}" alt="{{page.cover-alt}}">
+<div class="post-header bg-img-fill" style="background-image:url({{ page.cover }});">
+  <img class="sr-only" src="{{ page.cover }}" alt="{{page.cover-alt}}">
 </div>
-<div class="container">
+<div class="container padding-tb-md">
   <div class="row">
-    <div class="col-xs-12 col-sm-2">
-      <div class="post-attrib-container">
-        {% assign link = true %}
-        {%include attrib.html%}
-      </div>
+    <div class="post-attrib-container col-sm-2 hidden-xs">
+      {% assign link = true %}
+      {%include attrib-vertical.html%}
     </div>
     <div class="col-xs-12 col-sm-10">
-      <div class="post-body">
-        <h1>{{ page.title }}</h1>
+      <h1>{{ page.title }}</h1>
+    </div>
+    <div class="col-xs-12 visible-xs">
+      {% assign link = true %}
+      {%include attrib.html%}
+    </div>
+    <div class="col-xs-12 col-sm-10">
+      <div class="post-body padding-tb">
         {{ content }}
       </div>
     </div>

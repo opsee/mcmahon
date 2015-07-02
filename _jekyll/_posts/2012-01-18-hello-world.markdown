@@ -3,7 +3,7 @@ layout: post
 title: Hello World
 category: general
 author: cliff_moon
-excerpt: We're proud to introduce Opsee to the world. Here's what we're trying to
+excerpt:  quis aliquam dolor condimentum dapibus. Aliquam fermentum leo aliquet quam volutpat et molestie mauris mattis. Suspendisse semper consequat velit in suscipit. Praesent blandit, mi id facilisis adipiscing, tortor tellus mollis quam, sed dignissim sapien diam ac lectus. Nunc eget ornare quam.
 cover: /public/img/blog/opsee-wallpaper.png
 cover-alt: Opsee Logo
 
