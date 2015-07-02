@@ -6,8 +6,15 @@
 {% if author %}
 <div class="post-attrib">
   {% if link %}
-  <a href="{{ author.web }}" target="_blank" class="no-underline">
+  <a href="http://twitter.com/{{ author.twitter }}" target="_blank" class="no-underline">
   {% endif %}
+  {% if attribVertical %}
+    <div>
+      <img src="/public/img/{{post.author}}1.jpg" class="attrib-author"/>
+      <div>{{ author.name }}</div>
+      <time class="attrib-time" datetime="{{post.date|date:"%F"}}" am-time-ago="'{{post.date|date:"%F"}}'"></time>
+    </div>
+  {% else %}
     <div class="display-flex flex-vertical-align">
       <img src="/public/img/{{post.author}}1.jpg" class="attrib-author"/>
       <div class="padding-l">
@@ -15,6 +22,7 @@
         <time class="attrib-time" datetime="{{post.date|date:"%F"}}" am-time-ago="'{{post.date|date:"%F"}}'"></time>
       </div>
     </div>
+  {% endif %}
   {% if link %}
   </a>
   {% endif %}

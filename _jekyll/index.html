@@ -4,14 +4,20 @@ title: Home
 ---
 
 <!-- Show last 5 posts here -->
+<div itemscope itemtype="https://schema.org/Blog">
+
 {% for post in paginator.posts %}
-  <article class="padding-tb">
+  <article class="padding-tb" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
     <div class="row">
       <div class="col-xs-12">
-        <h2><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h2>
+        <h2>
+          <a href="{{site.baseurl}}{{post.url}}" itemprop="url">
+          <span itemprop="name">{{ post.title }}</span>
+        </a>
+      </h2>
       </div>
       <div class="col-xs-12">
-        <a href="{{site.baseurl}}{{post.url}}">
+        <a href="{{site.baseurl}}{{post.url}}" itemprop="url">
           <header class="list-header bg-img-fill" style="background-image:url({{ post.cover }})">
             <img class="sr-only header-image" src="{{ post.cover }}" alt="{{post.cover-alt}}">
           </header>
@@ -20,7 +26,7 @@ title: Home
       <div class="col-xs-12">
         <div class="row padding-tb">
           <div class="col-xs-12 col-sm-3 padding-b">{% include attrib.html %}</div>
-          <div class="col-xs-12 col-sm-9">{{ post.excerpt }}</div>
+          <div class="col-xs-12 col-sm-9" itemprop="description">{{ post.excerpt }}</div>
         </div>
       </div>
     </div>
@@ -47,4 +53,6 @@ title: Home
         </span>
       {% endif %}
     {% endif %}
+</div>
+
 </div>

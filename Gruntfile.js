@@ -8,9 +8,6 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     shell:{
-      jekyll:{
-        command:'jekyll build --source _jekyll --destination blog --config _config.yml'
-      },
       npm:{
         command:'npm install'
       },
