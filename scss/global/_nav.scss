@@ -1,0 +1,11 @@
+.navbar{
+  margin-bottom:0;
+}
+.navbar-nav{
+  > li{
+    > a{
+      text-transform: uppercase;
+      font-weight:500;
+    }
+  }
+}
