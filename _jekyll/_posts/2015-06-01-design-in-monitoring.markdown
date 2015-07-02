@@ -3,7 +3,7 @@ layout: post
 title: Monitorama 2015 - Design in Monitoring
 category: general
 author: steve_boak
-excerpt: A designer's view of the monitoring world, and what can be done to improve it
+excerpt: A designer's view of the monitoring world, and what can be done to improve it.
 cover: /public/img/blog/monitorama.jpg
 cover-alt: Steve speaking at Monitorama 2015
 

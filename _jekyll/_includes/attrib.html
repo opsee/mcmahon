@@ -5,26 +5,28 @@
 <!-- Output author details if some exist. -->
 {% if author %}
 <div class="post-attrib">
-  <span>
-      <!-- Personal Info. -->
+  {% if link %}
+  <a href="{{ author.web }}" target="_blank" class="no-underline">
+  {% endif %}
+    <div class="display-flex flex-vertical-align">
+      {% if link %}<img src="/public/img/{{post.author}}1.jpg" class="attrib-author"/>{% endif %}
+      <div class="padding-l">
+        <div>{{ author.name }}</div>
+        <time class="attrib-time" datetime="{{post.date|date:"%F"}}" am-time-ago="'{{post.date|date:"%F"}}'"></time>
+      </div>
+    </div>
+  {% if link %}
+  </a>
+  {% endif %}
 
-      {% if link %}
-        <a href="{{ author.web }}" target="_blank">
-          <img src="/public/img/{{post.author}}1.jpg" class="attrib-author"/>
-        </a>
-        <a href="{{ author.web }}" target="_blank">
-      {% endif %}
-      {{ author.name }}
-        </a>
-
-      <time class="attrib-time" datetime="{{post.date|date:"%F"}}" am-time-ago="'{{post.date|date:"%F"}}'"></time>
-      <ul class="list-unstyled attrib-tags">
-        {% for tag in post.tags %}
-        <li>
-          <a class="tag_list_link" href="/tag/{{ tag }}">#{{ tag }}</a>
-        </li>
-        {% endfor %}
-      </ul>
-  </span>
+  {%comment%}
+    <ul class="list-unstyled attrib-tags">
+      {% for tag in post.tags %}
+      <li>
+        <a class="tag_list_link" href="/tag/{{ tag }}">#{{ tag }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    {%endcomment%}
 </div>
 {% endif %}

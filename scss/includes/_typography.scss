@@ -92,6 +92,13 @@ $caption-font-size-base:   1.200rem;
   letter-spacing: 0.010em;
 }
 
+h1, .h1{
+  line-height: .9em;
+  &:first-child{
+    margin-top:0;
+  }
+}
+
 h2, .h2{
   margin:0 0 .5em 0;
 }
@@ -103,49 +110,10 @@ h3,.h3{
   line-height: 1.6rem;
 }
 
-// .text-gray{
-//   color:$gray !important;
-//   &:visited,&:hover{
-//     color:$gray !important;
-//   }
-// }
-
-// .text-gray-darkest{
-//   color:$gray-darkest !important;
-//   &:visited,&:hover{
-//     color:$gray-darkest !important;
-//   }
-// }
-
-// #{headings(all)}{
-//   font-weight:500;
-//   margin:0 0 .5em 0;
-//   &.text-hide{
-//     $extend .text-hide;
-//   }
-// }
-
-// ul,ol{
-//   padding-left:1.2em;
-//   &.line-between{
-//     > li{
-//       &:after{
-//         content:'|';
-//         display: inline-block;
-//         margin:0 0 0 .5em;
-//       }
-//       &:last-child{
-//         &:after{
-//           content:none;
-//         }
-//       }
-//     }
-//   }
-// }
-
-// .break-word{
-//   word-break:break-word;
-// }
-// .no-wrap{
-//   white-space:nowrap;
-// }
+//helpers
+.no-underline{
+  text-decoration: none;
+  &:hover,&:visited,&:active,&:focus{
+    text-decoration: none;
+  }
+}

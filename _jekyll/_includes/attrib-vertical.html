@@ -1,0 +1,21 @@
+{% unless post %}
+{% assign post = page %}
+{% endunless %}
+{% assign author = site.data.authors[post.author] %}
+<!-- Output author details if some exist. -->
+{% if author %}
+<div class="post-attrib">
+  {% if link %}
+  <a href="{{ author.web }}" target="_blank" class="no-underline">
+  {% endif %}
+    <div>
+      <img src="/public/img/{{post.author}}1.jpg" class="attrib-author"/>
+      <div>{{ author.name }}</div>
+      <time class="attrib-time" datetime="{{post.date|date:"%F"}}" am-time-ago="'{{post.date|date:"%F"}}'"></time>
+    </div>
+  {% if link %}
+  </a>
+  {% endif %}
+
+</div>
+{% endif %}
