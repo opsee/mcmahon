@@ -55,6 +55,7 @@ GEM
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.3.0)
       sass (~> 3.2)
+    jekyll-sitemap (0.8.1)
     jekyll-watch (1.2.1)
       listen (~> 2.7)
     kramdown (1.7.0)
@@ -96,6 +97,7 @@ DEPENDENCIES
   compass-core (= 1.1.0.alpha.3)
   compass-flexbox (= 1.1.3)
   jekyll (= 2.4.0)
+  jekyll-sitemap
   sass (= 3.4.9)
   sass-css-importer (= 1.0.0.beta.0)
 

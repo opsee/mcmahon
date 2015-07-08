@@ -17,6 +17,9 @@ module.exports = function(grunt) {
       seedling:{
         command:'bower update seedling'
       },
+      bundle:{
+        command:'bundle'
+      }
     },
     jekyll:{
       server:{
@@ -172,7 +175,7 @@ module.exports = function(grunt) {
       }
     },
     concurrent:{
-      npmBower:['shell:npm','shell:bower'],
+      npmBowerBundle:['shell:npm','shell:bower','shell:bundle'],
     },
     revision:{
       options:{
@@ -188,10 +191,11 @@ module.exports = function(grunt) {
     var done = this.async();
     var bower = grunt.file.readJSON('bower.json');
     var npm = grunt.file.readJSON('package.json');
-    var combined = JSON.stringify({npm:npm,bower:bower});
+    var gemfile = grunt.file.read('Gemfile');
+    var combined = JSON.stringify({npm:npm,bower:bower,gemfile:gemfile});
     function runThem(){
       grunt.file.write('packageCache.json',combined);
-      grunt.task.run(['concurrent:npmBower','uglify:deps']);
+      grunt.task.run(['concurrent:npmBowerBundle','uglify:deps']);
       return done();
     }
     try{
@@ -203,7 +207,7 @@ module.exports = function(grunt) {
       runThem();
     }
     if(cache){
-      grunt.log.ok('package.json and bower.json up to date.');
+      grunt.log.ok('package.json, bower.json, and Gemfile are up to date.');
       done();
       return true;
     }
