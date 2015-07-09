@@ -46,3 +46,15 @@
   background-position:50% 50%;
   background-repeat:no-repeat;
 }
+
+.hidden-touch{
+  html.touch &{
+    display: none !important;
+  }
+}
+
+.hidden-no-touch{
+  html.no-touch &{
+    display: none !important;
+  }
+}
