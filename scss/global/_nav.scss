@@ -6,6 +6,10 @@
     > a{
       text-transform: uppercase;
       font-weight:500;
+      @include breakpoint($screen-sm){
+        padding-top:10px;
+        padding-bottom: 10px;
+      }
     }
   }
 }
@@ -13,6 +17,16 @@
 .dropdown-menu {
   @extend .md-shadow-bottom-z-1;
   border: none;
+}
+
+.nav{
+  > li{
+    > .btn-warning{
+      &:hover{
+        background:#f29000;
+      }
+    }
+  }
 }
 
 .nav-tabs {

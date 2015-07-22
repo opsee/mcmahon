@@ -1,0 +1,27 @@
+// $grid-gutter-width:30px;
+
+// $container-tablet:             ((720px + $grid-gutter-width));
+// $container-sm:                 $container-tablet;
+
+// // Medium screen / desktop
+// $container-desktop:            ((900px + $grid-gutter-width));
+// $container-md:                 $container-desktop;
+
+// // Large screen / wide desktop
+// $container-large-desktop:      ((1300px + $grid-gutter-width));
+// $container-lg:                 $container-large-desktop;
+
+// Small screen / tablet
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+  
+// Medium screen / desktop
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+  
+// Large screen / wide desktop
+$screen-lg:                  1300px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;

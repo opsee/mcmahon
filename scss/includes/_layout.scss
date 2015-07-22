@@ -13,12 +13,29 @@ body {
     @include display-flex;
   }
 }
+.display-flex-md{
+  @include breakpoint($screen-md){
+    @include display-flex;
+  }
+}
 .flex-vertical-align{
   @include display-flex;
   @include align-items(center);
 }
 .flex-vertical-align-sm{
   @include breakpoint($screen-sm){
+    @include display-flex;
+    @include align-items(center);
+  }
+}
+.flex-vertical-align-md{
+  @include breakpoint($screen-md){
+    @include display-flex;
+    @include align-items(center);
+  }
+}
+.flex-vertical-align-lg{
+  @include breakpoint($screen-lg){
     @include display-flex;
     @include align-items(center);
   }
@@ -85,6 +102,9 @@ body {
 
 .padding{
   padding:1em;
+}
+.padding-none{
+  padding:0;
 }
 .padding-lr {
   padding-left:1em;
