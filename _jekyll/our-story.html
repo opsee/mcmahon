@@ -20,7 +20,7 @@ title: Home
   <h2 class="h1 text-center">Our Team</h2>
   <ul class="list-unstyled row">
     {% for author in site.data.authors %}
-    <li class="col-xs-12 col-sm-6 col-md-3 text-center">
+    <li class="col-xs-12 col-sm-6 col-md-3 text-center padding-tb">
       <div class="padding-lr">
         <div class="hover-team-member">
           <img src="/public/img/{{author[0]}}1.jpg" class="attrib-author one" style="width:100%;max-width:300px;"/>
@@ -43,7 +43,7 @@ title: Home
     {% endfor %}
   </ul>
 
-    <div class="col-xs-12 text-center">
+    <div class="col-xs-12 text-center padding-tb">
       <div class="padding-lr">
         <div class="hover-team-member">
           <img src="/public/img/opseeco.png" class="attrib-author one" style="width:100%;max-width:300px;"/>
@@ -65,12 +65,88 @@ title: Home
 </div>
 
 
-<div class="padding-tb-lg"></div>
+<div class="padding-tb-md"></div>
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
       <h2 class="h1 text-center">We're Hiring</h2>
       <p>We’re always looking for talented people to join, so even if you don’t see a position listed, reach out to us. Just send an email with your résumé and a little about yourself to <a href="mailto:work@opsee.co">work@opsee.co</a>.</p>
+
+      <div><br/></div>
+
+      <article>
+        <h3>Frontend Developer</h3>
+
+        <p>Opsee is looking for a talented, senior frontend engineer to be our second employee and lead the development of our web application. You’ll be using your expertise in Javascript and modern JS frameworks (like Angular or React) to build tools developers love.</p>
+
+        <p>You’ll work closely with the backend team to spec and build new features, and process real-time data streams (WebSockets) from our APIs and bastion hosts. You’ll also work with design to create a seamless and delightful product experience, and a powerful web application to notify users of problems and visualize and report on their application health and performance.</p>
+
+        <h4>Requirements</h4>
+
+        <ul class="bullet_list">
+          <li>At least three years of experience working with JavaScript professionally, and a strong portfolio of launched projects</li>
+          <li>Experience with modern Javascript frameworks like Angular or React (we use Angular, but we’re very interested in React) and mastery of component/directive design</li>
+          <li>Expertise at testing and performance-tuning Javascript in the browser</li>
+          <li>Experience with responsive design and mobile-first design principles</li>
+          <li>Comfort with CSS pre-compilers like Sass or Less</li>
+          <li>Located in the Bay Area.</li>
+        </ul>
+
+        <h4>Nice to haves</h4>
+        <ul class="bullet_list">
+          <li>Previous work in small startup environments</li>
+          <li>Experience with modern browser technologies like WebSockets</li>
+          <li>Background in computer science</li>
+          <li>Previous work on marketing websites, and with marketing departments</li>
+          <li>Mobile application development experience</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Application Developer</h3>
+
+        <p>Opsee is looking for a talented, senior application developer to help craft our APIs, and design and build new product features. Our languages of choice are Go & Clojure, so expertise in one or both is a big plus. Professional experience developing web applications and a willingness to learn are the only requirements, though.</p>
+
+        <p>We’re a small team, and your talents will be put to wide use. This can include:</p>
+        <ul class="bullet_list">
+          <li>Designing, building and deploying Go microservices</li>
+          <li>Adding functionality to our Clojure event processor</li>
+          <li>Sketching the design of a new feature with the rest of the team</li>
+          <li>Helping to scale our build, test, and deployment tooling, and our infrastructure</li>
+        </ul>
+
+        <h4>Requirements</h4>
+        <ul class="bullet_list">
+          <li>It’s important to us that you’ve been building software professionally for a few years, and have a portfolio of launched work that we can talk about</li>
+          <li>Having the competence and confidence to solve a variety of development tasks with strong, maintainable code is critical</li>
+          <li>As is being able to work and communicate well with our team</li>
+          <li>You should live in the Bay Area</li>
+        </ul>
+
+        <h4>Nice to haves</h4>
+        <ul class="bullet_list">
+          <li>We make and advocate for distributed systems, and we’re building a product to monitor them. It’s in our blood. If that interests you, you could fit in well here</li>
+          <li>Previous work on small startup teams will help you feel at home in the sometimes-chaotic environment</li>
+          <li>A strong understanding of AWS services and infrastructure will give you some immediate clarity into what we’re building</li>
+          <li>Previous experience with Clojure and/or Go</li>
+        </ul>
+
+        <h3>About Opsee</h3>
+        <p>We’re based in San Francisco's SoMa neighborhood and founded by <a href="https://twitter.com/moonpolysoft" target="_blank">Cliff Moon</a> & <a href="https://twitter.com/sboak" target="_blank">Steve Boak</a>. Our team has over 15 years of experience building dev tools and has built some of the most beloved tools in the industry, including Boundary and Sensu.</p>
+        <p>We're a technology company in the truest sense of the term. We're here to build great technology and a product that we and our users love.</p>
+        <p>Opsee Co. is an Equal Opportunity Employer.</p>
+
+        <h3>Benefits</h3>
+        <ul class="bullet_list">
+          <li>Compensation is competitive and includes a generous equity grant and full medical, dental, and vision benefits</li>
+          <li>Unlimited budget for your workstation</li>
+          <li>Paid time off</li>
+        </ul>
+
+        <h3>To Apply</h3>
+        <p>Send an email with your résumé and a little about yourself to <a href="mailto:work@opsee.co">work@opsee.co</a>.</p>
+
+      </article>
     </div>
   </div>
 </div>
