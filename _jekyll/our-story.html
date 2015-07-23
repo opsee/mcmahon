@@ -1,0 +1,78 @@
+---
+layout: new
+title: Home
+---
+
+<div class="bg-gray-300 padding-tb-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <h1 class="text-center">Our Story</h1>
+        <p>Clouds are replacing datacenters, containers are replacing VMs, and microservices are replacing monolithic applications. It’s not just infrastructure that’s changing, either. Product teams are segmenting into disparate groups developing interdependent services.</p>
+        <p>Microservices help engineering organizations break free of the quarterly release cycle and ship small increments of functionality faster. There’s a cost, though. What once ran in a single process now spans multiple machines. Disparate teams and infrastructure can add new failure modes between you and your users, and the dependencies are getting harder to track.</p>
+        <p>Many of today’s monitoring products are designed with monolithic applications in mind – more metrics to help you peer inside and instrument different parts of a fast-growing code base. Opsee is designed for product teams developing microservices in cloud environments, with tools to seamlessly integrate into your development cycle and take the burden out of monitoring.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="padding-tb-lg"></div>
+<div class="container">
+  <h2 class="h1 text-center">Our Team</h2>
+  <ul class="list-unstyled row">
+    {% for author in site.data.authors %}
+    <li class="col-xs-12 col-sm-6 col-md-3 text-center">
+      <div class="padding-lr">
+        <div class="hover-team-member">
+          <img src="/public/img/{{author[0]}}1.jpg" class="attrib-author one" style="width:100%;max-width:300px;"/>
+          <img src="/public/img/{{author[0]}}2.jpg" class="attrib-author two" style="width:100%;max-width:300px;"/>
+        </div>
+        <h3>{{author[1].name}}</h3>
+        <h4>{{author[1].title}}</h4>
+        <a href="http://twitter.com/{{author[1].twitter}}" target="_blank" style="margin:0 .5em;">
+          <svg class="svg-icon fill-brand-danger" viewBox="0 0 24 24">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ico_twitter"></use>
+          </svg>
+        </a>
+        <a href="{{author[1].linkedin}}" target="_blank" style="margin:0 .5em;">
+          <svg class="svg-icon fill-brand-warning" viewBox="0 0 24 24">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ico_linkedin"></use>
+          </svg>
+        </a>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+
+    <div class="col-xs-12 text-center">
+      <div class="padding-lr">
+        <div class="hover-team-member">
+          <img src="/public/img/opseeco.png" class="attrib-author one" style="width:100%;max-width:300px;"/>
+        </div>
+        <h3><a href="http://twitter.com/opseeco">@opseeco</a></h3>
+        <a href="http://twitter.com/opseeco" target="_blank" style="margin:0 .5em;">
+          <svg class="svg-icon fill-brand-danger" viewBox="0 0 24 24">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ico_twitter"></use>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/opsee" target="_blank" style="margin:0 .5em;">
+          <svg class="svg-icon fill-brand-warning" viewBox="0 0 24 24">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ico_linkedin"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+</div>
+
+
+<div class="padding-tb-lg"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+      <h2 class="h1 text-center">We're Hiring</h2>
+      <p>We’re always looking for talented people to join, so even if you don’t see a position listed, reach out to us. Just send an email with your résumé and a little about yourself to <a href="mailto:work@opsee.co">work@opsee.co</a>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="padding-tb-lg"></div>

@@ -36,6 +36,33 @@
 .fill-white{
   fill:white;
 }
+.fill-gray-300{
+  fill: $gray-300;
+}
+.fill-gray-500{
+  fill: $gray-500;
+}
+.fill-gray-900{
+  fill: $gray-900;
+}
+.fill-brand-primary{
+  fill: $brand-primary;
+}
+.fill-brand-success{
+  fill: $brand-success;
+}
+.fill-brand-info{
+  fill: $brand-info;
+}
+.fill-brand-warning{
+  fill: $brand-warning;
+}
+.fill-brand-danger{
+  fill: $brand-danger;
+}
+.fill-body{
+  fill: $body-bg;
+}
 
 .user-select-none{
   @include user-select(none);

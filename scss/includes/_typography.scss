@@ -94,6 +94,9 @@ $caption-font-size-base:   1.200rem;
 
 h1, .h1{
   line-height: .9em;
+  font-weight:100;
+  -webkit-font-smoothing: antialiased;
+  color:$blue-dark;
   &:first-child{
     margin-top:0;
   }
@@ -101,13 +104,15 @@ h1, .h1{
 
 h2, .h2{
   margin:0 0 .5em 0;
+  font-weight:100;
+  color:$blue-dark;
 }
 
 h3,.h3{
   font-family: $font-family-sans-serif;
-  font-size: 1.4rem;
-  font-weight: $body-font-weight-med;
+  font-size: 1.8rem;
   line-height: 1.6rem;
+  font-weight:100;
 }
 
 //helpers
@@ -116,4 +121,11 @@ h3,.h3{
   &:hover,&:visited,&:active,&:focus{
     text-decoration: none;
   }
+}
+
+.text-secondary{
+  color:$text-color-secondary;
+}
+.text-white{
+  color:white;
 }
