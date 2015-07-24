@@ -1,5 +1,7 @@
 #header{
-  border-bottom:1px solid $gray-500;
+  .hiring {
+    color: #ffa726;
+  }
   .logo{
     width:80px;
     @include breakpoint($screen-sm){

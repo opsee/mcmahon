@@ -15,18 +15,18 @@
 $screen-sm:                  768px !default;
 $screen-sm-min:              $screen-sm !default;
 $screen-tablet:              $screen-sm-min !default;
-  
+
 // Medium screen / desktop
 $screen-md:                  992px !default;
 $screen-md-min:              $screen-md !default;
 $screen-desktop:             $screen-md-min !default;
-  
+
 // Large screen / wide desktop
 $screen-lg:                  1300px !default;
 $screen-lg-min:              $screen-lg !default;
 $screen-lg-desktop:          $screen-lg-min !default;
 
-$headings-font-family: 'Tungsten', 'Tungsten Rounded A', 'Tungsten Rounded B', sans-serif;
+$headings-font-family: 'Tungsten A', 'Tungsten B', sans-serif;
 $font-family-sans-serif:  'Gotham HTF', 'Gotham', "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $blue-dark: #01579B;

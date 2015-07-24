@@ -1,0 +1,42 @@
+---
+layout: post
+title: How To Hire Engineers At The Seed Stage
+category: general
+author: cliff_moon
+excerpt:  Talk to any investor, entrepreneur, or hiring manager in the Bay Area, and you'll hear all about how brutal the hiring environment and how bad the war for engineering talent really is.  We are told there is a shortage of talent.  In reality there is a shortage of people willing to risk their careers on your company.
+cover: /public/img/blog/opsee-wallpaper.png
+cover-alt: Opsee Logo
+
+---
+
+Talk to any investor, entrepreneur, or hiring manager in the Bay Area, and you'll hear all about how brutal the hiring environment and how bad the war for engineering talent really is.  We are told there is a shortage of talent.  In reality there is a shortage of people willing to risk their careers on your company.  The best entrepreneurs think about their product from the point of view of their customers, and the best team builders think about their hiring process from that of the candidates.  Every interaction with your company is a chance to either earn or break someone's trust, and when you're an early stage company, you have very little trust to burn and quite a lot of trust to earn.  This may not be the only way to hire at the seed stage, but it's how I learned to do it and represents our philosophy at Opsee.
+
+## You Can't Hire A-Players
+
+Firstly, what is an A-player?  A-players are high profile individuals who have a proven ability to exceed in their field.  Secondly, you're not hiring A-players.  Not unless one of the founders is a top tier, been had money titan of silicon valley.  For the rest of us, we may be able to get conversations with the A-players, but realize they are A-players for a reason.  As far as reputation is concerned, it's better to be associated with a company that's winning in its category, and the only surefire way of doing so is to join the current frontrunner.  Financially, the equity at a market leader is way more likely to pay out than a seed stage company, and the paltry grants that many founders are giving out at the seed stage do not adequately adjust for this risk (more on this later).  Put simply, unless there is something extraordinary about you or your company, A-players do not want to work for a scrub like you.
+
+## Make A-Players Instead
+
+You might be feeling very confused right now, because pretty much any other guide to startup hiring is going to tell you to only hire A-players.  You're not going to hire A-players, though, you're going to find and develop them.  It's your job to go out and search for folks who are overlooked by others, but in your environment would flourish.  They might have an odd background; they might be switching up career paths; or they might simply be hungry and ready to level up.  Finding these people takes a blend of luck, a good eye, and creativity.  Find people at meet-ups, on open source projects in your space, or even just find people tweeting about topics relevant to your company.  Once you find one of these people, craft a very personalized message to reach out to them, preferably via Twitter instead of e-mail, and certainly not over LinkedIn.  Don't make a classic recruiter faux pas like blasting out form e-mails to lists scraped from GitHub.  It ruins your brand, and the kinds of people you want on your early team won't respond anyways.
+
+## Rollercoaster vs. Mine Cart
+
+A common metaphor is that startups are a rollercoaster, referencing the frequent ups, downs, and inversions one experiences at a startup.  A defining feature of rollercoasters, however, is that they will always travel in a circle and let you off right where you got on.  To strain the metaphor, you want your startup to be a mine cart.  A mine cart is going somewhere.  Hopefully somewhere good.  The pitch to your prospective employee should be that yes, at this stage the equity is a lottery ticket and the salary isn't amazing but by taking this job you will acquire skills that will make you vastly more valuable in the future.  How?  Because as a member of a small team you are forced to shoulder more responsibility and take on roles that would be off-limits in a much larger organization.  Want to be an engineering manager?  Step up and start leading.  Want to be a founder some day?  Come meet our investors and tell them about your ideas.  The most important part of this pitch is that you will leave the company transformed, which means that at the very beginning we recognize that you will leave someday for greener pastures, and that's okay.
+
+## Don't Be Stingy
+
+This advice primarily applies when you're at the seed stage, and you've raised your round on some sort of debt-like instrument (e.g. a convertible note or SAFE).  If you did an equity round then giving your seed people a meaningful amount of equity will be somewhat more difficult, but it won't be impossible.
+
+What do I mean by meaningful equity?  First employee gets 5%, then you roughly halve that number for each new person that joins, making adjustments for experience, location, or position.  Your company is still unproven, and these first few employees will have no way to know if you'll be struggling in a year or growing like crazy.  Without the massive grants and the steep drop off, there will be no urgency to join, and it would be a much smarter move for the employee to wait and see.  Or join GrowthCo down the street where they're already killing it.  The massive number also acts as a signal that you value the people you hire, and maybe all those promises of being free to make a big impact and help shape the future of the company aren't just hot air.
+
+Also, so long as you've raised on a note or SAFE, you likely have no obligation to complete a 409(a) valuation at the moment.  Therefore, the share price is entirely up to the board, making the sale of restricted stock to employees a practical way of issuing equity.  This allows the employee to start the clock on their long term capital gains tax and avoid taking the tax hit that would come with exercising their options when they finally leave the company.  It's the right thing to do for your team and should be the standard way of delivering equity for seed stage companies.
+
+## Run A Tight Interview Process
+
+Don't just throw a candidate into a room and blithely trot in engineers to ask the same questions over and over.  A random interview process is not impressive to the candidate and generally leads to random results.  Design your interview process like you would design your product.  If the candidate is to write code, then let them use a computer to do it--not the damn whiteboard.
+
+A well-designed interview process will generate real data with which to make a hiring decision, guarantees that different candidates are at least being subjected to the same level of scrutiny, and the attention to detail will give the candidate a good impression of the company.  Most importantly, the process will allow you to deliver an offer quickly and with confidence.  If the candidate flew in from out of town, check on them to make sure they got in and know how to get to the hotel.  If possible, don't let them get back on the plane without an offer in hand.  Dedicate some time in the interview process to selling the candidate on your company and all the awesome ways that the startup experience will change their life.  Even if you end up deciding not to make an offer, you still want the candidate to have had a positive experience and to come away impressed.
+
+## Oh, And BTW We're Hiring
+
+As founder, it's not really your job to build the product.  The team builds the product, you are there to build the team.  There are many different kinds of teams and depending on the kind of team you want to build this may not be the right process.  The team I'm building right now is the early stage people who will do whatever it takes to ship the product.  They don't shy away from a challenge, and they don't let unfamiliarity with a particular area stop them from figuring things out and getting the job done.  "That's not my job" isn't really something that you'll hear these people say.  If that's who you are, and if that's the kind of team you want to be on, then we should talk: <a href="mailto:work@opsee.co">work@opsee.co</a>
