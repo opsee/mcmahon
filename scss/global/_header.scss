@@ -1,6 +1,14 @@
-#header{
+#header {
+  .svg_icon {
+    display: inline-block;
+    fill: $gray-900;
+    height: 1.25em;
+    margin-left: 0.25em;
+    vertical-align: text-bottom;
+    width: 1.25em;
+  }
   .hiring {
-    color: #ffa726;
+    color: #EF6C00;
   }
   .logo{
     width:80px;
@@ -12,5 +20,24 @@
     @include breakpoint($screen-sm){
       margin-top:1em;
     }
+  }
+}
+.header_nav {
+  display: none;
+}
+.header_link {
+  font-weight: 500;
+  padding: 0 0.5em;
+  text-transform: uppercase;
+}
+@include breakpoint($screen-sm) {
+  .mobile_links {
+    display: none;
+  }
+  .header_nav {
+    display: inline-block;
+  }
+  .hamburger {
+    display: none;
   }
 }
