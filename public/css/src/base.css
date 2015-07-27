@@ -730,11 +730,10 @@ h4,
 h5,
 h6 {
   color: rgba(255, 255, 255, 0.56);
-  font-family: 'Tungsten Rounded A', 'Tungsten Rounded B', sans-serif;
-  font-weight: 500;
+  font-family: 'Tungsten A', 'Tungsten B', sans-serif;
+  font-weight: 100;
   line-height: 1.1;
   margin: 0;
-  text-transform: uppercase;
 }
 h1 {
   font-size: 2.441em;
