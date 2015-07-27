@@ -1,3 +1,8 @@
+.padding-tb{
+  padding-top:1rem;
+  padding-bottom:1rem;
+}
+
 .header {
   padding: 2rem 1rem 0 1rem;
 }
@@ -19,14 +24,15 @@
     .opacity(100);
   }
 }
-.header_nav {
+.mobile_links, .header_nav {
   float: right;
-  vertical-align: top;
+}
+.header_nav {
+  display: none;
 }
 .header_link {
-  display: none;
   font-weight: @body_med_font_weight;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   text-transform: uppercase;
   &.hiring {
     color: @orange_400;
@@ -36,12 +42,18 @@
     }
   }
 }
+.hamburger {
+  display: inline-block;
+}
 
 @media @mq_medium {
   .header {
     padding: 2rem 0 0 0;
   }
-  .header_link {
+  .header_nav {
     display: inline-block;
+  }
+  .hamburger {
+    display: none;
   }
 }

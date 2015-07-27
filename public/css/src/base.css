@@ -182,7 +182,7 @@ th {
 @font-face {
   font-family: 'InconsolataMedium';
   src: url('/app/fonts/Inconsolata-webfont.eot');
-  src: local('☺'), url('/public/fonts/Inconsolata-webfont.woff') format('woff'), url('/public/fonts/Inconsolata-webfont.ttf') format('truetype'), url('/public/fonts/Inconsolata-webfont.svg#webfont6txitxZN') format('svg');
+  src: local('☺'), url('../fonts/Inconsolata-webfont.woff') format('woff'), url('../fonts/Inconsolata-webfont.ttf') format('truetype'), url('../fonts/Inconsolata-webfont.svg#webfont6txitxZN') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -338,7 +338,7 @@ body {
 @media only screen and (min-width: 48rem) {
   .team_headshot {
     margin: 0 2%;
-    width: 20%;
+    width: 21%;
   }
 }
 .team_headshot img {
@@ -885,6 +885,10 @@ a:active {
     margin: 0 1.5rem;
   }
 }
+.padding-tb {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .header {
   padding: 2rem 1rem 0 1rem;
 }
@@ -909,14 +913,16 @@ a:active {
   opacity: 100;
   filter: alpha(opacity=10000);
 }
+.mobile_links,
 .header_nav {
   float: right;
-  vertical-align: top;
+}
+.header_nav {
+  display: none;
 }
 .header_link {
-  display: none;
   font-weight: 500;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   text-transform: uppercase;
 }
 .header_link.hiring {
@@ -926,12 +932,18 @@ a:active {
 .header_link.hiring:hover {
   color: #f57c00;
 }
+.hamburger {
+  display: inline-block;
+}
 @media only screen and (min-width: 48rem) {
   .header {
     padding: 2rem 0 0 0;
   }
-  .header_link {
+  .header_nav {
     display: inline-block;
+  }
+  .hamburger {
+    display: none;
   }
 }
 .btn_container {

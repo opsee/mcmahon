@@ -4,7 +4,7 @@ title: How To Hire Engineers At The Seed Stage
 category: general
 author: cliff_moon
 excerpt:  Talk to any investor, entrepreneur, or hiring manager in the Bay Area, and you'll hear all about how brutal the hiring environment and how bad the war for engineering talent really is.  We are told there is a shortage of talent.  In reality there is a shortage of people willing to risk their careers on your company.
-cover: /public/img/blog/opsee-wallpaper.png
+cover: /public/img/blog/hiring-seed-stage.jpg
 cover-alt: Opsee Logo
 
 ---
