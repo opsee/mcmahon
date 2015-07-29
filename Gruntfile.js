@@ -22,11 +22,11 @@ module.exports = function(grunt) {
       }
     },
     jekyll:{
-      server:{
+      blog:{
         options:{
-          src: '_jekyll',
+          src: '_site',
           config: '_config.yml',
-          dest:'blog'
+          dest:'dist'
         }
       }
     },
@@ -34,7 +34,8 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: 4000,
-          livereload:35728
+          livereload:35728,
+          base:'dist'
         }
       }
     },
@@ -61,7 +62,7 @@ module.exports = function(grunt) {
           compress:false
         },
         files:{
-          'public/js/dist/deps.min.js':[
+          '_site/public/js/deps.min.js':[
             'angular/angular.min',
             'angular-bootstrap/ui-bootstrap-tpls',
             'lodash/lodash.min',
@@ -74,7 +75,7 @@ module.exports = function(grunt) {
             'moment/moment',
             'angular-moment/angular-moment.min'
           ].map(function(f){
-            return 'public/lib/'+f+'.js';
+            return '_site/public/bower_components/'+f+'.js';
           })
         }
       },
@@ -84,7 +85,7 @@ module.exports = function(grunt) {
           compress:false
         },
         files:{
-          'public/js/dist/opsee.min.js':['public/js/dist/deps.min.js','public/js/src/app.app.js','public/**/*.annotated.js']
+          '_site/public/js/opsee.min.js':['_site/public/js/deps.min.js','js/src/app.app.js','js/src/**/*.annotated.js']
         }
       },
     },
@@ -109,7 +110,7 @@ module.exports = function(grunt) {
         files:[
         {
           expand:true,
-          src:['public/js/src/**/*.js'],
+          src:['js/src/**/*.js'],
           ext:'.annotated.js',
           extDot:'last'
         }
@@ -121,7 +122,7 @@ module.exports = function(grunt) {
         files:[
         {
           expand:true,
-          src:['public/js/src/app.js'],
+          src:['js/src/app.js'],
           ext:'.app.js',
           extDot:'last'
         }
@@ -133,9 +134,13 @@ module.exports = function(grunt) {
         files:['Gruntfile.js'],
         tasks:['uglify:deps']
       },
-      jekyll:{
-        files:['_jekyll/**/*'],
-        tasks:['jekyll']
+      jekyllBlog:{
+        files:['_site/**/*'],
+        tasks:['jekyll:blog']
+      },
+      jekyllPages:{
+        files:['_pages/**/*'],
+        tasks:['jekyll:pages']
       },
       blog:{
         options:{
@@ -144,14 +149,15 @@ module.exports = function(grunt) {
         files:['blog/**/*'],
       },
       srcScripts:{
-        options:{
-           livereload:true
-         },
-        files:['js/public/js/**/*.js'],
+        files:['js/src/**/*.js'],
+        tasks:['uglify:annotated']
       },
       sass:{
+        options:{
+          livereload:true
+        },
         files:['scss/**/*.scss'],
-        tasks:['compass:dist']
+        tasks:['compass:dist'],
       },
       css:{
         options:{
@@ -163,7 +169,7 @@ module.exports = function(grunt) {
     compass:{
       dist:{
         options:{
-          cssDir:'public/css/src',
+          cssDir:'_site/public/css',
           sassDir:'scss',
           imagesDir:'public/img',
           fontsPath:'fonts',
@@ -171,12 +177,14 @@ module.exports = function(grunt) {
           httpPath:'',
           relativeAssets:true,
           noLineComments:true,
-          outputStyle:'compact'
+          outputStyle:'compressed'
         }
       }
     },
     concurrent:{
       npmBowerBundle:['shell:npm','shell:bower','shell:bundle'],
+      uglify:['uglify:deps'],
+      build:['compass:dist','annotate']
     },
     revision:{
       options:{
@@ -214,11 +222,11 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('init', ['packageCache','shell:seedling','jekyll']);
+  grunt.registerTask('init', ['concurrent:npmBowerBundle','concurrent:uglify', 'concurrent:build', 'jekyll']);
   grunt.registerTask('serve', ['connect', 'open', 'watch']);
   grunt.registerTask('annotate', ['ngAnnotate','uglify:annotated','clean:annotated']);
-  grunt.registerTask('prod', ['concurrent:setup','concurrent:build','annotate']);
+  grunt.registerTask('prod', ['init']);
   grunt.registerTask('docker', ['install', 'compass', 'build', 'shell:docker']);
-  grunt.registerTask('default', ['init','compass','serve']);
+  grunt.registerTask('default', ['init','serve']);
 
 };

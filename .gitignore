@@ -11,10 +11,12 @@ modules/public/
 modules/views/
 /nbproject/private/
 bower_components/
-public/css/src/style.css.map
-public/css/src/style.css
+public/css/style.css.map
+public/css/style.css
 *.min.js
+
 /blog/
+/pages/
 dist/
 
 packageCache.json
