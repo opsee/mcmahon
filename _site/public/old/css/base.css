@@ -182,7 +182,7 @@ th {
 @font-face {
   font-family: 'InconsolataMedium';
   src: url('/app/fonts/Inconsolata-webfont.eot');
-  src: local('☺'), url('../fonts/Inconsolata-webfont.woff') format('woff'), url('../fonts/Inconsolata-webfont.ttf') format('truetype'), url('../fonts/Inconsolata-webfont.svg#webfont6txitxZN') format('svg');
+  src: local('☺'), url('/public/fonts/Inconsolata-webfont.woff') format('woff'), url('/public/fonts/Inconsolata-webfont.ttf') format('truetype'), url('/public/fonts/Inconsolata-webfont.svg#webfont6txitxZN') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -730,11 +730,10 @@ h4,
 h5,
 h6 {
   color: rgba(255, 255, 255, 0.56);
-  font-family: 'Tungsten Rounded A', 'Tungsten Rounded B', sans-serif;
-  font-weight: 500;
+  font-family: 'Tungsten A', 'Tungsten B', sans-serif;
+  font-weight: 100;
   line-height: 1.1;
   margin: 0;
-  text-transform: uppercase;
 }
 h1 {
   font-size: 2.441em;
@@ -793,7 +792,7 @@ a:active {
   color: #738ffe;
 }
 .serif {
-  font-family: 'Sentinel SSm A', 'Sentinel SSm B';
+  font-family: 'Mercury SSm A', 'Mercury SSm B';
   font-weight: 400;
 }
 .caption {
