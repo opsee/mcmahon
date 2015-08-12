@@ -31,7 +31,7 @@ done both for a while, but the process became brittle and unstable. We chose
 Docker for the ability to have a single build pipeline, and we weren't doing
 that. The method you use to build your development container on your laptop
 should yield a runtime environment identical to the one in production.  There
-should be no guessing about it. 
+should be no guessing about it.
 
 The goal is such that when you're under pressure, and you have to diagnose a
 production issue without touching production, you can stand up an entire
@@ -128,5 +128,5 @@ easy to remove and replace with something else when it's shown to no longer be
 viable. Personally, this is my first time as the first hire at a startup--and
 this methodology has proven to be invaluable.
 
-If this sounds exciting to you, well, we’re hiring.
+If this sounds exciting to you, well, <a href="/#hiring-positions">we're hiring</a>.
 

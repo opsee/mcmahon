@@ -11,10 +11,12 @@ pre, code {
   font-family: $font-family-monospace;
 }
 blockquote {
+  border-left: 0.25em solid $gray-500;
+  font-family: $font-family-serif;
   font-size: 1.125em;
+  font-style: italic;
   position: relative;
   padding-left: 1em;
-  border-left: 0.25em solid $brand-info;
 }
 
 $display-4-font-size-base: 11.20rem;
