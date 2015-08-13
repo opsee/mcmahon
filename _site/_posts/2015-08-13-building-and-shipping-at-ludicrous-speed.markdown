@@ -91,8 +91,8 @@ some initial flexibility.  Keeping the image small means we keep our S3 storage
 and inter-region transfer costs down. Hooray!
 
 After we compile in the build-go container, we then import the resulting
-compiled code into our runtime container--all of which begin with "FROM
-[gliderlabs/alpine](https://github.com/gliderlabs/docker-alpine)". Once we
+compiled code into our runtime container--which begins with "FROM
+[gliderlabs/alpine](https://github.com/gliderlabs/docker-alpine):3.2". Once we
 get really good at running these things in production, we're considering
 moving to a different base image that only includes those things absolutely
 necessary for a particular runtime.
@@ -110,7 +110,7 @@ Doing so will dramatically increase the build time. Instead, automate updates
 to your build container. The end goal is to use CircleCI to auomate our
 container build process instead of using git push notifications to our
 respitories on [Quay.io](https://quay.io/). This is specifically so that we can
-tag every we build with a Git rev-hash or a nightly build timestamp. Doing so
+tag every build with a Git rev-hash or a nightly build timestamp. Doing so
 allows us to strictly version all components of a release. For now, we're just
 using git push notifications.
 
