@@ -15,14 +15,14 @@
 }
 
 .ss-hero {
-  align-items: center;
   background-image: url('/public/img/home-4/home-hero.jpg');
   background-position: 25% 50%;
   background-size: cover;
-  display: flex;
-  height: 500px;
-  justify-content: center;
+  height: 350px;
   position: relative;
+  @include breakpoint($screen-sm) {
+    height: 500px;
+  }
   h1,h2 {
     text-align: center;
   }
@@ -50,32 +50,15 @@
   width: 100%;
 }
 
-// .ss-row {
-//   display: flex;
-//   flex-wrap: wrap;
-//   @include breakpoint($screen-sm) {
-//     display: block;
-//   }
-// }
-
-// .ss-text {
-//   order: 0;
-//   @include breakpoint($screen-sm) {
-//     order: unset;
-//   }
-// }
-
-// .ss-figure {
-//   order: 1;
-//   @include breakpoint($screen-sm) {
-//     order: unset;
-//   }
-// }
-
 .ss-img {
   display: block;
-  margin: 0 auto;
-  width: 320px;
+  margin: 2em auto 0 auto;
+  max-width: 320px;
+  width: 75%;
+  @include breakpoint($screen-sm) {
+    margin: 0 auto 0 auto;
+    width: 320px;
+  }
 }
 
 footer {
@@ -88,6 +71,7 @@ footer {
 }
 .nav-footer {
   list-style: none;
+  padding: 0 0;
 }
 .nav-footer-item {
   display: inline-block;
