@@ -1,0 +1,108 @@
+.btn-ss {
+  padding-left: 0;
+  padding-right: 0;
+  .icon {
+    @include transition(transform $swift-ease-out-duration $swift-ease-out-timing-function);
+  }
+  &:hover .icon {
+    @include translate(0.5em,0);
+    fill: lighten($brand-primary,15);
+  }
+}
+
+.section-bordered {
+  border-bottom: 1px solid $gray-300;
+}
+
+.ss-hero {
+  align-items: center;
+  background-image: url('/public/img/home-4/home-hero.jpg');
+  background-position: 25% 50%;
+  background-size: cover;
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  position: relative;
+  h1,h2 {
+    text-align: center;
+  }
+  h1 {
+    color: $gray-200;
+  }
+  h2 {
+    color: #90CAF9;
+  }
+}
+
+.ss-signup {
+  background-color: #455A64;
+  color: white;
+  text-align: center;
+  h3 { font-weight: 100; }
+}
+
+.ss-hero-overlay {
+  background-color: rgba(70,90,100,0.75);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+// .ss-row {
+//   display: flex;
+//   flex-wrap: wrap;
+//   @include breakpoint($screen-sm) {
+//     display: block;
+//   }
+// }
+
+// .ss-text {
+//   order: 0;
+//   @include breakpoint($screen-sm) {
+//     order: unset;
+//   }
+// }
+
+// .ss-figure {
+//   order: 1;
+//   @include breakpoint($screen-sm) {
+//     order: unset;
+//   }
+// }
+
+.ss-img {
+  display: block;
+  margin: 0 auto;
+  width: 320px;
+}
+
+footer {
+  background-color: #263238;
+  color: $gray-200;
+  text-align: center;
+  .nav a {
+    color: $gray-400;
+  }
+}
+.nav-footer {
+  list-style: none;
+}
+.nav-footer-item {
+  display: inline-block;
+  a {
+    color: $gray-400;
+    &:hover {
+      color: lighten($gray-400,15);
+    }
+  }
+  .icon {
+    @include transition(transform $swift-ease-out-duration $swift-ease-out-timing-function);
+    fill: $gray-400;
+    &:hover {
+      fill: lighten($gray-400,15);
+      @include scale(1.5,1.5);
+    }
+  }
+}

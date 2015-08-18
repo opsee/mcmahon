@@ -32,9 +32,6 @@
   line-height: 1.2em;
   padding:$grid-gutter-width/4 $grid-gutter-width/2;
   text-transform: uppercase;
-  @extend .md-shadow-bottom-z-1;
-  @include transition(box-shadow $swift-ease-out-duration $swift-ease-out-timing-function,
-    background-color $swift-ease-out-duration $swift-ease-out-timing-function);
   &.btn-flat{
     box-shadow:none;
   }
@@ -66,6 +63,7 @@
   padding-right: 0;
 }
 .btn-flat {
+  @include transition(color $swift-ease-out-duration $swift-ease-out-timing-function);
   background-color: transparent;
   &.btn-primary {
     background-color: transparent;
@@ -103,7 +101,11 @@
     }
   }
   &:hover {
-    background-color: $gray-800;
+    &.btn-primary { color: lighten($brand-primary,15); };
+    &.btn-success { color: lighten($brand-success,15); };
+    &.btn-warning { color: lighten($brand-warning,15); };
+    &.btn-danger { color: lighten($brand-danger,15); };
+    &.btn-info { color: lighten($brand-info,15); };
   }
 }
 .btn-block {

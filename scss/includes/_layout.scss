@@ -49,6 +49,9 @@ body {
 .flex-wrap{
   @include flex-wrap(wrap);
 }
+.flex-start {
+  align-self: flex-start;
+}
 .justify-content-between{
   @include justify-content(space-between);
 }
@@ -113,6 +116,18 @@ body {
 .padding-l{
   padding-left:1em;
 }
+.padding-t {
+  padding-top:1em;
+}
+.padding-t-md {
+  padding-top:2em;
+}
+.padding-t-lg {
+  padding-top:3em;
+}
+.padding-t-xlg {
+  padding-top:5em;
+}
 .padding-tb{
   padding-top:1em;
   padding-bottom:1em;
@@ -124,6 +139,10 @@ body {
 .padding-tb-lg{
   padding-top:3em;
   padding-bottom:3em;
+}
+.padding-tb-xlg{
+  padding-top:5em;
+  padding-bottom:5em;
 }
 .padding-b {
   padding-bottom: 1em;
