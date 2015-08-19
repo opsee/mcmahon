@@ -28,9 +28,15 @@
   }
   h1 {
     color: $gray-200;
+    @include breakpoint($screen-sm){
+      font-size:60px;
+    }
   }
   h2 {
     color: #90CAF9;
+  }
+  hgroup{
+    text-shadow: 0 0 30px rgba(0,0,0,1);
   }
 }
 
