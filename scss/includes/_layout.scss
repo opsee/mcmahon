@@ -128,6 +128,9 @@ body {
 }
 .padding-b-xlg {
   padding-bottom:4em;
+  @include breakpoint($screen-sm){
+    padding-bottom:5em;
+  }
 }
 
 .padding-t {
@@ -141,6 +144,9 @@ body {
 }
 .padding-t-xlg {
   padding-top:4em;
+  @include breakpoint($screen-sm){
+    padding-top:5em;
+  }
 }
 .padding-tb{
   padding-top:1em;
@@ -157,6 +163,10 @@ body {
 .padding-tb-xlg{
   padding-top:4em;
   padding-bottom:4em;
+  @include breakpoint($screen-sm){
+    padding-top:5em;
+    padding-bottom:5em;
+  }
 }
 .padding-b {
   padding-bottom: 1em;

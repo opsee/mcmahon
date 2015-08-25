@@ -15,6 +15,7 @@ public/css/style.css.map
 public/css/style.css
 *.min.js
 *.lock
+*.codekit
 
 /blog/
 /pages/
