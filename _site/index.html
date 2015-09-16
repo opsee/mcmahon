@@ -1,492 +1,154 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6076032/646208/css/fonts.css" />
-  <link rel="stylesheet" type="text/css" href="public/old/css/base.css" />
+---
+layout: new
+title: Home
+---
 
-  <!-- <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" /> -->
-  <link href="/public/bower_components/seedling//img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <meta name="application-name" content="Opsee"/>
-  <meta name="msapplication-TileColor" content="#00579B" />
-  <meta name="msapplication-TileImage" content="mstile-144x144.png" />
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-  <title>Opsee - Own Your Availability</title>
-  <meta name="description" content="Own Your Availability. Application developers are being asked to own the availability of their code. We're here to help.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.opsee.co/">
-  <meta property="og:title" content="Opsee: Own Your Availability">
-  <meta property="og:site_name" content="Opsee">
-  <meta property="og:image" content="https://s3-us-west-1.amazonaws.com/opsee-public-images/opsee_logo_blue_400px.png">
-  <meta property="og:description" content="Application developers are being asked to own the availability of their code. We're here to help.">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@opseeco">
-  <meta name="twitter:title" content="Opsee - Own Your Availability">
-  <meta name="twitter:description" content="Own Your Availability. Application developers are being asked to own the availability of their code. We're here to help.">
-  <meta name="twitter:image:src" content="https://s3-us-west-1.amazonaws.com/opsee-public-images/opsee_logo_blue_400px.png">
-
-  <script type="text/javascript" src="public/old/js/jquery.js"></script>
-  <script type="text/javascript" src="public/old/js/jquery.validate.js"></script>
-  <script type="text/javascript" src="public/old/js/app.js"></script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-59205908-1', 'auto');
-    ga('send', 'pageview');
-  </script>
-  <script>
-  !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
-  arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
-  d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
-  insertBefore(d,q)}(window,document,'script','_gs');
-  _gs('GSN-959221-B');
-</script>
-</head>
-<body>
-
-  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
-    <symbol id="ico_add" viewBox="0 0 24 24">
-      <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
-    </symbol>
-    <symbol id="ico_add_sign" viewBox="0 0 24 24">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
-    </symbol>
-    <symbol id="ico_checkmark" viewBox="0 0 24 24">
-      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-    </symbol>
-    <symbol id="ico_chevron_down" viewBox="0 0 24 24">
-      <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
-    </symbol>
-    <symbol id="ico_chevron_left" viewBox="0 0 24 24">
-      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-    </symbol>
-    <symbol id="ico_chevron_right" viewBox="0 0 24 24">
-      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-    </symbol>
-    <symbol id="ico_chevron_up" viewBox="0 0 24 24">
-      <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/>
-    </symbol>
-    <symbol id="ico_close" viewBox="0 0 24 24">
-      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-    </symbol>
-    <symbol id="ico_close_sign" viewBox="0 0 24 24">
-      <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/>
-    </symbol>
-    <symbol id="ico_delete" viewBox="0 0 24 24">
-      <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
-    </symbol>
-    <symbol id="ico_edit" viewBox="0 0 24 24">
-      <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
-    </symbol>
-    <symbol id="ico_error" viewBox="0 0 24 24">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
-    </symbol>
-    <symbol id="ico_home" viewBox="0 0 24 24">
-      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-    </symbol>
-    <symbol id="ico_info" viewBox="0 0 24 24">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
-    </symbol>
-    <symbol id="ico_linkedin" viewbox="0 0 24 24">
-      <path d="M18.7,17.7V13c0-2.5-1.3-3.7-3.1-3.7c-1.4,0-2.1,0.8-2.4,1.3V9.5h-2.7c0,0.8,0,8.2,0,8.2h2.7v-4.6c0-0.2,0-0.5,0.1-0.7c0.2-0.5,0.6-1,1.4-1c1,0,1.4,0.7,1.4,1.8v4.4H18.7z M7.6,8.4c0.9,0,1.5-0.6,1.5-1.4c0-0.8-0.6-1.4-1.5-1.4S6.1,6.2,6.1,7C6.1,7.7,6.7,8.4,7.6,8.4L7.6,8.4z M8.9,17.7V9.5H6.2v8.2H8.9z M0,0h24v24H0V0z"/>
-    </symbol>
-    <symbol id="ico_key" viewBox="0 0 24 24">
-      <path d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
-    </symbol>
-    <symbol id="ico_lock" viewBox="0 0 24 24">
-      <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
-    </symbol>
-    <symbol id="ico_mail" viewBox="0 0 24 24">
-      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-    </symbol>
-    <symbol id="ico_menu" viewBox="0 0 24 24">
-      <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-    </symbol>
-    <symbol id="ico_notifications" viewBox="0 0 24 24">
-      <path d="M11.5 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6.5-6v-5.5c0-3.07-2.13-5.64-5-6.32V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5v.68c-2.87.68-5 3.25-5 6.32V16l-2 2v1h17v-1l-2-2z"/>
-    </symbol>
-    <symbol id="ico_open_new_window" viewBox="0 0 24 24">
-      <path d="M19,19H5V5h7V3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2v-7h-2V19z M14,3v2h3.6l-9.8,9.8l1.4,1.4L19,6.4V10h2V3H14z"/>
-    </symbol>
-    <symbol id="ico_people" viewBox="0 0 24 24">
-      <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
-    </symbol>
-    <symbol id="ico_person" viewBox="0 0 24 24">
-      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-    </symbol>
-    <symbol id="ico_person_add" viewBox="0 0 24 24">
-      <path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 4c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-    </symbol>
-    <symbol id="ico_refresh" viewBox="0 0 24 24">
-      <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
-    </symbol>
-    <symbol id="ico_remove" viewBox="0 0 24 24">
-      <path d="M19 13H5v-2h14v2z"/>
-    </symbol>
-    <symbol id="ico_remove_sign" viewBox="0 0 24 24">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"/>
-    </symbol>
-    <symbol id="ico_search" viewBox="0 0 24 24">
-      <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-    </symbol>
-    <symbol id="ico_settings" viewBox="0 0 24 24">
-      <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
-    </symbol>
-    <symbol id="ico_sort" viewBox="0 0 24 24">
-      <path d="M3 18h6v-2H3v2zM3 6v2h18V6H3zm0 7h12v-2H3v2z"/>
-    </symbol>
-    <symbol id="ico_sync" viewBox="0 0 24 24">
-      <path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/>
-    </symbol>
-    <symbol id="ico_twitter" viewBox="0 0 24 24">
-      <path d="M24,4.3c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2C19.3,2.6,18,2,16.6,2c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,7.8,4.1,5.9,1.7,2.9C1.2,3.6,1,4.5,1,5.4c0,1.7,0.9,3.2,2.2,4.1C2.4,9.4,1.6,9.2,1,8.9c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6C22.5,6.2,23.3,5.3,24,4.3L24,4.3z"/>
-    </symbol>
-    <symbol id="ico_warning" viewBox="0 0 24 24">
-      <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
-    </symbol>
-  </svg>
-
-  <div id="boids">
-    <div class="header">
-      <div class="container">
-        <img class="header_logo" src="/public/img/logo.svg" alt="Opsee logo">
-        <img class="header_logo_color" src="/public/img/logo-color.svg" alt="Opsee logo color">
-        <div class="mobile_links padding-tb">
-          <a class="header_link" href="/blog">Blog</a>
-        </div>
-        <nav class="header_nav padding-tb">
-          <a class="header_link" href="/#product-section">Product</a>
-          <a class="header_link" href="/#team-section">Team</a>
-          <a class="header_link hiring" href="/#hiring-positions">We're Hiring!</a>
-        </nav>
-      </div>
-    </div>
-
-    <div class="hero pad2">
-      <div class="container">
-        <h1 class="centered">Own Your Availability</h1>
-        <p>Clouds are replacing datacenters, containers are replacing VMs, and microservices are replacing monolithic applications. Independent microservices help engineering organizations break free of the quarterly release cycle and ship small increments of functionality every single day. There's a cost, though. What once ran in a single process now spans multiple machines, and unreliable infrastructure can add new failure modes between you and your users.</p>
-        <p>Now, more than ever, application developers are being asked to own the availability of their code. We're here to help.</p>
+<section class="ss-hero flex-vertical-align">
+  <div class="ss-hero-overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <hgroup>
+          <h1>Effortless Monitoring of Your AWS Environment</h1>
+          <h2>Health & performance checks for your services with no software to install</h2>
+        </hgroup>
       </div>
     </div>
   </div>
+</section>
 
-  <div class="signup pad2">
-    <div class="container" id="mc_embed_signup">
-      <form action="//opsee.us10.list-manage.com/subscribe/post?u=f6291133c44c59f3209284bb7&amp;id=689a72b5cb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-          <h2 class="centered">Sign up to learn more</h2>
+<section class="ss-signup">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 padding-tb-md">
+        <h3>Use Opsee for <strong>free</strong>, with no limits, for as long as you want</h3>
 
-          <p>We're launching soon. Sign up to be one of the first to try Opsee for free in our private beta. If you <a href="https://opsee.typeform.com/to/JHiTKr" target="_blank">fill out our survey</a> and you're a good fit, <em>we'll bump you to the top of the list</em>.</p>
-          <div class="row">
-            <div class="columns twelve">
-              <div class="mc-field-group input_container">
-                <input type="email" value="" name="EMAIL" class="required email block icon" id="mce-EMAIL" placeholder="email address">
-                <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_mail" /></svg>
-                <label for="mce-EMAIL">Email Address</label>
-                <span class="error_text font_small">is not valid</span>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="columns six">
-              <div class="mc-field-group input_container">
-                <input type="text" value="" name="FNAME" class="required block icon" id="mce-FNAME" placeholder="first name">
-                <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_person" /></svg>
-                <label for="mce-FNAME">First Name</label>
-                <span class="error_text font_small">is required</span>
-              </div>
-            </div>
-            <div class="columns six">
-              <div class="mc-field-group input_container">
-                <input type="text" value="" name="LNAME" class="required block icon" id="mce-LNAME" placeholder="last name">
-                <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_person" /></svg>
-                <label for="mce-LNAME">Last Name</label>
-                <span class="error_text font_small">is required</span>
-              </div>
-            </div>
-          </div>
-          <div id="mce-responses" class="clear">
-            <div class="response" id="mce-error-response" style="display:none"></div>
-            <div class="response" id="mce-success-response" style="display:none"></div>
-          </div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;"><input type="text" name="b_f6291133c44c59f3209284bb7_689a72b5cb" tabindex="-1" value=""></div>
-          <div class="row">
-            <div class="columns twelve">
-              <div class="clear input_container"><input type="submit" value="Keep me posted" name="subscribe" id="mc-embedded-subscribe" class="button btn raised success block"></div>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <div class="microservices alt_color pad2" id="product-section">
-    <div class="container">
-      <div class="row">
-        <div class="columns four">
-          <img class="img_bottom" src="/public/img/container.svg" alt="riding the docker wave">
-        </div>
-        <div class="columns eight">
-          <h2 class="centered">Made for Microservices</h2>
-          <p>Opsee is made for distributed environments. Hundreds of services in production? No problem. Opsee recognizes new instances and containers as they come online, and automatically starts health checking their services.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="software pad2">
-    <div class="container">
-      <div class="row">
-        <div class="columns seven">
-          <h2 class="centered">No Software, no Agent</h2>
-          <p>No bash scripts to blithely curl and pipe into sudo sh, and no opaque APT repos to add. Our bastion instance is delivered as a prebuilt AMI that automatically detects your AWS infrastructure and services, and coordinates health checking and incident response.</p>
-        </div>
-        <div class="columns five">
-          <img class="img_bottom" src="/public/img/bastion.svg" alt="bastion host diagram">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="anywhere pad2">
-    <div class="container">
-      <div class="row">
-        <div class="columns seven offset-by-five">
-          <h2 class="centered">Built to Work Anywhere</h2>
-          <p>Being on call can be a real drag. All too often your sleep will get ruined by an easily solved problem like a noisy threshold or a malfunctioning VM. Opsee can help you do everything from silencing a noisy alert to restarting a crashed process, all from your phone.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="design alt_color pad2top">
-    <div class="container">
-      <div class="row">
-        <div class="columns six">
-          <h2 class="centered">Designed for You</h2>
-          <p>Better anomaly detection, prettier graphs, and more data are all nice, but how many new devops products <strong>feel like they were designed for the people who use them</strong>? It shouldn’t take a webinar to explain how our tools work.</p>
-        </div>
-        <div class="columns five offset-by-one">
-          <img class="img_bottom" src="/public/img/phone.svg" alt="phone alert">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="team pad2" id="team-section">
-    <div class="container">
-      <h2 class="centered">The Opsee Team</h2>
-      <p>We've got over 15 years experience developing monitoring tools, and working with developers and ops professionals to build some of the most beloved tools in the space including Boundary, Riak, and Sensu.</p>
-
-      <div class="centered">
-        <figure class="team_headshot" data-event="cliff">
-          <img src="/public/img/cliff_moon1.jpg" alt="Cliff Moon">
-          <img class="team_headshot_ro" src="/public/img/cliff_moon2.jpg" alt="Cliff Moon">
-          <figcaption>
-            <div><strong>Cliff Moon</strong></div>
-            <div class="team_icons">
-              <a href="https://twitter.com/moonpolysoft" title="@moonpolysoft on Twitter" target="_blank">
-                <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_twitter" /></svg>
-              </a>
-              <a href="https://www.linkedin.com/pub/cliff-moon/4/44b/283" title="Cliff Moon on LinkedIn" target="_blank">
-                <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_linkedin" /></svg>
-              </a>
-            </div>
-         </figcaption>
-        </figure><!--
-        --><figure class="team_headshot" data-event="steve">
-         <img src="/public/img/steve_boak1.jpg" alt="Steve Boak">
-         <img class="team_headshot_ro" src="/public/img/steve_boak2.jpg" alt="Steve Boak">
-         <figcaption>
-           <div><strong>Steve Boak</strong></div>
-           <div class="team_icons">
-             <a href="https://twitter.com/sboak" title="@sboak on Twitter" target="_blank">
-               <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_twitter" /></svg>
-             </a>
-             <a href="https://www.linkedin.com/in/stephenboak" title="Steve Boak on LinkedIn" target="_blank">
-               <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_linkedin" /></svg>
-             </a>
-           </div>
-         </figcaption>
-        </figure>
-        </figure><!--
-        --><figure class="team_headshot" data-event="greg">
-         <img src="/public/img/greg_poirier1.jpg" alt="Greg Poirier">
-         <img class="team_headshot_ro" src="/public/img/greg_poirier2.jpg" alt="Greg Poirier">
-         <figcaption>
-           <div><strong>Greg Poirier</strong></div>
-           <div class="team_icons">
-             <a href="https://twitter.com/grepory" title="@grepory on Twitter" target="_blank">
-               <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_twitter" /></svg>
-             </a>
-             <a href="https://www.linkedin.com/in/grepory" title="Greg Poirier on LinkedIn" target="_blank">
-               <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_linkedin" /></svg>
-             </a>
-           </div>
-         </figcaption>
-        </figure><!--
-        --><figure class="team_headshot" data-event="corey">
-         <img src="/public/img/corey_light1.jpg" alt="Corey Light">
-         <img class="team_headshot_ro" src="/public/img/corey_light2.jpg" alt="Corey Light">
-         <figcaption>
-           <div><strong>Corey Light</strong></div>
-           <div class="team_icons">
-             <a href="https://twitter.com/coreyalight" title="@coreyalight on Twitter" target="_blank">
-               <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_twitter" /></svg>
-             </a>
-             <a href="https://www.linkedin.com/in/coreylight" title="Corey Light on LinkedIn" target="_blank">
-               <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_linkedin" /></svg>
-             </a>
-           </div>
-         </figcaption>
-        </figure><!--
-        --><figure class="team_headshot" data-event="mark">
-         <img src="/public/img/mark_martin1.jpg" alt="Mark Martin">
-         <img class="team_headshot_ro" src="/public/img/mark_martin2.jpg" alt="Mark Martin">
-         <figcaption>
-           <div><strong>Mark Martin</strong></div>
-           <div class="team_icons">
-             <a href="https://twitter.com/snorecone" title="@snorecone on Twitter" target="_blank">
-               <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_twitter" /></svg>
-             </a>
-             <a href="https://www.linkedin.com/in/owlchaos" title="Mark Martin on LinkedIn" target="_blank">
-               <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_linkedin" /></svg>
-             </a>
-           </div>
-         </figcaption>
-        </figure><!--
-        --><figure class="team_headshot">
-         <a href="https://twitter.com/opseeco" target="_blank"><img src="/public/img/opseeco.png" alt="Person"></a>
-         <figcaption>
-           <div><a href="https://twitter.com/opseeco" target="_blank">@opseeco</a></div>
-           <div class="team_icons">
-             <a href="https://twitter.com/opseeco" title="@opseeco on Twitter" target="_blank">
-               <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_twitter" /></svg>
-             </a>
-             <a href="https://www.linkedin.com/company/opsee" title="Opsee on LinkedIn" target="_blank">
-               <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_linkedin" /></svg>
-             </a>
-           </div>
-         </figcaption>
-        </figure>
-      </div>
-
-      <div class="pad2">
-        <h2 class="centered">We're Hiring!</h2>
-        <p>We’re always looking for talented people to join, so even if you don’t see a position listed, reach out to us. Just send an email with your résumé and a little about yourself to <a href="mailto:work@opsee.co">work@opsee.co</a>. Every thoughtful application we receive will be replied to, we promise.</p>
-
-        <section class="ac-container" id="hiring-positions" data-event="backend developer">
-          <div>
-            <input id="ac-2" name="accordion-2" type="checkbox" />
-            <label for="ac-2"><svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_chevron_down" /></svg> Frontend Developer</label>
-            <article>
-              <h2>Frontend Developer</h2>
-
-              <p>Opsee is looking for a talented, senior frontend engineer to be our second employee and lead the development of our web application. You’ll be using your expertise in Javascript and modern JS frameworks (like Angular or React) to build tools developers love.</p>
-
-              <p>You’ll work closely with the backend team to spec and build new features, and process real-time data streams (WebSockets) from our APIs and bastion hosts. You’ll also work with design to create a seamless and delightful product experience, and a powerful web application to notify users of problems and visualize and report on their application health and performance.</p>
-
-              <p>To apply, send an email with your résumé and a little about yourself to <a href="mailto:work@opsee.co">work@opsee.co</a>.</p>
-
-              <h3>Requirements</h3>
-
-              <ul class="bullet_list">
-                <li>At least three years of experience working with JavaScript professionally, and a strong portfolio of launched projects</li>
-                <li>Experience with modern Javascript frameworks like Angular or React (we use Angular, but we’re very interested in React) and mastery of component/directive design</li>
-                <li>Expertise at testing and performance-tuning Javascript in the browser</li>
-                <li>Experience with responsive design and mobile-first design principles</li>
-                <li>Comfort with CSS pre-compilers like Sass or Less</li>
-                <li>Located in the Bay Area.</li>
-              </ul>
-
-              <h3>Nice to haves</h3>
-              <ul class="bullet_list">
-                <li>Previous work in small startup environments</li>
-                <li>Experience with modern browser technologies like WebSockets</li>
-                <li>Background in computer science</li>
-                <li>Previous work on marketing websites, and with marketing departments</li>
-                <li>Mobile application development experience</li>
-              </ul>
-
-              <h3>Benefits</h3>
-              <ul class="bullet_list">
-                <li>Compensation is competitive and includes a generous equity grant and full medical, dental, and vision benefits</li>
-                <li>Unlimited budget for your workstation</li>
-                <li>Paid time off</li>
-              </ul>
-
-              <h3>About Opsee</h3>
-              <p>We’re based in San Francisco's SoMa neighborhood and founded by <a href="https://twitter.com/moonpolysoft" target="_blank">Cliff Moon</a> & <a href="https://twitter.com/sboak" target="_blank">Steve Boak</a>. Our team has over 15 years of experience building dev tools and has built some of the most beloved tools in the industry, including Boundary and Sensu.</p>
-              <p>We're a technology company in the truest sense of the term. We're here to build great technology and a product that we and our users love.</p>
-
-              <p>Opsee Co. is an Equal Opportunity Employer.</p>
-            </article>
-
-            <input id="ac-1" name="accordion-1" type="checkbox" />
-            <label for="ac-1"><svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_chevron_down" /></svg> Application Developer</label>
-            <article>
-              <h2>Application Developer</h2>
-
-              <p>Opsee is looking for a talented, senior application developer to help craft our APIs, and design and build new product features. Our languages of choice are Go & Clojure, so expertise in one or both is a big plus. Professional experience developing web applications and a willingness to learn are the only requirements, though.</p>
-
-              <p>We’re a small team, and your talents will be put to wide use. This can include:</p>
-              <ul class="bullet_list">
-                <li>Designing, building and deploying Go microservices</li>
-                <li>Adding functionality to our Clojure event processor</li>
-                <li>Sketching the design of a new feature with the rest of the team</li>
-                <li>Helping to scale our build, test, and deployment tooling, and our infrastructure</li>
-              </ul>
-
-              <p>To apply, send an email with your résumé and a little about yourself to <a href="mailto:work@opsee.co">work@opsee.co</a>.</p>
-
-              <h3>Requirements</h3>
-              <ul class="bullet_list">
-                <li>It’s important to us that you’ve been building software professionally for a few years, and have a portfolio of launched work that we can talk about</li>
-                <li>Having the competence and confidence to solve a variety of development tasks with strong, maintainable code is critical</li>
-                <li>As is being able to work and communicate well with our team</li>
-                <li>You should live in the Bay Area</li>
-              </ul>
-
-              <h3>Nice to haves</h3>
-              <ul class="bullet_list">
-                <li>We make and advocate for distributed systems, and we’re building a product to monitor them. It’s in our blood. If that interests you, you could fit in well here</li>
-                <li>Previous work on small startup teams will help you feel at home in the sometimes-chaotic environment</li>
-                <li>A strong understanding of AWS services and infrastructure will give you some immediate clarity into what we’re building</li>
-                <li>Previous experience with Clojure and/or Go</li>
-              </ul>
-
-              <h3>Benefits</h3>
-              <ul class="bullet_list">
-                <li>Compensation is competitive and includes a generous equity grant and full medical, dental, and vision benefits</li>
-                <li>Unlimited budget for your workstation</li>
-                <li>Paid time off</li>
-              </ul>
-
-              <h3>About Opsee</h3>
-              <p>We’re based in San Francisco's SoMa neighborhood and founded by <a href="https://twitter.com/moonpolysoft" target="_blank">Cliff Moon</a> & <a href="https://twitter.com/sboak" target="_blank">Steve Boak</a>. Our team has over 15 years of experience building dev tools and has built some of the most beloved tools in the industry, including Boundary and Sensu.</p>
-              <p>We're a technology company in the truest sense of the term. We're here to build great technology and a product that we and our users love.</p>
-
-              <p>Opsee Co. is an Equal Opportunity Employer.</p>
-            </article>
-          </div>
-        </section>
+        <p><a href="#" class="btn btn-lg btn-warning">SIGN UP FOR FREE</a></p>
 
       </div>
     </div>
   </div>
+</section>
 
-  <script>
-  $('[data-event]').on('click', function() {
-    _gs('event', $(this).data('event'));
-  });
-  </script>
-</body>
+<section class="section-bordered">
+  <div class="container">
+    <div class="row flex-vertical-align-sm padding-t-xlg">
+      <div class="col-xs-12 col-sm-6 flex-start">
+        <h2 class="">Great Monitoring Doesn't Need to Be Complicated</h2>
+        <p class="">Easily create health and performance checks for your services, and get notifications when they fail.</p>
+
+        <a href="/product" class="btn btn-primary btn-flat btn-ss hidden-xs">product tour <svg class="icon" viewBox="0 0 24 24"><use xlink:href="#ico_arrow_right_sign" /></svg></a>
+      </div>
+      <div class="col-xs-12 col-sm-6 flex-start">
+        <img class="ss-img" src="/public/img/home-4/home-checks2.svg"/>
+      </div>
+    </div>
+    <div class="padding-tb-md visible-xs">
+      <a href="/product" class="btn btn-primary btn-flat btn-ss btn-block">product tour <svg class="icon" viewBox="0 0 24 24"><use xlink:href="#ico_arrow_right_sign" /></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="section-bordered">
+  <div class="container">
+    <div class="row flex-vertical-align-sm padding-tb-xlg">
+      <div class="col-xs-12 col-sm-6 flex-order-1 flex-start">
+        <h2 class="">Seamless AWS Integration</h2>
+        <p class="">Opsee automatically discovers your AWS instances, groups, and services and helps you create health checks for them.</p>
+        <p class=""><em>Support for other platforms is coming, but not soon</em>.</p>
+
+        <a href="#" class="btn btn-primary btn-flat btn-ss hidden-xs">How Opsee Works <svg class="icon" viewBox="0 0 24 24"><use xlink:href="#ico_arrow_right_sign" /></svg></a>
+      </div>
+      <div class="col-xs-12 col-sm-6 flex-start">
+        <img class="ss-img" src="/public/img/home-4/home-aws.svg"/>
+      </div>
+    </div>
+    <div class="padding-b-md visible-xs">
+      <a href="#" class="btn btn-primary btn-flat btn-ss btn-block">How Opsee Works <svg class="icon" viewBox="0 0 24 24"><use xlink:href="#ico_arrow_right_sign" /></svg></a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row flex-vertical-align-sm padding-t-xlg">
+      <div class="col-xs-12 col-sm-6 flex-start">
+        <h2 class="">Real Incident Response Tools</h2>
+        <p class="">When there's a problem, you can take action right from the app.</p>
+
+        <a href="#" class="btn btn-primary btn-flat btn-ss hidden-xs">More about Actions <svg class="icon" viewBox="0 0 24 24"><use xlink:href="#ico_arrow_right_sign" /></svg></a>
+      </div>
+      <div class="col-xs-12 col-sm-6 flex-start">
+        <img class="ss-img" src="/public/img/home-4/instance-actions2-2x.gif"/>
+      </div>
+    </div>
+    <div class="padding-tb-md visible-xs">
+      <a href="#" class="btn btn-primary btn-flat btn-ss btn-block">More about Actions <svg class="icon" viewBox="0 0 24 24"><use xlink:href="#ico_arrow_right_sign" /></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="section-blue">
+  <div class="container">
+    <div class="row flex-vertical-align-sm padding-t-lg">
+      <div class="col-xs-12">
+        <h2 class="">Opsee Works Everywhere</h2>
+        <p class="">Track your health from anywhere with our responsive web app.</p>
+
+        <img class="ss-img-alt" src="/public/img/home-4/home-actions.svg"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-bordered">
+  <div class="container">
+    <div class="row flex-vertical-align-sm padding-t-xlg">
+      <div class="col-xs-12 col-sm-6 flex-order-1 flex-start">
+        <h2 class="">No SSH or cURL Required</h2>
+        <p class="">Once you add our Bastion Instance to your environment, it runs your health checks and watches for new instances and services automatically.</p>
+        <p><em>There’s no software to install on your systems.</em></p>
+
+        <a href="#" class="btn btn-primary btn-flat btn-ss hidden-xs">Getting Started With Opsee <svg class="icon" viewBox="0 0 24 24"><use xlink:href="#ico_arrow_right_sign" /></svg></a>
+      </div>
+      <div class="col-xs-12 col-sm-6 flex-start">
+        <img class="ss-img" src="/public/img/home-4/home-bastion3.svg"/>
+      </div>
+    </div>
+    <div class="padding-b-md visible-xs">
+      <a href="#" class="btn btn-primary btn-flat btn-ss btn-block">Getting Started With Opsee <svg class="icon" viewBox="0 0 24 24"><use xlink:href="#ico_arrow_right_sign" /></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="section-bordered">
+  <div class="container">
+    <div class="row flex-vertical-align-sm padding-tb-xlg">
+      <div class="col-xs-12 col-sm-6 flex-start">
+        <h2 class="">Made for Small Teams</h2>
+        <p class="">We're building Opsee for small teams, like us. There are no complicated dashboards, and it’s designed to get you back to doing what you love faster.</p>
+
+        <a href="#" class="btn btn-primary btn-flat btn-ss hidden-xs">Customer Case-studies <svg class="icon" viewBox="0 0 24 24"><use xlink:href="#ico_arrow_right_sign" /></svg></a>
+      </div>
+      <div class="col-xs-12 col-sm-6 flex-start">
+        <img class="ss-img" src="/public/img/home-4/home-team2.svg"/>
+      </div>
+    </div>
+    <div class="padding-tb-md visible-xs">
+      <a href="#" class="btn btn-primary btn-flat btn-ss btn-block">Customer Case-studies <svg class="icon" viewBox="0 0 24 24"><use xlink:href="#ico_arrow_right_sign" /></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="ss-signup-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 padding-tb-lg">
+        <h2>Use Opsee for <strong>free</strong>, with no limits, for as long as you want</h2>
+
+        <p><a href="#" class="btn btn-lg btn-warning">SIGN UP FOR FREE</a></p>
+
+      </div>
+    </div>
+  </div>
+</section>

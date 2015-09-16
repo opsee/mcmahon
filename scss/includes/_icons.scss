@@ -1,4 +1,6 @@
-.svg-icon{
-  width:100%;
-  max-width:30px;
+.svg_icon {
+  @include transition(fill $swift-ease-out-duration $swift-ease-out-timing-function);
+  display: inline-block;
+  height: 1.5em;
+  width: 1.5em;
 }
