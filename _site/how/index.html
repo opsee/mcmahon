@@ -1,0 +1,66 @@
+---
+layout: new
+title: How Opsee Works
+---
+
+<div class="jumbotron text-center">
+  <h1>No Software to Install on Your Systems</h1>
+  <h2 class="h3 text-white">Just add our Bastion Instance to your AWS environment</h2>
+</div>
+
+<section class="section-bordered">
+  <div class="container">
+    <div class="row flex-vertical-align-sm padding-tb-xlg">
+      <div class="col-xs-12 col-sm-6 flex-start">
+        <h2 class="">First, Add the Bastion Instance</h2>
+        <p class="">The first thing we do is add the Bastion Instance to your AWS environment. It's resonsible for all health checking, incident response, and discovery of your infrastructure.</p>
+        <p>The Bastion Instance is an Amazon AMI defined by a CloudFormation Template. <a href="DOCS">Learn more about the Bastion Instance</a> in our docs.</p>
+      </div>
+      <div class="col-xs-12 col-sm-6 flex-start">
+        <img class="ss-img" src="/public/img/home-4/how-bastion.svg" alt="Add the Bastion Instance"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-bordered">
+  <div class="container">
+    <div class="row flex-vertical-align-sm padding-tb-xlg">
+      <div class="col-xs-12 col-sm-6 flex-order-1 flex-start">
+        <h2 class="">Opsee Discovers Your Infrastructure</h2>
+        <p class="">The Bastion Instance uses AWS APIs to discover your instances and groups. It's always scanning, and detects changes to infrastructure automatically.</p>
+      </div>
+      <div class="col-xs-12 col-sm-6 flex-start">
+        <img class="ss-img" src="/public/img/home-4/how-discovery.svg" alt="We Discover Your Infrastructure"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row flex-vertical-align-sm padding-tb-xlg">
+      <div class="col-xs-12 col-sm-6 flex-start">
+        <h2 class="">Create Health Checks, but Don't Maintain Them</h2>
+        <p class="">In Opsee you can create health checks for AWS Security Groups, ELBs, and soon other entities like EC2 Tags, Regions, or Availability Zones. Opsee applies these checks to the right instances for you, and knows when new instances come online.</p>
+
+      </div>
+      <div class="col-xs-12 col-sm-6 flex-start">
+        <img class="ss-img" src="/public/img/home-4/how-checks.svg" alt="Group Health Checks"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ss-signup-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 padding-tb-lg">
+        <h2>You could already be trying Opsee.</h2>
+
+        <p><a href="#" class="btn btn-lg btn-warning">SIGN UP FOR FREE</a></p>
+
+      </div>
+    </div>
+  </div>
+</section>
