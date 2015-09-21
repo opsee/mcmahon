@@ -90,7 +90,7 @@ module.exports = function(grunt) {
       },
       prod: {
         options: {
-          bucket: 'staging-web.opsee.com',
+          bucket: 'opsee.com',
           params: {
             ContentEncoding: 'gzip' // applies to all the files!
           },
