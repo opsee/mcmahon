@@ -1,13 +1,13 @@
 # Name of your blog (this will show up at the top of your page and in the RSS feed)
-name: Opsee Blog
+name: Opsee
 
-title: Opsee
+title: Opsee - Effortless Monitoring of Your AWS Environment
 
 # Short description (goes below the title; it will also be used in the RSS feed)
-description: The Official Blog of Opsee
+description: Health and performance checks for your services with no software to install.
 
 # Your name, as you want it to appear underneath each post and in the footer
-author: Team Opsee
+author: Opsee Co
 
 # Your email if you want it to be linked on the contact page
 author_email: blog@opsee.co
@@ -19,11 +19,11 @@ category_dir: /
 # Uncomment if you are planning to run the blog in a subdirectory
 # Note - if you enable this, and attempt to view your site locally you have to use the baseurl in your local path.
 # Example, you must use http://localhost:4000/path/to/blog
-#baseurl: /path/to/blog 
+#baseurl: /path/to/blog
 #baseurl: /blog
 
 # The URL of your actual domain. This will be used to make absolute links in the RSS feed.
-url: http://opsee.co
+url: https://opsee.com
 
 #### Under the Hood Stuff #####
 

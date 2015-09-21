@@ -44,7 +44,7 @@
   {% if page.cover %}
     <meta content="{{ post.cover }}" property="og:image">
   {% else %}
-    <meta content="/public/img/opseeco.png" property="og:image">
+    <meta content="https://s3-us-west-1.amazonaws.com/opsee-public-images/opsee_logo_blue_400px.png" property="og:image">
   {% endif %}
   {% if page.categories %}
     {% for category in page.categories limit:1 %}
@@ -81,7 +81,7 @@
   {% if page.cover %}
     <meta name="twitter:image" content="{{ site.url }}{{page.cover}}">
   {% else %}
-    <meta content="/public/img/opseeco.png" property="twitter:image">
+    <meta content="https://s3-us-west-1.amazonaws.com/opsee-public-images/opsee_logo_blue_400px.png" property="twitter:image">
   {% endif %}
   {% if page.categories %}
     {% for category in page.categories limit:1 %}
