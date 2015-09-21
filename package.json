@@ -37,5 +37,9 @@
     "grunt-shell-spawn": "^0.3.0",
     "load-grunt-tasks": "^3.1.0",
     "ng-annotate": "^0.15.3"
+  },
+  "devDependencies": {
+    "grunt-aws-s3": "^0.14.0",
+    "grunt-contrib-compress": "^0.13.0"
   }
 }
