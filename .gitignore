@@ -13,6 +13,7 @@ modules/views/
 bower_components/
 public/css/style.css.map
 public/css/style.css
+production/
 *.min.js
 *.lock
 *.codekit

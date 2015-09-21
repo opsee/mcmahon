@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
   var load = require('load-grunt-tasks')(grunt)
-  var fs = require('fs');
+  , fs = require('fs')
   ;
 
   // Project configuration.
@@ -54,6 +54,57 @@ module.exports = function(grunt) {
         }
         ]
       }
+    },
+    compress:{
+      main:{
+        options:{
+          mode:'gzip'
+        },
+        expand:true,
+        cwd:'dist/',
+        src:['**/*'],
+        dest:'production/'
+      }
+    },
+    aws_s3: {
+      options: {
+        accessKeyId: process.env.Key, // Use the variables
+        secretAccessKey: process.env.Secret, // You can also use env variables
+        region: 'us-west-1',
+        uploadConcurrency: 5, // 5 simultaneous uploads
+        downloadConcurrency: 5 // 5 simultaneous downloads
+      },
+      staging: {
+        options: {
+          bucket: 'mcmahon-testing',
+          differential: true, // Only uploads the files that have changed
+          gzipRename: 'ext' // when uploading a gz file, keep the original extension
+        },
+        files: [
+          // {dest: 'app/', cwd: 'backup/staging/', action: 'download'},
+          // {src: 'app/', cwd: 'copy/', action: 'copy'},
+          {expand: true, cwd: 'dist/', src: ['**'], dest: '/'},
+          // {expand: true, cwd: 'dist/staging/styles/', src: ['**'], dest: 'app/styles/'},
+          // {dest: 'src/app', action: 'delete'},
+        ]
+      },
+      prod: {
+        options: {
+          bucket: 'staging-web.opsee.com',
+          params: {
+            ContentEncoding: 'gzip' // applies to all the files!
+          },
+          mime: {
+            'production/assets/production/LICENCE': 'text/plain'
+          }
+        },
+        files: [
+          {expand: true, cwd: 'production/', src: ['**'], dest: '/', stream: true}, // enable stream to allow large files
+          {expand: true, cwd: 'production/public/', src: ['**'], dest: '/public', params: {CacheControl: '2000'}},
+          // CacheControl only applied to the assets folder
+          // LICENCE inside that folder will have ContentType equal to 'text/plain'
+        ]
+      },
     },
     uglify:{
       deps:{
@@ -225,7 +276,7 @@ module.exports = function(grunt) {
   grunt.registerTask('init', ['concurrent:npmBowerBundle','concurrent:uglify', 'concurrent:build', 'jekyll']);
   grunt.registerTask('serve', ['connect', 'open', 'watch']);
   grunt.registerTask('annotate', ['ngAnnotate','uglify:annotated','clean:annotated']);
-  grunt.registerTask('prod', ['init']);
+  grunt.registerTask('prod', ['init', 'compress', 'aws_s3:prod']);
   grunt.registerTask('docker', ['install', 'compass', 'build', 'shell:docker']);
   grunt.registerTask('default', ['init','serve']);
 
