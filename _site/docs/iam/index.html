@@ -34,7 +34,7 @@ title: Docs - Bastion
         <p>The Access Policy you attach to the previously created IAM User limits what resources the User (in this case, Opsee) has access to. For more information on this Policy Element, refer to the section entitled Access Policy in the <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html">AWS Policy Elements Documentation</a>. Follow the steps listed below to apply the policy to the user you created in the previous section.</p>
 
         <ol>
-          <li>If for some reason you are not already signed in, sign in to the AWS Management Console and open the IAM console at https://console.aws.amazon.com/iam/</li>
+          <li>If for some reason you are not already signed in, sign in to the AWS Management Console and open the IAM console at <a target="_blank" href="https://console.aws.amazon.com/iam/">https://console.aws.amazon.com/iam/</a></li>
           <li>In the navigation pane, click Users.</li>
           <li>Click the name of the IAM user you created for the onboarding process, then scroll down to the section labled Permissions.</li>
           <li>In the section entitled, Inline Policies, Click the button labled Create User Policy</li>
@@ -45,30 +45,30 @@ title: Docs - Bastion
           <li>If no errors have occurred, click the button labled Apply Policy</li>
         </ol>
 
-        <pre>{
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Action": [
-                "cloudformation:*",
-                "ec2:*",
-                "rds:*",
-                "iam:AddRoleToInstanceProfile",
-                "iam:CreateInstanceProfile",
-                "iam:CreateRole",
-                "iam:DeleteInstanceProfile",
-                "iam:DeleteRole",
-                "iam:DeleteRolePolicy",
-                "iam:GetRole",
-                "iam:PassRole",
-                "iam:PutRolePolicy",
-                "iam:RemoveRoleFromInstanceProfile"
-              ],
-              "Resource": "*"
-            }
-          ]
-        }
-        </pre>
+        <pre>
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:*",
+        "ec2:*",
+        "rds:*",
+        "iam:AddRoleToInstanceProfile",
+        "iam:CreateInstanceProfile",
+        "iam:CreateRole",
+        "iam:DeleteInstanceProfile",
+        "iam:DeleteRole",
+        "iam:DeleteRolePolicy",
+        "iam:GetRole",
+        "iam:PassRole",
+        "iam:PutRolePolicy",
+        "iam:RemoveRoleFromInstanceProfile"
+      ],
+      "Resource": "*"
+    }
+  ]
+}</pre>
 
         <h3>Finishing Up</h3>
         <p>The final step of the process is to provide opsee with the credentials for the IAM User Account.  To do this, you will need to create an access key for the IAM User you have created.</p>
