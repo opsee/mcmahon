@@ -16,7 +16,7 @@ title: Blog
         <div itemscope itemtype="https://schema.org/Blog">
 
         {% for post in paginator.posts %}
-          <article class="padding-tb" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+          <article class="padding-tb-md" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
           {% assign author = site.data.authors[post.author] %}
             <div class="row">
               <div class="col-xs-12">
