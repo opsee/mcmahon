@@ -111,8 +111,8 @@ body {
 .padding{
   padding:1em;
 }
-.padding-none{
-  padding:0;
+.padding-none {
+  padding: 0 0 0 0;
 }
 .padding-lr {
   padding-left:1em;
@@ -122,6 +122,9 @@ body {
   padding-left:1em;
 }
 
+.padding-b-sm {
+  padding-bottom:0.5em;
+}
 .padding-b {
   padding-bottom:1em;
 }
@@ -138,6 +141,9 @@ body {
   }
 }
 
+.padding-t-sm {
+  padding-top:0.5em;
+}
 .padding-t {
   padding-top:1em;
 }
@@ -152,6 +158,11 @@ body {
   @include breakpoint($screen-sm){
     padding-top:5em;
   }
+}
+
+.padding-tb-sm {
+  padding-top:0.5em;
+  padding-bottom:0.5em;
 }
 .padding-tb {
   padding-top:1em;
