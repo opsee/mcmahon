@@ -1,16 +1,16 @@
 # Name of your blog (this will show up at the top of your page and in the RSS feed)
 name: Opsee
 
-title: Opsee - Effortless Monitoring of Your AWS Environment
+title: Opsee - Effortless Monitoring
 
 # Short description (goes below the title; it will also be used in the RSS feed)
-description: Health and performance checks for your services with no software to install.
+description: Health and performance checks for your services with no software to install
 
 # Your name, as you want it to appear underneath each post and in the footer
 author: Opsee Co
 
 # Your email if you want it to be linked on the contact page
-author_email: blog@opsee.co
+author_email:
 
 # The directory for category index pages. Change it to something else if
 # for example you want links like /categories/category1 instead of /category1

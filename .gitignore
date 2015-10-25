@@ -17,6 +17,8 @@ production/
 *.min.js
 *.lock
 *.codekit
+.ruby-version
+.ruby-version
 
 /blog/
 /pages/
