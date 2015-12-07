@@ -12,14 +12,14 @@
     <div>
       <img src="/public/img/{{post.author}}1.jpg" class="attrib-author"/>
       <div>{{ author.name }}</div>
-      <time class="attrib-time" datetime="{{post.date|date:"%F"}}" am-time-ago="'{{post.date|date:"%F"}}'"></time>
+      <time class="attrib-time" datetime="{{post.date|date:"%F"}}" am-time-ago="'{{post.date|date:"%F"}}'">{{post.date|date:"%F"}}</time>
     </div>
   {% else %}
     <div class="display-flex flex-vertical-align">
       {% if link %}<img src="/public/img/{{post.author}}1.jpg" class="attrib-author"/>{% endif %}
       <div class="padding-l">
         <div>{{ author.name }}</div>
-        <time class="attrib-time" datetime="{{post.date|date:"%F"}}" am-time-ago="'{{post.date|date:"%F"}}'"></time>
+        <time class="attrib-time" datetime="{{post.date|date:"%F"}}" am-time-ago="'{{post.date|date:"%F"}}'">{{post.date|date:"%F"}}</time>
       </div>
     </div>
   {% endif %}
