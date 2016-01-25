@@ -1,35 +1,49 @@
   <section id="signup" class="ss-signup">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 padding-tb-lg">
+        <div class="col-xs-12 col-md-8 col-md-8 col-md-offset-2 padding-tb-lg">
 
-          <h2>Get Effortless AWS Monitoring. Join our Private Beta</h2>
+          <div id="js-signup">
+            <h2>Get Effortless AWS Monitoring. Join our Private Beta</h2>
 
-          <p> If you <a href="https://opsee.typeform.com/to/JHiTKr" target="_blank">
-          fill out our survey</a> and you're a good fit, we'll <em>bump you to the top of the list</em>.</p>
+            <form id="js-signup-form">
+              <p> We're currently reviewing signups for our private beta. If you <a
+              href="https://opsee.typeform.com/to/JHiTKr" target="_blank">fill out
+              our survey</a> and you're a good fit, we'll <em>bump you to the
+              top of the list</em>.</p>
 
-          <form id="js-signup">
-            <div class="row">
+              <div class="row">
+                <div class="col-xs-6 text-left">
+                  <div class="form-group">
+                    <label for="js-signup-name">Name</label>
+                    <input class="form-control" name="name" id="js-signup-name" placeholder="Your Name" type="text" required />
+                  </div>
+                </div>
 
-              <div class="col-xs-6 col-xs-offset-3 text-left">
-                <div class="form-group">
-                  <label for="js-signup-name">Name</label>
-                  <input class="form-control" name="name" id="js-signup-name" placeholder="Your Name" type="text" required />
+                <div class="col-xs-6 text-left">
+                  <div class="form-group">
+                    <label for="js-signup-email">Email address</label>
+                    <input class="form-control" name="email" id="js-signup-email" placeholder="address@domain.com" type="email" required />
+                  </div>
                 </div>
               </div>
 
-              <div class="col-xs-6 col-xs-offset-3 text-left">
-                <div class="form-group">
-                  <label for="js-signup-email">Email address</label>
-                  <input class="form-control" name="email" id="js-signup-email" placeholder="address@domain.com" type="email" required />
-                </div>
+              <div class="form-group">
+                <input type="submit" class="btn btn-lg btn-warning" value="SIGN UP FOR FREE" />
               </div>
-            </div>
+            </form>
+          </div>
 
-            <div class="form-group">
-              <input type="submit" class="btn btn-lg btn-warning" value="SIGN UP FOR FREE" />
-            </div>
-          </form>
+          <div id="js-signup-thanks" hidden>
+            <h2>Thanks for joining the Opsee Private Beta!</h2>
+
+            <p>Thanks for letting us know you're interested in Opsee,
+            <span class="js-signup-thanks-name"></span>! We're currently reviewing signups for our private beta. If you <a href="https://opsee.typeform.com/to/JHiTKr" target="_blank">fill out our survey</a> and you're a good fit, you'll get an email from us at
+            <span class="js-signup-thanks-email"></span>.</p>
+
+            <p>'Til then, check out <a href="http://twitter.com/opseeco"
+            target="_blank">@opseeco</a> on Twitter for updates.</p>
+          </div>
         </div>
       </div>
     </div>

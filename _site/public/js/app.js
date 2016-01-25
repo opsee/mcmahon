@@ -38,27 +38,32 @@ $( document ).ready(function() {
     }
   });
 
-  $('form#js-signup').submit(function(event) {
+  $('#js-signup-form').submit(function(event) {
     event.preventDefault();
 
-    var data = {
-      name: $('#js-signup-name').val(),
-      email: $('#js-signup-email').val()
-    };
+    $("#js-signup-form :input").prop("disabled", true);
 
     $.ajax({
       type: 'POST',
       url: 'https://auth.opsee.com/signups',
-      data: JSON.stringify(data),
-      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify({
+        name: $('#js-signup-name').val(),
+        email: $('#js-signup-email').val()
+      }),
+      contentType: "application/json; charset=utf-8"
+    })
+    .done(function(user, textStatus, xhr) {
+      $('.js-signup-thanks-name').text(user.name);
+      $('.js-signup-thanks-email').text(user.email);
 
-      success: function(response) {
-        // no-op
-      },
-
-      error: function(response) {
-        // no-op
-      }
+      $('#js-signup').hide();
+      $('#js-signup-thanks').show();
+    })
+    .fail(function(xhr, textStatus, error) {
+      console.log('failure', xhr, textStatus, error);
+    })
+    .always(function() {
+      $("#js-signup-form :input").prop("disabled", false);
     });
   });
 });
