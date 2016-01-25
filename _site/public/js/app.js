@@ -61,8 +61,14 @@ $( document ).ready(function() {
       $('#js-signup-thanks').show();
     })
     .fail(function(xhr, textStatus, error) {
-      var response = JSON.parse(xhr.responseText);
-      var message = response.message || 'an error occurred!'
+      var message;
+
+      if (xhr && xhr.responseText) {
+        var response = JSON.parse(xhr.responseText);
+        message = response.message;
+      } else {
+        message = 'an error occurred!';
+      }
 
       $('#js-signup-errors')
         .text('Sorry, ' + message)
