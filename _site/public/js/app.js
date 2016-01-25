@@ -50,7 +50,8 @@ $( document ).ready(function() {
         name: $('#js-signup-name').val(),
         email: $('#js-signup-email').val()
       }),
-      contentType: "application/json; charset=utf-8"
+      contentType: 'application/json; charset=utf-8',
+      dataType: 'json'
     })
     .done(function(user, textStatus, xhr) {
       $('.js-signup-thanks-name').text(user.name);
@@ -60,7 +61,12 @@ $( document ).ready(function() {
       $('#js-signup-thanks').show();
     })
     .fail(function(xhr, textStatus, error) {
-      console.log('failure', xhr, textStatus, error);
+      var response = JSON.parse(xhr.responseText);
+      var message = response.message || 'an error occurred!'
+
+      $('#js-signup-errors')
+        .text('Sorry, ' + message)
+        .show();
     })
     .always(function() {
       $("#js-signup-form :input").prop("disabled", false);
