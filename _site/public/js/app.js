@@ -38,4 +38,27 @@ $( document ).ready(function() {
     }
   });
 
+  $('form#js-signup').submit(function(event) {
+    event.preventDefault();
+
+    var data = {
+      name: $('#js-signup-name').val(),
+      email: $('#js-signup-email').val()
+    };
+
+    $.ajax({
+      type: 'POST',
+      url: 'https://auth.opsee.com/signups',
+      data: JSON.stringify(data),
+      contentType: "application/json; charset=utf-8",
+
+      success: function(response) {
+        // no-op
+      },
+
+      error: function(response) {
+        // no-op
+      }
+    });
+  });
 });
