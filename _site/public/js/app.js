@@ -76,13 +76,21 @@ $( document ).ready(function() {
     }
   });
 
-  $('#js-signup-form').submit(function(event) {
+  $('.js-signup-form').submit(function(event) {
     event.preventDefault();
 
-    $("#js-signup-form :input").prop("disabled", true);
+    // In case of multiple sign-up forms on the same page, make sure to only
+    // work with the user submitted
+    const $form = $(event.target);
 
-    var name = $('#js-signup-name').val();
-    var email = $('#js-signup-email').val();
+    // We do, however, want to disable inputs on ALL signup forms
+    const $forms = $('.js-signup-form');
+    const $inputs = $forms.find(':input');
+
+    $inputs.prop('disabled', true);
+
+    var name = $form.find('.js-signup-name').val();
+    var email = $form.find('.js-signup-email').val();
 
     doSignUp(name, email)
       .done(function(user, textStatus, xhr) {
@@ -91,8 +99,8 @@ $( document ).ready(function() {
         $('.js-signup-thanks-name').text(user.name);
         $('.js-signup-thanks-email').text(user.email);
 
-        $('#js-signup').hide();
-        $('#js-signup-thanks').show();
+        $('.js-signup').hide();
+        $('.js-signup-thanks').show();
       })
       .fail(function(xhr, textStatus, error) {
         var message;
@@ -104,12 +112,12 @@ $( document ).ready(function() {
           message = 'an error occurred!';
         }
 
-        $('#js-signup-errors')
+        $('.js-signup-errors')
           .text('Sorry, ' + message)
           .show();
       })
       .always(function() {
-        $("#js-signup-form :input").prop("disabled", false);
+        $inputs.prop('disabled', false);
       });
   });
 });
