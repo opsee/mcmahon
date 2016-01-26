@@ -14,23 +14,27 @@
 
               <div class="row">
                 <div class="col-sm-6 text-left">
-                  <div class="form-group">
-                    <label for="js-signup-name">Name</label>
-                    <input class="form-control" name="name" id="js-signup-name" placeholder="Your Name" type="text" required />
+                  <div class="input_container">
+                    <input class="block icon" name="name" id="js-signup-name" placeholder="Your name" type="text" required />
+
+                    <label for="js-signup-name">Your name</label>
+                    <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_person" /></svg>
                   </div>
                 </div>
 
                 <div class="col-sm-6 text-left">
-                  <div class="form-group">
+                  <div class="input_container">
+                    <input class="block icon" name="email" id="js-signup-email" placeholder="Email address" type="email" required />
+
                     <label for="js-signup-email">Email address</label>
-                    <input class="form-control" name="email" id="js-signup-email" placeholder="address@domain.com" type="email" required />
+                    <svg class="svg_icon" viewBox="0 0 24 24"><use xlink:href="#ico_mail" /></svg>
                   </div>
                 </div>
               </div>
 
-              <div id="js-signup-errors" class="form-group text-danger"></div>
+              <div id="js-signup-errors" class="form-group text-danger" hidden></div>
 
-              <div class="form-group">
+              <div>
                 <input type="submit" class="btn btn-lg btn-warning" value="SIGN UP FOR FREE" />
               </div>
             </form>
