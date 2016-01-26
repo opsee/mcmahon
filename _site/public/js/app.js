@@ -1,3 +1,41 @@
+/**
+ * @param {string} name - required
+ * @param {string} email - required
+ */
+function doSignUp(name, email) {
+  return $.ajax({
+    type: 'POST',
+    url: 'https://auth.opsee.com/signups',
+    data: JSON.stringify({
+      name: name,
+      email: email
+    }),
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json'
+  });
+}
+
+/**
+ * @param {object} user
+ */
+function trackSignUp(user) {
+  return $.ajax({
+    type: 'POST',
+    url: 'https://myst.opsee.com/event',
+    data: JSON.stringify({
+      category: 'Onboard',
+      action: 'signup',
+      user: {
+        id: user.id,
+        name: user.name,
+        email: user.email
+      }
+    }),
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json'
+  });
+}
+
 $( document ).ready(function() {
   $(".required").blur(function(e) {
     if ($(e.target).val()) {
@@ -43,39 +81,35 @@ $( document ).ready(function() {
 
     $("#js-signup-form :input").prop("disabled", true);
 
-    $.ajax({
-      type: 'POST',
-      url: 'https://auth.opsee.com/signups',
-      data: JSON.stringify({
-        name: $('#js-signup-name').val(),
-        email: $('#js-signup-email').val()
-      }),
-      contentType: 'application/json; charset=utf-8',
-      dataType: 'json'
-    })
-    .done(function(user, textStatus, xhr) {
-      $('.js-signup-thanks-name').text(user.name);
-      $('.js-signup-thanks-email').text(user.email);
+    var name = $('#js-signup-name').val();
+    var email = $('#js-signup-email').val();
 
-      $('#js-signup').hide();
-      $('#js-signup-thanks').show();
-    })
-    .fail(function(xhr, textStatus, error) {
-      var message;
+    doSignUp(name, email)
+      .done(function(user, textStatus, xhr) {
+        trackSignUp(user);
 
-      if (xhr && xhr.responseText) {
-        var response = JSON.parse(xhr.responseText);
-        message = response.message;
-      } else {
-        message = 'an error occurred!';
-      }
+        $('.js-signup-thanks-name').text(user.name);
+        $('.js-signup-thanks-email').text(user.email);
 
-      $('#js-signup-errors')
-        .text('Sorry, ' + message)
-        .show();
-    })
-    .always(function() {
-      $("#js-signup-form :input").prop("disabled", false);
-    });
+        $('#js-signup').hide();
+        $('#js-signup-thanks').show();
+      })
+      .fail(function(xhr, textStatus, error) {
+        var message;
+
+        if (xhr && xhr.responseText) {
+          var response = JSON.parse(xhr.responseText);
+          message = response.message;
+        } else {
+          message = 'an error occurred!';
+        }
+
+        $('#js-signup-errors')
+          .text('Sorry, ' + message)
+          .show();
+      })
+      .always(function() {
+        $("#js-signup-form :input").prop("disabled", false);
+      });
   });
 });
