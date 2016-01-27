@@ -1,0 +1,282 @@
+// From mcmahon/_site/public/old/css/base.css
+.input_container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 1em;
+  padding-bottom: 0;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+.input_container > label {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: -webkit-transform 450ms cubic-bezier(0.23, 1, 0.32, 1), opacity 450ms cubic-bezier(0.23, 1, 0.32, 1), visibility 450ms cubic-bezier(0.23, 1, 0.32, 1);
+  -moz-transition: -moz-transform 450ms cubic-bezier(0.23, 1, 0.32, 1), opacity 450ms cubic-bezier(0.23, 1, 0.32, 1), visibility 450ms cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: -o-transform 450ms cubic-bezier(0.23, 1, 0.32, 1), opacity 450ms cubic-bezier(0.23, 1, 0.32, 1), visibility 450ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 450ms cubic-bezier(0.23, 1, 0.32, 1), opacity 450ms cubic-bezier(0.23, 1, 0.32, 1), visibility 450ms cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transform: translate(-2em, 0);
+  -ms-transform: translate(-2em, 0);
+  -o-transform: translate(-2em, 0);
+  transform: translate(-2em, 0);
+  color: #bdbdbd;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-top: 0.25em;
+  visibility: hidden;
+}
+.input_container > label + input {
+  padding-top: 0.5em;
+}
+.input_container > input[type='submit'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+.input_container > input[type='submit'].block {
+  width: 100%;
+}
+.input_container > input[type='text'],
+.input_container > input[type='email'],
+.input_container > input[type='password'] {
+  -webkit-transition: -webkit-box-shadow 450ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 450ms cubic-bezier(0.23, 1, 0.32, 1), border-color 450ms cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: -webkit-box-shadow 450ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 450ms cubic-bezier(0.23, 1, 0.32, 1), border-color 450ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: -webkit-box-shadow 450ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 450ms cubic-bezier(0.23, 1, 0.32, 1), border-color 450ms cubic-bezier(0.23, 1, 0.32, 1);
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #757575;
+  display: block;
+  font-size: 1.125em;
+  font-weight: 300;
+  line-height: 1.2em;
+  height: auto; // Firefox/Bootstrap fix: http://stackoverflow.com/a/24449464
+  outline: none;
+  padding: 1em 0 0.5em 0;
+}
+.input_container > input[type='text']::-moz-placeholder,
+.input_container > input[type='email']::-moz-placeholder,
+.input_container > input[type='password']::-moz-placeholder {
+  color: #bdbdbd;
+  opacity: 1;
+}
+.input_container > input[type='text']:-ms-input-placeholder,
+.input_container > input[type='email']:-ms-input-placeholder,
+.input_container > input[type='password']:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+.input_container > input[type='text']::-webkit-input-placeholder,
+.input_container > input[type='email']::-webkit-input-placeholder,
+.input_container > input[type='password']::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+.input_container > input[type='text']:hover,
+.input_container > input[type='email']:hover,
+.input_container > input[type='password']:hover {
+  border-bottom-color: #bdbdbd;
+}
+.input_container > input[type='text']:hover ~ .svg_icon,
+.input_container > input[type='email']:hover ~ .svg_icon,
+.input_container > input[type='password']:hover ~ .svg_icon {
+  fill: #bdbdbd;
+}
+.input_container > input[type='text']:focus::-moz-placeholder,
+.input_container > input[type='email']:focus::-moz-placeholder,
+.input_container > input[type='password']:focus::-moz-placeholder,
+.input_container > input[type='text']:active::-moz-placeholder,
+.input_container > input[type='email']:active::-moz-placeholder,
+.input_container > input[type='password']:active::-moz-placeholder,
+.input_container > input[type='text'].has_content::-moz-placeholder,
+.input_container > input[type='email'].has_content::-moz-placeholder,
+.input_container > input[type='password'].has_content::-moz-placeholder,
+.input_container > input[type='text'].error::-moz-placeholder,
+.input_container > input[type='email'].error::-moz-placeholder,
+.input_container > input[type='password'].error::-moz-placeholder {
+  color: transparent;
+  opacity: 1;
+}
+.input_container > input[type='text']:focus:-ms-input-placeholder,
+.input_container > input[type='email']:focus:-ms-input-placeholder,
+.input_container > input[type='password']:focus:-ms-input-placeholder,
+.input_container > input[type='text']:active:-ms-input-placeholder,
+.input_container > input[type='email']:active:-ms-input-placeholder,
+.input_container > input[type='password']:active:-ms-input-placeholder,
+.input_container > input[type='text'].has_content:-ms-input-placeholder,
+.input_container > input[type='email'].has_content:-ms-input-placeholder,
+.input_container > input[type='password'].has_content:-ms-input-placeholder,
+.input_container > input[type='text'].error:-ms-input-placeholder,
+.input_container > input[type='email'].error:-ms-input-placeholder,
+.input_container > input[type='password'].error:-ms-input-placeholder {
+  color: transparent;
+}
+.input_container > input[type='text']:focus::-webkit-input-placeholder,
+.input_container > input[type='email']:focus::-webkit-input-placeholder,
+.input_container > input[type='password']:focus::-webkit-input-placeholder,
+.input_container > input[type='text']:active::-webkit-input-placeholder,
+.input_container > input[type='email']:active::-webkit-input-placeholder,
+.input_container > input[type='password']:active::-webkit-input-placeholder,
+.input_container > input[type='text'].has_content::-webkit-input-placeholder,
+.input_container > input[type='email'].has_content::-webkit-input-placeholder,
+.input_container > input[type='password'].has_content::-webkit-input-placeholder,
+.input_container > input[type='text'].error::-webkit-input-placeholder,
+.input_container > input[type='email'].error::-webkit-input-placeholder,
+.input_container > input[type='password'].error::-webkit-input-placeholder {
+  color: transparent;
+}
+.input_container > input[type='text']:focus ~ label,
+.input_container > input[type='email']:focus ~ label,
+.input_container > input[type='password']:focus ~ label,
+.input_container > input[type='text']:active ~ label,
+.input_container > input[type='email']:active ~ label,
+.input_container > input[type='password']:active ~ label,
+.input_container > input[type='text'].has_content ~ label,
+.input_container > input[type='email'].has_content ~ label,
+.input_container > input[type='password'].has_content ~ label,
+.input_container > input[type='text'].error ~ label,
+.input_container > input[type='email'].error ~ label,
+.input_container > input[type='password'].error ~ label {
+  opacity: 100;
+  filter: alpha(opacity=10000);
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  visibility: visible;
+}
+.input_container > input[type='text']:focus.error,
+.input_container > input[type='email']:focus.error,
+.input_container > input[type='password']:focus.error,
+.input_container > input[type='text']:active.error,
+.input_container > input[type='email']:active.error,
+.input_container > input[type='password']:active.error,
+.input_container > input[type='text'].has_content.error,
+.input_container > input[type='email'].has_content.error,
+.input_container > input[type='password'].has_content.error,
+.input_container > input[type='text'].error.error,
+.input_container > input[type='email'].error.error,
+.input_container > input[type='password'].error.error {
+  -webkit-box-shadow: 0 1px 0 #e84e40;
+  box-shadow: 0 1px 0 #e84e40;
+  border-bottom-color: #e84e40;
+}
+.input_container > input[type='text']:focus.error ~ label,
+.input_container > input[type='email']:focus.error ~ label,
+.input_container > input[type='password']:focus.error ~ label,
+.input_container > input[type='text']:active.error ~ label,
+.input_container > input[type='email']:active.error ~ label,
+.input_container > input[type='password']:active.error ~ label,
+.input_container > input[type='text'].has_content.error ~ label,
+.input_container > input[type='email'].has_content.error ~ label,
+.input_container > input[type='password'].has_content.error ~ label,
+.input_container > input[type='text'].error.error ~ label,
+.input_container > input[type='email'].error.error ~ label,
+.input_container > input[type='password'].error.error ~ label {
+  color: #e84e40;
+}
+.input_container > input[type='text']:focus.error ~ .svg_icon,
+.input_container > input[type='email']:focus.error ~ .svg_icon,
+.input_container > input[type='password']:focus.error ~ .svg_icon,
+.input_container > input[type='text']:active.error ~ .svg_icon,
+.input_container > input[type='email']:active.error ~ .svg_icon,
+.input_container > input[type='password']:active.error ~ .svg_icon,
+.input_container > input[type='text'].has_content.error ~ .svg_icon,
+.input_container > input[type='email'].has_content.error ~ .svg_icon,
+.input_container > input[type='password'].has_content.error ~ .svg_icon,
+.input_container > input[type='text'].error.error ~ .svg_icon,
+.input_container > input[type='email'].error.error ~ .svg_icon,
+.input_container > input[type='password'].error.error ~ .svg_icon {
+  fill: #e84e40;
+}
+.input_container > input[type='text']:focus.error ~ .error_text,
+.input_container > input[type='email']:focus.error ~ .error_text,
+.input_container > input[type='password']:focus.error ~ .error_text,
+.input_container > input[type='text']:active.error ~ .error_text,
+.input_container > input[type='email']:active.error ~ .error_text,
+.input_container > input[type='password']:active.error ~ .error_text,
+.input_container > input[type='text'].has_content.error ~ .error_text,
+.input_container > input[type='email'].has_content.error ~ .error_text,
+.input_container > input[type='password'].has_content.error ~ .error_text,
+.input_container > input[type='text'].error.error ~ .error_text,
+.input_container > input[type='email'].error.error ~ .error_text,
+.input_container > input[type='password'].error.error ~ .error_text {
+  opacity: 100;
+  filter: alpha(opacity=10000);
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  visibility: visible;
+}
+.input_container > input[type='text']:focus,
+.input_container > input[type='email']:focus,
+.input_container > input[type='password']:focus,
+.input_container > input[type='text']:active,
+.input_container > input[type='email']:active,
+.input_container > input[type='password']:active {
+  -webkit-box-shadow: 0 1px 0 #90CAF9;
+  box-shadow: 0 1px 0 #90CAF9;
+  border-bottom-color: #90CAF9;
+}
+.input_container > input[type='text']:focus ~ label,
+.input_container > input[type='email']:focus ~ label,
+.input_container > input[type='password']:focus ~ label,
+.input_container > input[type='text']:active ~ label,
+.input_container > input[type='email']:active ~ label,
+.input_container > input[type='password']:active ~ label {
+  color: #90CAF9;
+}
+.input_container > input[type='text']:focus ~ .svg_icon,
+.input_container > input[type='email']:focus ~ .svg_icon,
+.input_container > input[type='password']:focus ~ .svg_icon,
+.input_container > input[type='text']:active ~ .svg_icon,
+.input_container > input[type='email']:active ~ .svg_icon,
+.input_container > input[type='password']:active ~ .svg_icon {
+  fill: #90CAF9;
+}
+@media only screen and (min-width: 48em) {
+  .input_container > input[type='text'],
+  .input_container > input[type='email'],
+  .input_container > input[type='password'] {
+    font-size: 1em;
+  }
+}
+.input_container > input[type='text'].icon,
+.input_container > input[type='email'].icon,
+.input_container > input[type='password'].icon {
+  text-indent: 2em;
+}
+.input_container > input[type='text'].block,
+.input_container > input[type='email'].block,
+.input_container > input[type='password'].block {
+  display: block;
+  width: 100%;
+}
+.input_container > input[type='text'] ~ .svg_icon,
+.input_container > input[type='email'] ~ .svg_icon,
+.input_container > input[type='password'] ~ .svg_icon {
+  fill: #757575;
+  height: auto;
+  left: 0;
+  margin-top: 1em;
+  position: absolute;
+  top: 0;
+  width: 1.25em;
+}
+.input_container > .error_text {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: -webkit-transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, visibility 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+  -moz-transition: -moz-transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, visibility 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+  -o-transition: -o-transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, visibility 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+  transition: transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, visibility 450ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+  -webkit-transform: translate(2em, 0);
+  -ms-transform: translate(2em, 0);
+  -o-transform: translate(2em, 0);
+  transform: translate(2em, 0);
+  color: #e84e40;
+  display: inline-block;
+  font-weight: 700;
+  visibility: hidden;
+}
