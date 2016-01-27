@@ -130,6 +130,13 @@ $( document ).ready(function() {
               message = 'an error occurred!';
             }
 
+            if (xhr.status <= 0 || xhr.status >= 500) {
+              if (window.Yeller) {
+                // TODO: figure out some custom attributes
+                window.Yeller.report(message);
+              }
+            }
+
             $('.js-signup-errors')
               .text('Sorry, ' + message)
               .show();
