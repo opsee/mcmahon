@@ -1,4 +1,28 @@
 /**
+ * @returns {string} - an anonymous UUID for tracking unauthenticated users
+ *    (similar in spirit to Google Analytics' _ga cookie)
+ */
+function getAnonymousUUID() {
+  return localStorage.getItem('_opsee_uuid');
+}
+
+/**
+ * @returns {string} - a random UUID
+ */
+function setAnonymousUUID() {
+  function s4() {
+    return Math.floor((1 + Math.random()) * 0x10000)
+      .toString(16)
+      .substring(1);
+  }
+  // @see http://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
+  var uuid = s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+    s4() + '-' + s4() + s4() + s4();
+
+  localStorage.setItem('_opsee_uuid', uuid);
+}
+
+/**
  * @param {string} name - required
  * @param {string} email - required
  */
@@ -35,7 +59,28 @@ function trackSignUp(user) {
   });
 }
 
+function trackPageView() {
+  if (!getAnonymousUUID()) setAnonymousUUID();
+
+  $.ajax({
+    type: 'POST',
+    url: 'https://myst.opsee.com/pageview',
+    data: JSON.stringify({
+      path: document.location.pathname,
+      name: document.title,
+      user: {
+        uuid: getAnonymousUUID()
+      }
+    }),
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json'
+  });
+}
+
 $( document ).ready(function() {
+
+  trackPageView();
+
   $(".required").blur(function(e) {
     if ($(e.target).val()) {
       $(e.target).addClass('has_content');
