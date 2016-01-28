@@ -25,8 +25,7 @@ function trackSignUp(user) {
     data: JSON.stringify({
       category: 'Onboard',
       action: 'signup',
-      user: {
-        id: user.id,
+      data: {
         name: user.name,
         email: user.email
       }
