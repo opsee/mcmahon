@@ -1,3 +1,6 @@
+var MYST_API = 'https://myst.opsee.com';
+var AUTH_API = 'https://auth.opsee.com';
+
 /**
  * @returns {string} - an anonymous UUID for tracking unauthenticated users
  *    (similar in spirit to Google Analytics' _ga cookie)
@@ -29,7 +32,7 @@ function setAnonymousUUID() {
 function doSignUp(name, email) {
   return $.ajax({
     type: 'POST',
-    url: 'https://auth.opsee.com/signups',
+    url: AUTH_API + '/signups',
     data: JSON.stringify({
       name: name,
       email: email
@@ -45,7 +48,7 @@ function doSignUp(name, email) {
 function trackSignUp(user) {
   return $.ajax({
     type: 'POST',
-    url: 'https://myst.opsee.com/event',
+    url: MYST_API + '/event',
     data: JSON.stringify({
       category: 'Onboard',
       action: 'signup',
@@ -64,7 +67,7 @@ function trackPageView() {
 
   $.ajax({
     type: 'POST',
-    url: 'https://myst.opsee.com/pageview',
+    url: MYST_API + '/pageview',
     data: JSON.stringify({
       path: document.location.pathname,
       name: document.title,
