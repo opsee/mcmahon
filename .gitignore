@@ -32,3 +32,6 @@ rawdata/
 
 *.sublime-workspace
 *.sublime-project
+
+# Static mcman stuff
+dist/

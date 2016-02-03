@@ -5,10 +5,19 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "webpack": "webpack --progress --colors",
+    "dev": "webpack-dev-server --progress --colors",
+    "start": "npm run dev"
   },
   "repository": "",
   "author": "Opsee Team",
   "license": "Copyright 2015",
-  "readmeFilename": "readme.md"
+  "readmeFilename": "readme.md",
+  "devDependencies": {
+    "jsx-loader": "^0.13.2",
+    "react": "^0.13.3",
+    "static-site-generator-webpack-plugin": "^2.0.1",
+    "webpack": "^1.12.12",
+    "webpack-dev-server": "^1.14.1"
+  }
 }
