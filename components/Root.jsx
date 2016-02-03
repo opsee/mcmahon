@@ -9,7 +9,7 @@ var Root = React.createClass({
           <title>{this.props.title}</title>
         </head>
         <body>
-          hello, world
+          hello, world!
         </body>
       </html>
     )
