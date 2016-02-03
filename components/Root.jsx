@@ -1,15 +1,19 @@
-// components/Root.jsx
-var React = require('react')
+const React = require('react')
+const Router = require('react-router');
+const RouteHandler = Router.RouteHandler;
+
+const Header = require('./Header.jsx');
 
 var Root = React.createClass({
   render: function () {
     return (
       <html>
         <head>
-          <title>{this.props.title}</title>
+          <title>Opsee</title>
         </head>
         <body>
-          hello, world!
+          <Header />
+          hello world
         </body>
       </html>
     )
