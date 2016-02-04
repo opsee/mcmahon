@@ -1,6 +1,7 @@
 const React = require('react');
 
 const Header = require('./Header.jsx');
+const css = require('./style.css');
 
 var Root = React.createClass({
   render: function () {
@@ -8,6 +9,7 @@ var Root = React.createClass({
       <html>
         <head>
           <title>Opsee</title>
+          <style dangerouslySetInnerHTML={{ __html: css }} />
         </head>
         <body>
           <Header />
