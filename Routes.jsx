@@ -1,16 +1,17 @@
 const React = require('react');
-const Router = require('react-router');
-const Route = Router.Route;
-const DefaultRoute = Router.DefaultRoute;
+const Router = require('react-router').Router;
+const Route = require('react-router').Route;
+const IndexRoute = require('react-router').IndexRoute;
 
 const Root = require('./components/Root.jsx');
-// const About = require('./components/About.jsx');
 const Index = require('./components/Index.jsx');
-
-
-
+const About = require('./components/About.jsx');
 
 module.exports = (
-  <Route handler={Root} path='/'>
-  </Route>
+  <Router>
+    <Route component={Root} path='/'>
+      <IndexRoute component={Index} />
+      <Route path="about" component={About} />
+    </Route>
+  </Router>
 );

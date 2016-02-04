@@ -1,6 +1,4 @@
-const React = require('react')
-const Router = require('react-router');
-const RouteHandler = Router.RouteHandler;
+const React = require('react');
 
 const Header = require('./Header.jsx');
 
@@ -13,7 +11,7 @@ var Root = React.createClass({
         </head>
         <body>
           <Header />
-          hello world
+          {this.props.children}
         </body>
       </html>
     )
