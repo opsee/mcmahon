@@ -25,6 +25,7 @@
     "jsx-loader": "^0.13.2",
     "opsee-style": "git+ssh://git@github.com/opsee/style.git",
     "postcss": "^5.0.14",
+    "postcss-cssnext": "^2.4.0",
     "postcss-loader": "^0.8.0",
     "postcss-modules": "^0.3.0",
     "react": "^0.13.3",
