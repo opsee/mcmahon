@@ -1,7 +1,21 @@
-a {
-  display: flex;
+body, html, .root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  background-color: yellow;
 }
 
 .root {
   background-color: fuchsia;
+  text-align: center;
+}
+
+.logo {
+  max-width: 200px;
 }
