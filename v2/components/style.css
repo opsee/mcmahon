@@ -1,7 +1,7 @@
-* {
-  color: red !important;
+a {
+  display: flex;
 }
 
-a {
-    display: flex;
+.root {
+  background-color: fuchsia;
 }

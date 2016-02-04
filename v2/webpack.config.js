@@ -13,7 +13,10 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.css/,
+        test: /\.json$/,
+        loader: 'json-loader'
+      }, {
+        test: /\.css$/,
         loader: 'css-loader!postcss-loader'
       }, {
         test: /\.jsx$/,
@@ -31,7 +34,8 @@ module.exports = {
 
   postcss(webpack) {
     return [
-      require('autoprefixer')
+      require('autoprefixer'),
+      require('postcss-modules')
     ];
   }
 };
