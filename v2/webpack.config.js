@@ -32,8 +32,11 @@ module.exports = {
     new StaticSiteGeneratorPlugin('bundle.js', data.routes, data)
   ],
 
-  postcss() {
+  postcss(webpack) {
     return [
+      require('postcss-import')({
+        addDependencyTo: webpack
+      }),
       require('postcss-modules'),
       require('postcss-cssnext')()
     ];
