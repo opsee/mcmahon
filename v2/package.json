@@ -16,13 +16,18 @@
   "readmeFilename": "readme.md",
   "devDependencies": {
     "babel-eslint": "^4.1.8",
+    "css-loader": "^0.23.1",
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.16.1",
+    "file-loader": "^0.8.5",
     "jsx-loader": "^0.13.2",
     "opsee-style": "git+ssh://git@github.com/opsee/style.git",
+    "postcss-loader": "^0.8.0",
     "react": "^0.13.3",
     "react-router": "^2.0.0-rc5",
     "static-site-generator-webpack-plugin": "^2.0.1",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
     "webpack": "^1.12.12",
     "webpack-dev-server": "^1.14.1"
   }

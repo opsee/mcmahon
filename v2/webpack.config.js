@@ -12,7 +12,16 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.jsx$/, loader: 'jsx-loader' }
+      {
+        test: /\.css/,
+        loader: 'css-loader'
+      }, {
+        test: /\.jsx$/,
+        loader: 'jsx-loader'
+      }, {
+        test: /\.(png|jpg|svg)$/,
+        loader: 'url-loader?limit=8192'
+      }
     ]
   },
 
