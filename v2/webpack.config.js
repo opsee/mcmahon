@@ -32,7 +32,7 @@ module.exports = {
     new StaticSiteGeneratorPlugin('bundle.js', data.routes, data)
   ],
 
-  postcss(webpack) {
+  postcss() {
     return [
       require('autoprefixer'),
       require('postcss-modules')
