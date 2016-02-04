@@ -14,7 +14,7 @@ module.exports = {
     loaders: [
       {
         test: /\.css/,
-        loader: 'css-loader'
+        loader: 'css-loader!postcss-loader'
       }, {
         test: /\.jsx$/,
         loader: 'jsx-loader'
@@ -27,5 +27,11 @@ module.exports = {
 
   plugins: [
     new StaticSiteGeneratorPlugin('bundle.js', data.routes, data)
-  ]
+  ],
+
+  postcss(webpack) {
+    return [
+      require('autoprefixer')
+    ];
+  }
 };
