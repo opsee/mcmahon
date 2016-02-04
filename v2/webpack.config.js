@@ -13,8 +13,11 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.css/,
-        loader: 'css-loader'
+        test: /\.json$/,
+        loader: 'json-loader'
+      }, {
+        test: /\.css$/,
+        loader: 'css-loader!postcss-loader'
       }, {
         test: /\.jsx$/,
         loader: 'jsx-loader'
@@ -27,5 +30,15 @@ module.exports = {
 
   plugins: [
     new StaticSiteGeneratorPlugin('bundle.js', data.routes, data)
-  ]
+  ],
+
+  postcss(webpack) {
+    return [
+      require('postcss-import')({
+        addDependencyTo: webpack
+      }),
+      require('postcss-modules'),
+      require('postcss-cssnext')()
+    ];
+  }
 };

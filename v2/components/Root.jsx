@@ -1,8 +1,12 @@
 const React = require('react');
 
 const Header = require('./Header.jsx');
-const css = require('./style.css');
+
 const logo = require('../img/logo-color-border-light.svg');
+const pepe = require('../img/pepe.png');
+
+const style = require('../css/style.css');
+const css = require('../css/style.css.json');
 
 var Root = React.createClass({
   render: function () {
@@ -10,14 +14,16 @@ var Root = React.createClass({
       <html>
         <head>
           <title>Opsee</title>
-          <style dangerouslySetInnerHTML={{ __html: css }} />
+          <style dangerouslySetInnerHTML={{ __html: style }} />
         </head>
         <body>
-          <div>
-            <img src={logo} alt="Opsee logo" />
+          <div className={css.root}>
+            <h1>Welcome to</h1>
+            <div><img src={logo} alt="Opsee logo" className={css.logo} /></div>
+            <div><img src={pepe} /></div>
+            <Header />
+            {this.props.children}
           </div>
-          <Header />
-          {this.props.children}
         </body>
       </html>
     )

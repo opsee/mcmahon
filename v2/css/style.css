@@ -1,0 +1,20 @@
+@import './header.css';
+
+:root {
+  --mainColour: lime;
+}
+
+body, html, .root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.root {
+  background-color: fuchsia;
+  text-align: center;
+}
+
+.logo {
+  max-width: 200px;
+}
