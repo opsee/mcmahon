@@ -4,7 +4,7 @@ body, html, .root {
   padding: 0;
 }
 
-header {
+.header {
   text-align: center;
   margin: 0 auto;
   display: block;
