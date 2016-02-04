@@ -1,7 +1,6 @@
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const data = require('./data');
 
-
 module.exports = {
   entry: './entry.js',
 
