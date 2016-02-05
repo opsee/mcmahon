@@ -4,14 +4,26 @@
   --mainColour: lime;
 }
 
+html {
+  background-color: fuchsia;
+}
+
 body, html, .root {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
+a, a:visited, a:active {
+  color: lime;
+  padding: 12px;
+}
+
+a:hover {
+  color: aqua;
+}
+
 .root {
-  background-color: fuchsia;
   text-align: center;
 }
 

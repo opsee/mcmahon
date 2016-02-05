@@ -1,14 +1,21 @@
 const React = require('react');
+const garf = require('../img/garf.jpg');
 
 module.exports = React.createClass({
 
-  onSubmit(e) {
-    e.preventDefault();
-    console.log(e);
+  getInitialState() {
+    return {
+      showGarf: false
+    };
   },
 
-  render() {
-    return(
+  onSubmit(e) {
+    e.preventDefault();
+    this.setState({ showGarf: true });
+  },
+
+  renderForm() {
+    return (
       <form onSubmit={this.onSubmit}>
         <div>
           <label htmlFor="js-submit-email">Email:</label>
@@ -25,5 +32,18 @@ module.exports = React.createClass({
         </div>
       </form>
     );
+  },
+
+  renderGarf() {
+    return (
+      <div>
+        <h1>Congration</h1>
+        <img src={garf} />
+      </div>
+    );
+  },
+
+  render() {
+    return this.state.showGarf ? this.renderGarf() : this.renderForm();
   }
 });

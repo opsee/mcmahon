@@ -1,6 +1,5 @@
 const React = require('react');
 const Link = require('react-router').Link;
-
 const css = require('../css/style.css.json');
 
 const Header = React.createClass({
