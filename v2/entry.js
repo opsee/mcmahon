@@ -1,9 +1,9 @@
 const React = require('react');
 const Router = require('react-router');
 
-const routes = require('./Routes.jsx');
-const router = require('./Router.jsx');
-const context = require('./context.jsx');
+const routes = require('./src/Routes.jsx');
+const router = require('./src/Router.jsx');
+const context = require('./src/context.jsx');
 
 // Client-side rendering
 if (typeof document !== 'undefined') {
