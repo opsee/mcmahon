@@ -5,6 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
+    "test": "npm run lint && npm run webpack",
     "webpack": "webpack --progress --colors",
     "dev": "webpack-dev-server --progress --colors --port 8282",
     "start": "npm run dev",

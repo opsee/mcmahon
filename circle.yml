@@ -1,0 +1,5 @@
+machine:
+  node:
+    version: 5.4
+general:
+  build_dir: v2
