@@ -24,6 +24,8 @@ var Root = React.createClass({
             <Header />
             {this.props.children}
           </div>
+
+          <script src='bundle.js' />
         </body>
       </html>
     )

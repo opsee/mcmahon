@@ -1,9 +1,15 @@
 const React = require('react');
 
 module.exports = React.createClass({
+
+  onSubmit(e) {
+    e.preventDefault();
+    console.log(e);
+  },
+
   render() {
     return(
-      <form>
+      <form onSubmit={this.onSubmit}>
         <div>
           <label for="js-submit-email">Email:</label>
           <input id="js-submit-email" name="email" placeholder="pepe@therarest.com" type="email" autofocus />
