@@ -1,3 +1,4 @@
+const config = require('config');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const data = require('./src/data');
 
@@ -6,7 +7,7 @@ module.exports = {
 
   output: {
     filename: 'bundle.js',
-    path: 'dist',
+    path: config.staticDir,
     libraryTarget: 'umd'
   },
 

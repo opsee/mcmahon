@@ -1,0 +1,9 @@
+{
+  "staticDir": "dist",
+
+  "aws": {
+    "accessKeyID": null,
+    "secretAccessKey": null,
+    "bucket": null
+  }
+}

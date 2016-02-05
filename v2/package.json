@@ -5,11 +5,13 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint && npm run webpack",
-    "webpack": "webpack --progress --colors",
+    "test": "npm run lint && npm run build",
+    "build": "webpack --progress --colors",
     "dev": "webpack-dev-server --progress --colors --port 8282",
     "start": "npm run dev",
-    "lint": "./node_modules/eslint/bin/eslint.js --max-warnings 0 *.js"
+    "lint": "./node_modules/eslint/bin/eslint.js --max-warnings 0 *.js",
+    "deploy": "NODE_ENV=production node ./bin/deploy.js",
+    "publish": "npm run build && npm run deploy"
   },
   "repository": "",
   "author": "Opsee Team",
@@ -32,6 +34,7 @@
     "postcss-modules": "^0.3.0",
     "react": "^0.13.3",
     "react-router": "^2.0.0-rc5",
+    "s3": "^4.4.0",
     "static-site-generator-webpack-plugin": "^2.0.1",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
