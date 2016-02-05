@@ -1,6 +1,7 @@
 const config = require('config');
 const s3 = require('s3');
 const path = require('path');
+const colors = require('colors');
 
 function deploy() {
   const params = {
@@ -13,8 +14,6 @@ function deploy() {
     }
   };
 
-  console.log('deploying!', params);
-
   const client = s3.createClient({
     s3Options: {
       accessKeyId: config.aws.accessKeyID,
@@ -24,21 +23,16 @@ function deploy() {
 
   const uploader = client.uploadDir(params);
 
-  uploader.on('fileUploadStart', (localFilePath, s3Key) => {
-    console.log('uploading ' + localFilePath);
-  });
-
   uploader.on('error', (err) => {
     console.error("unable to sync:", err.stack);
   });
 
-  uploader.on('progress', function() {
-    console.log('files found', uploader.filesFound)
-    console.log('deleting ', uploader.deleteAmount, uploader.deleteTotal);
-    // console.log("progress", uploader.progressAmount, uploader.progressTotal);
+  uploader.on('progress', () => {
+    process.stdout.write(".");
   });
+
   uploader.on('end', function() {
-    console.log("done uploading");
+    console.log('\n', 'done uploading!'.green);
   });
 }
 
