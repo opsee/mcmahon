@@ -11,12 +11,12 @@ module.exports = React.createClass({
     return(
       <form onSubmit={this.onSubmit}>
         <div>
-          <label for="js-submit-email">Email:</label>
+          <label htmlFor="js-submit-email">Email:</label>
           <input id="js-submit-email" name="email" placeholder="pepe@therarest.com" type="email" autofocus />
         </div>
 
         <div>
-          <label for="js-submit-name">Name:</label>
+          <label htmlFor="js-submit-name">Name:</label>
           <input id="js-submit-name" name="name" placeholder="pepe" type="text" />
         </div>
 
