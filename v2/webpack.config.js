@@ -4,7 +4,7 @@ const path = require('path');
 const data = require('./src/data');
 
 const CONTEXT_DIR = path.join(__dirname, '/src');
-const MODULES_DIR = path.resolve(__dirname, 'node_modules', 'Emissary');
+const EMISSARY_DIR = path.resolve(__dirname, 'node_modules', 'Emissary');
 
 module.exports = {
   entry: './src/entry.js',
@@ -20,24 +20,29 @@ module.exports = {
       {
         test: /\.json$/,
         loader: 'json-loader',
-        include: [CONTEXT_DIR, MODULES_DIR]
+        include: [CONTEXT_DIR, EMISSARY_DIR]
       }, {
         test: /\.css$/,
         loader: 'css-loader!postcss-loader',
-        include: [CONTEXT_DIR, MODULES_DIR]
+        include: [CONTEXT_DIR, EMISSARY_DIR]
       }, {
         test: /\.js$|\.jsx$/,
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react']
         },
-        include: [CONTEXT_DIR, MODULES_DIR]
+        include: [CONTEXT_DIR, EMISSARY_DIR]
       }, {
         test: /\.(png|jpg|svg)$/,
         loader: 'url-loader?limit=8192',
-        include: [CONTEXT_DIR, MODULES_DIR]
+        include: [CONTEXT_DIR, EMISSARY_DIR]
       }
     ]
+  },
+
+  resolve: {
+    extensions: ['', '.jsx', '.js', '.json', '.svg', '.png', '.jpg'],
+    modulesDirectories: ['node_modules']
   },
 
   plugins: [
