@@ -1,8 +1,13 @@
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
-const data = require('./data');
+const path = require('path');
+
+const data = require('./src/data');
+
+const CONTEXT_DIR = path.join(__dirname, '/src');
+const MODULES_DIR = path.resolve(__dirname, 'node_modules', 'Emissary');
 
 module.exports = {
-  entry: './entry.js',
+  entry: './src/entry.js',
 
   output: {
     filename: 'bundle.js',
@@ -14,19 +19,23 @@ module.exports = {
     loaders: [
       {
         test: /\.json$/,
-        loader: 'json-loader'
+        loader: 'json-loader',
+        include: [CONTEXT_DIR, MODULES_DIR]
       }, {
         test: /\.css$/,
-        loader: 'css-loader!postcss-loader'
+        loader: 'css-loader!postcss-loader',
+        include: [CONTEXT_DIR, MODULES_DIR]
       }, {
         test: /\.js$|\.jsx$/,
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react']
-        }
+        },
+        include: [CONTEXT_DIR, MODULES_DIR]
       }, {
         test: /\.(png|jpg|svg)$/,
-        loader: 'url-loader?limit=8192'
+        loader: 'url-loader?limit=8192',
+        include: [CONTEXT_DIR, MODULES_DIR]
       }
     ]
   },
