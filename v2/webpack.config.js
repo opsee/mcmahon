@@ -19,8 +19,11 @@ module.exports = {
         test: /\.css$/,
         loader: 'css-loader!postcss-loader'
       }, {
-        test: /\.jsx$/,
-        loader: 'jsx-loader'
+        test: /\.js$|\.jsx$/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015', 'react']
+        }
       }, {
         test: /\.(png|jpg|svg)$/,
         loader: 'url-loader?limit=8192'
