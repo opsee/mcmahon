@@ -1,5 +1,5 @@
-const React = require('react');
-const Link = require('react-router').Link;
+import React from 'react'
+import {Link} from 'react-router';
 import LogoColor from 'Emissary/src/js/components/global/LogoColor.jsx';
 
 const css = require('../css/style.css.json');
