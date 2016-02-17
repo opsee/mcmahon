@@ -1,3 +1,4 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const path = require('path');
 
@@ -22,10 +23,6 @@ module.exports = {
         loader: 'json-loader',
         include: [CONTEXT_DIR, EMISSARY_DIR]
       }, {
-        test: /\.css$/,
-        loader: 'css-loader!postcss-loader',
-        include: [CONTEXT_DIR, EMISSARY_DIR]
-      }, {
         test: /\.js$|\.jsx$/,
         loader: 'babel-loader',
         query: {
@@ -36,7 +33,24 @@ module.exports = {
         test: /\.(png|jpg|svg)$/,
         loader: 'url-loader?limit=8192',
         include: [CONTEXT_DIR, EMISSARY_DIR]
-      }
+      },
+      // ONLY MCMAHON CSS
+      {
+        test: /\.css$/,
+        loader: 'css-loader!postcss-loader',
+        include: [CONTEXT_DIR]
+      },
+      // ONLY EMISSARY CSS
+      {
+        test: /\.global\.css$/,
+        loader: 'style-loader!css-loader?&importLoaders=1!postcss-loader',
+        include: [EMISSARY_DIR]
+      },
+      {
+        test: /^(?!.*global\.css$).*\.css$/,
+        loader: 'style-loader!css-loader?module&localIdentName=[path][name]-[local]&importLoaders=1!postcss-loader',
+        include: [EMISSARY_DIR]
+      },
     ]
   },
 
@@ -46,6 +60,7 @@ module.exports = {
   },
 
   plugins: [
+    new ExtractTextPlugin('style.css'),
     new StaticSiteGeneratorPlugin('bundle.js', data.routes, data)
   ],
 
