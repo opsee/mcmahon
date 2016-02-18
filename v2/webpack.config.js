@@ -5,7 +5,7 @@ const path = require('path');
 const data = require('./src/data');
 
 const CONTEXT_DIR = path.join(__dirname, '/src');
-const EMISSARY_DIR = path.resolve(__dirname, 'node_modules', 'Emissary');
+const EMISSARY_DIR = path.resolve(__dirname, 'node_modules', 'emissary');
 
 module.exports = {
   entry: './src/entry.js',
@@ -38,25 +38,25 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'css-loader!postcss-loader',
-        include: [CONTEXT_DIR]
+        include: [CONTEXT_DIR, EMISSARY_DIR]
       },
       // ONLY EMISSARY CSS
-      {
-        test: /\.global\.css$/,
-        loader: 'style-loader!css-loader?&importLoaders=1!postcss-loader',
-        include: [EMISSARY_DIR]
-      },
-      {
-        test: /^(?!.*global\.css$).*\.css$/,
-        loader: 'style-loader!css-loader?module&localIdentName=[path][name]-[local]&importLoaders=1!postcss-loader',
-        include: [EMISSARY_DIR]
-      },
+      // {
+      //   test: /\.global\.css$/,
+      //   loader: 'style-loader!css-loader?&importLoaders=1!postcss-loader',
+      //   include: [EMISSARY_DIR]
+      // },
+      // {
+      //   test: /^(?!.*global\.css$).*\.css$/,
+      //   loader: 'style-loader!css-loader?module&localIdentName=[path][name]-[local]&importLoaders=1!postcss-loader',
+      //   include: [EMISSARY_DIR]
+      // },
     ]
   },
 
   resolve: {
     extensions: ['', '.jsx', '.js', '.json', '.svg', '.png', '.jpg'],
-    modulesDirectories: ['node_modules']
+    modulesDirectories: ['node_modules', EMISSARY_DIR]
   },
 
   plugins: [

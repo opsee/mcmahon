@@ -16,7 +16,7 @@
   "license": "Copyright 2015",
   "readmeFilename": "readme.md",
   "dependencies": {
-    "Emissary": "github:opsee/emissary",
+    "emissary": "github:opsee/emissary",
     "babel-core": "^6.5.2",
     "babel-loader": "^6.2.2",
     "babel-preset-react": "^6.5.0",
