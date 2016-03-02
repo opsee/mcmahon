@@ -1,0 +1,26 @@
+<!--twitter-->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@opseeco">
+{% if page.title %}
+  <meta name="twitter:title" content="{{ page.title }}">
+{% else %}
+  <meta name="twitter:title" content="{{ site.title }}">
+{% endif %}
+{% if page.excerpt %}
+  <meta name="twitter:description" content="{{ page.excerpt }}">
+{% else %}
+  <meta name="twitter:description" content="{{ site.description }}">
+{% endif %}
+{% if page.url %}
+<meta name="twitter:url" ontent="{{ site.url }}{{ page.url }}">
+{% endif %}
+{% if page.date %}
+  <meta name="twitter:creator" content="@{{site.data.authors[page.author].twitter}}">
+{% else %}
+  <meta name="twitter:creator" content="@opseeco">
+{% endif %}
+{% if page.cover %}
+  <meta name="twitter:image" content="{{ site.url }}{{page.cover}}">
+{% else %}
+  <meta content="https://s3-us-west-1.amazonaws.com/opsee-public-images/opsee_logo_blue_400px.png" property="twitter:image">
+{% endif %}

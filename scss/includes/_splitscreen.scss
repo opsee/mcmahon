@@ -32,6 +32,10 @@ section {
   background-size: cover;
   height: 350px;
   position: relative;
+  &.try {
+    background-image: url('/public/img/try/desk1-trimmed.jpg');
+    background-position: 25% 50%;
+  }
   @include breakpoint($screen-sm) {
     height: 500px;
   }
@@ -75,6 +79,9 @@ section {
   position: absolute;
   top: 0;
   width: 100%;
+  &.try {
+    background-color: rgba(70,90,100,0.6);
+  }
 }
 
 .ss-img {
