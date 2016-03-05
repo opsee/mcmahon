@@ -32,9 +32,12 @@ section {
   background-size: cover;
   height: 350px;
   position: relative;
-  &.try {
-    background-image: url('/public/img/try/desk1-trimmed.jpg');
-    background-position: 25% 50%;
+  &.try-dev {
+    background-image: url('/public/img/try/desk-dev-trimmed.jpg');
+  }
+  &.try-aws {
+    background-image: url('/public/img/try/desk-aws-trimmed.jpg');
+    background-position: 50% 50%;
   }
   @include breakpoint($screen-sm) {
     height: 500px;
@@ -73,7 +76,7 @@ section {
 }
 
 .ss-hero-overlay {
-  background-color: rgba(70,90,100,0.75);
+  background-color: rgba(70,90,100,0.7);
   height: 100%;
   left: 0;
   position: absolute;
