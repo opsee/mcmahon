@@ -33,10 +33,14 @@ section {
   height: 350px;
   position: relative;
   &.try-dev {
-    background-image: url('/public/img/try/desk-dev-trimmed.jpg');
+    background-image: url('/public/img/try/try-dev-trimmed.jpg');
   }
   &.try-aws {
-    background-image: url('/public/img/try/desk-aws-trimmed.jpg');
+    background-image: url('/public/img/try/try-aws-trimmed.jpg');
+    background-position: 50% 50%;
+  }
+  &.try-ux {
+    background-image: url('/public/img/try/try-ux2-trimmed.jpg');
     background-position: 50% 50%;
   }
   @include breakpoint($screen-sm) {
