@@ -43,6 +43,10 @@ section {
     background-image: url('/public/img/try/try-ux2-trimmed.jpg');
     background-position: 50% 50%;
   }
+  &.try-nagios {
+    background-image: url('/public/img/try/try-nagios-trimmed.jpg');
+    background-position: 50% 50%;
+  }
   @include breakpoint($screen-sm) {
     height: 500px;
   }
