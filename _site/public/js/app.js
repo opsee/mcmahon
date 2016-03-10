@@ -1,4 +1,3 @@
-var MYST_API = 'https://myst.opsee.com';
 var AUTH_API = 'https://auth.opsee.com';
 
 /**
@@ -30,18 +29,6 @@ function trackSignUp(user) {
   };
 
   window.ga('send', 'event', category, action, JSON.stringify(data));
-
-  return $.ajax({
-    type: 'POST',
-    url: MYST_API + '/event',
-    data: JSON.stringify({
-      category,
-      action,
-      data
-    }),
-    contentType: 'application/json; charset=utf-8',
-    dataType: 'json'
-  });
 }
 
 $( document ).ready(function() {
