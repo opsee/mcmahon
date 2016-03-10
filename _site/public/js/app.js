@@ -22,16 +22,22 @@ function doSignUp(name, email) {
  * @param {object} user
  */
 function trackSignUp(user) {
+  const category = 'Onboard';
+  const action = 'signup';
+  const data = {
+    name: user.name,
+    email: user.email
+  };
+
+  window.ga('send', 'event', category, action, JSON.stringify(data));
+
   return $.ajax({
     type: 'POST',
     url: MYST_API + '/event',
     data: JSON.stringify({
-      category: 'Onboard',
-      action: 'signup',
-      data: {
-        name: user.name,
-        email: user.email
-      }
+      category,
+      action,
+      data
     }),
     contentType: 'application/json; charset=utf-8',
     dataType: 'json'
