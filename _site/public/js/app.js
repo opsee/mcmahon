@@ -1,4 +1,3 @@
-var MYST_API = 'https://myst.opsee.com';
 var AUTH_API = 'https://auth.opsee.com';
 
 /**
@@ -22,20 +21,14 @@ function doSignUp(name, email) {
  * @param {object} user
  */
 function trackSignUp(user) {
-  return $.ajax({
-    type: 'POST',
-    url: MYST_API + '/event',
-    data: JSON.stringify({
-      category: 'Onboard',
-      action: 'signup',
-      data: {
-        name: user.name,
-        email: user.email
-      }
-    }),
-    contentType: 'application/json; charset=utf-8',
-    dataType: 'json'
-  });
+  const category = 'Onboard';
+  const action = 'signup';
+  const data = {
+    name: user.name,
+    email: user.email
+  };
+
+  window.ga('send', 'event', category, action, JSON.stringify(data));
 }
 
 $( document ).ready(function() {

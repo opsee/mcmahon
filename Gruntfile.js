@@ -33,7 +33,7 @@ module.exports = function(grunt) {
     connect: {
       server: {
         options: {
-          port: 4000,
+          port: 8080,
           livereload:35728,
           base:'dist'
         }
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
     },
     open:{
       dev:{
-        path:'http://localhost:4000'
+        path:'http://localhost:8080'
       }
     },
     copy:{
